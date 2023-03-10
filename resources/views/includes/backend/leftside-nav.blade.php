@@ -1,7 +1,7 @@
 <aside class="sidebar-nav-wrapper">
     <div class="navbar-logo">
         <a href="index.html">
-            <img src="{{asset('/')}}backend/assets/images/logo/logo.svg" alt="logo" />
+            <img src="{{ asset('/') }}backend/assets/images/logo/logo.svg" alt="logo" />
         </a>
     </div>
     <nav class="sidebar-nav">
@@ -92,10 +92,20 @@
                     </span>
                     <span class="text">Setting </span>
                 </a>
-                <ul id="ddmenu_4" class="collapse dropdown-nav {{ request()->is('settings/company-setting') || request()->is('roles') ? 'show' : null }}">
+                <ul id="ddmenu_4"
+                    class="collapse dropdown-nav {{ request()->is('settings/company-setting') || request()->is('role') || request()->is('role/assign') ? 'show' : null }}">
                     @can('role.access')
                         <li>
-                            <a href="alerts.html"> Role </a>
+                            <a href="{{ route('role.index') }}"
+                                class="{{ request()->is('role/create') || request()->is('role') ? 'active' : null }}">
+                                Role
+                            </a>
+                        </li>
+                    @endcan
+                    @can('role_permission.assign')
+                        <li>
+                            <a href="{{ route('role.assign') }}"
+                                class="{{ request()->is('role/assign') ? 'active' : null }}"> Role Assign </a>
                         </li>
                     @endcan
                     {{-- @can('permission.access')
@@ -105,7 +115,9 @@
                     @endcan --}}
                     @can('settings.access')
                         <li>
-                            <a href="{{ route('company-setting.edit') }}" class="{{ request()->is('settings/company-setting') ? 'active' : null }}"> Company Setting </a>
+                            <a href="{{ route('company-setting.edit') }}"
+                                class="{{ request()->is('settings/company-setting') ? 'active' : null }}"> Company Setting
+                            </a>
                         </li>
                     @endcan
                 </ul>

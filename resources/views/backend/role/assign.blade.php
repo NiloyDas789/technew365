@@ -10,7 +10,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="titlemb-30">
-                        <h2>Role</h2>
+                        <h2>Assign Role</h2>
                     </div>
                 </div>
                 <!-- end col -->
@@ -22,7 +22,7 @@
                                     <a href="#0">Dashboard</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    Role
+                                    Assign Role
                                 </li>
                             </ol>
                         </nav>
@@ -38,7 +38,7 @@
             <div class="col-lg-12">
                 <div class="card-style settings-card-1 mb-30">
                     <div class="title mb-30 d-flex justify-content-between align-items-center">
-                        <h6>Create Role</h6>
+                        <h6>Assign Role</h6>
                         <button class="border-0 bg-transparent">
                             <i class="lni lni-pencil-alt"></i>
                         </button>
@@ -52,33 +52,33 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="{{ route('role.store') }}" method="post">
+                    <form action="{{ route('assign.store') }}" method="post">
                         @csrf
                         <div class="profile-info">
                             <div class="row">
-
                                 <div class="col-12">
-                                    <div class="input-style-1">
-                                        <label>Role Name</label>
-                                        <input type="text" name="name" value="{{ old('name') }}"
-                                            class="@error('name') is-invalid @enderror" placeholder="Role Name">
-                                        @error('name')
-                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="select-style-2">
-                                        <label>Permissions</label>
+                                    <div class="select-style-1">
+                                        <label>User</label>
                                         <div class="select-position">
-                                            <select class="select2" name="permissions[]" multiple>
-                                                @foreach ($permissions as $permission)
-                                                    <option value="{{ $permission->id }}">{{ $permission->name }}</option>
+                                            <select name="user_id">
+                                                @foreach ($users as $user)
+                                                    <option value="{{ $user->id }}">{{ $user->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                     </div>
-
+                                </div>
+                                <div class="col-12">
+                                    <div class="select-style-1">
+                                        <label>Role</label>
+                                        <div class="select-position">
+                                            <select name="role_id">
+                                                @foreach ($roles as $role)
+                                                    <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="main-btn primary-btn btn-hover">

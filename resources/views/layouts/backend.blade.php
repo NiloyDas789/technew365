@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/css/fullcalendar.css') }}" />
     <link rel="stylesheet" href="{{ asset('backend/assets/css/fullcalendar.css') }}" />
     <link rel="stylesheet" href="{{ asset('backend/assets/css/main.css') }}" />
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/alpine-modal.css') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     @stack('style')
@@ -24,12 +23,8 @@
 
 </head>
 
-<body x-cloak x-data="{ open: false }">
+<body>
     <!-- ======== sidebar-nav start =========== -->
-
-    <div class="overlay"></div>
-
-    <div x-show="open" class="model-overlay"></div>
 
 
     <!-- ======== sidebar-nav end =========== -->
@@ -63,13 +58,11 @@
     <script src="{{ asset('backend/assets/js/world-merc.js') }}"></script>
     <script src="{{ asset('backend/assets/js/polyfill.js') }}"></script>
     <script src="{{ asset('backend/assets/js/main.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('.select2').select2();
-    });
-    <script>
     @stack('script')
 
     <script>

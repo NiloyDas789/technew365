@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
@@ -23,7 +24,7 @@ class RoleController extends Controller
     {
         $this->checkPermission('role.access');
         $roles = Role::orderBy('id', 'DESC')->paginate($this->itemPerPage);
-        $permissions = Permission::pluck('name', 'id');
+        $permissions = Permission::select('name', 'id')->get();
         $this->putSL($roles);
         return view('backend.role.index', compact('roles', 'permissions'));
     }
@@ -36,7 +37,7 @@ class RoleController extends Controller
     public function create()
     {
         $this->checkPermission('role.create');
-        $permissions = Permission::pluck('name', 'id');
+        $permissions = Permission::get();
         return view('backend.role.create', compact('permissions'));
     }
 
@@ -48,16 +49,17 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         $this->checkPermission('role.store');
         $this->validate($request, [
             'name' => 'required|unique:roles,name',
-            'permission' => 'required',
+            'permissions' => 'required',
         ]);
 
         $role = Role::create(['name' => $request->input('name')]);
-        $role->syncPermissions($request->input('permission'));
+        $role->syncPermissions($request->input('permissions'));
 
-        return redirect()->route('roles.index')
+        return redirect()->route('role.index')
                         ->with('success', 'Role created successfully');
     }
     /**
@@ -81,9 +83,9 @@ class RoleController extends Controller
     public function edit(Role $role)
     {
         $this->checkPermission('role.edit');
-        $permission = Permission::pluck('name', 'id');
+        $permissions = Permission::pluck('name', 'id');
 
-        return view('backend.role.edit', compact('role', 'permission'));
+        return view('backend.role.edit', compact('role', 'permissions'));
     }
 
     /**
@@ -98,15 +100,15 @@ class RoleController extends Controller
         $this->checkPermission('role.update');
         $this->validate($request, [
             'name' => 'required',
-            'permission' => 'required',
+            'permissions' => 'required',
         ]);
 
         $role->name = $request->input('name');
         $role->save();
 
-        $role->syncPermissions($request->input('permission'));
+        $role->syncPermissions($request->input('permissions'));
 
-        return redirect()->route('roles.index')
+        return redirect()->route('role.index')
                         ->with('success', 'Role updated successfully');
     }
     /**
@@ -119,7 +121,24 @@ class RoleController extends Controller
     {
         $this->checkPermission('role.destroy');
         $role->delete();
-        return redirect()->route('roles.index')
+        return redirect()->route('role.index')
                         ->with('success', 'Role deleted successfully');
+    }
+
+    public function assign()
+    {
+        $this->checkPermission('role_permission.assign');
+        $users = User::all();
+        $roles = Role::all();
+        return view('backend.role.assign', compact('users', 'roles'));
+    }
+
+    public function storeAssign(Request $request)
+    {
+        $this->checkPermission('role_permission.assign');
+        User::findOrFail($request->input('user_id'))
+            ->syncRoles($request->input('role_id'));
+
+        return redirect()->route('role.assign')->with('success', 'Role assigned to user successfully.');
     }
 }
