@@ -88,7 +88,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="header-opening-time text-lg-right text-center">
-                            <p>Opening Hours : Monday to Saturay - 8 Am to 5 Pm</p>
+                            <p>Opening Hours : Saturday to Thursday - 9 Am to 10 Pm</p>
                         </div>
                     </div>
                 </div> <!-- row -->
@@ -800,7 +800,7 @@
 
     <!--====== TEACHERS PART START ======-->
 
-    <section id="teachers-part" class="pt-70 pb-120">
+    {{-- <section id="teachers-part" class="pt-70 pb-120">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
@@ -881,13 +881,13 @@
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </section>
+    </section> --}}
 
     <!--====== TEACHERS PART ENDS ======-->
 
     <!--====== PUBLICATION PART START ======-->
 
-    <section id="publication-part" class="pt-115 pb-120 gray-bg">
+    {{-- <section id="publication-part" class="pt-115 pb-120 gray-bg">
         <div class="container">
             <div class="row align-items-end">
                 <div class="col-lg-6 col-md-8 col-sm-7">
@@ -1001,13 +1001,13 @@
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </section>
+    </section> --}}
 
     <!--====== PUBLICATION PART ENDS ======-->
 
     <!--====== TEASTIMONIAL PART START ======-->
 
-    <section id="testimonial" class="bg_cover pt-115 pb-115" data-overlay="8"
+    {{-- <section id="testimonial" class="bg_cover pt-115 pb-115" data-overlay="8"
         style="background-image: url({{ asset('frontend/assets') }}/images/bg-2.jpg)">
         <div class="container">
             <div class="row">
@@ -1069,13 +1069,13 @@
                 </div>
             </div> <!-- testimonial slied -->
         </div> <!-- container -->
-    </section>
+    </section> --}}
 
     <!--====== TEASTIMONIAL PART ENDS ======-->
 
     <!--====== NEWS PART START ======-->
 
-    <section id="news-part" class="pt-115 pb-110">
+    {{-- <section id="news-part" class="pt-115 pb-110">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -1175,13 +1175,13 @@
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </section>
+    </section> --}}
 
     <!--====== NEWS PART ENDS ======-->
 
     <!--====== PATNAR LOGO PART START ======-->
 
-    <div id="patnar-logo" class="pt-40 pb-80 gray-bg">
+    {{-- <div id="patnar-logo" class="pt-40 pb-80 gray-bg">
         <div class="container">
             <div class="row patnar-slied">
                 <div class="col-lg-12">
@@ -1216,7 +1216,7 @@
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </div>
+    </div> --}}
 
     <!--====== PATNAR LOGO PART ENDS ======-->
 
@@ -1243,7 +1243,7 @@
                         </div> <!-- footer about -->
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="footer-link mt-40">
+                        {{-- <div class="footer-link mt-40">
                             <div class="footer-title pb-25">
                                 <h6>Sitemap</h6>
                             </div>
@@ -1261,10 +1261,10 @@
                                 <li><a href="#"><i class="fa fa-angle-right"></i>Support</a></li>
                                 <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact</a></li>
                             </ul>
-                        </div> <!-- footer link -->
+                        </div> <!-- footer link --> --}}
                     </div>
                     <div class="col-lg-2 col-md-6 col-sm-6">
-                        <div class="footer-link support mt-40">
+                        {{-- <div class="footer-link support mt-40">
                             <div class="footer-title pb-25">
                                 <h6>Support</h6>
                             </div>
@@ -1275,7 +1275,7 @@
                                 <li><a href="#"><i class="fa fa-angle-right"></i>Support</a></li>
                                 <li><a href="#"><i class="fa fa-angle-right"></i>Documentation</a></li>
                             </ul>
-                        </div> <!-- support -->
+                        </div> <!-- support --> --}}
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-address mt-40">
@@ -1288,7 +1288,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>143 castle road 517 district, kiyev port south Canada</p>
+                                        <p>Joynab Colony</p>
                                     </div>
                                 </li>
                                 <li>
@@ -1304,7 +1304,7 @@
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>info@yourmail.com</p>
+                                        <p>technews365.net@gmail.com</p>
                                     </div>
                                 </li>
                             </ul>
