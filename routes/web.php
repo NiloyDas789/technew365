@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\CompanySettingController;
+use App\Http\Controllers\Backend\CourseController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\UserController;
@@ -37,6 +38,9 @@ Route::middleware('auth')->group(function () {
     Route::post('role/assign', [RoleController::class, 'storeAssign'])->name('assign.store');
     Route::resource('role', RoleController::class);
     Route::resource('user', UserController::class);
+
+
+    Route::resource('course', CourseController::class);
 
     Route::get('settings/company-setting', [CompanySettingController::class, 'editCompanySetting'])->name('company-setting.edit');
     Route::post('settings/company-setting', [CompanySettingController::class, 'updateCompanySetting'])->name('company-setting.update');

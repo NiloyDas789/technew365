@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
     {
         CompanySetting::create([
             'name'                 => 'Niloy Das  ',
-            'mobile1'              => '01xxxxxxxxx',
+            'mobile1'              => '01800000000000',
             'email'                => 'info@gmail.com',
         ]);
     }
@@ -43,13 +43,6 @@ class UserSeeder extends Seeder
             ['name' => 'user.edit'],
             ['name' => 'user.show'],
             ['name' => 'user.delete'],
-
-            ['name' => 'status.access'],
-            ['name' => 'status.create'],
-            ['name' => 'status.edit'],
-            ['name' => 'status.show'],
-            ['name' => 'status.delete'],
-
 
             ['name' => 'contact_message.access'],
             ['name' => 'contact_message.delete'],
@@ -67,6 +60,14 @@ class UserSeeder extends Seeder
             ['name' => 'role.delete'],
 
             ['name' => 'role_permission.assign'],
+
+
+
+            ['name' => 'course.access'],
+            ['name' => 'course.create'],
+            ['name' => 'course.edit'],
+            ['name' => 'course.show'],
+            ['name' => 'course.delete'],
 
 
         ];

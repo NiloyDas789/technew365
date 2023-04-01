@@ -209,9 +209,9 @@
                     <div class="col-xl-7 col-lg-9">
                         <div class="slider-cont">
                             <h1 data-animation="bounceInLeft" data-delay="1s">Stay Ahead of the Curve - Learn with
-                                Technews365
+                                TECHNEWS365
                             </h1>
-                            <p data-animation="fadeInUp" data-delay="1.3s">Technews365 provides learners with flexible
+                            <p data-animation="fadeInUp" data-delay="1.3s">TECHNEWS365 provides learners with flexible
                                 learning options and high-quality resources, making it an ideal platform for anyone
                                 interested in enhancing their skills and staying up-to-date with the latest technology
                                 trends.</p>
@@ -234,7 +234,7 @@
                     <div class="col-xl-7 col-lg-9">
                         <div class="slider-cont">
                             <h1 data-animation="bounceInLeft" data-delay="1s">Stay Ahead of the Curve - Learn with
-                                Technews365
+                                TECHNEWS365
                             </h1>
                             <p data-animation="fadeInUp" data-delay="1.3s">The platform has been providing courses on
                                 emerging technologies since June 2013 and has become a trusted source for learners
@@ -258,9 +258,9 @@
                     <div class="col-xl-7 col-lg-9">
                         <div class="slider-cont">
                             <h1 data-animation="bounceInLeft" data-delay="1s">Stay Ahead of the Curve - Learn with
-                                Technews365
+                                TECHNEWS365
                             </h1>
-                            <p data-animation="fadeInUp" data-delay="1.3s">The courses on Technews365 are designed by
+                            <p data-animation="fadeInUp" data-delay="1.3s">The courses on TECHNEWS365 are designed by
                                 industry experts with years of experience in the field. They use a variety of teaching
                                 methods, including lectures, videos, interactive simulations, and hands-on exercises, to
                                 ensure a comprehensive understanding of the subject matter.</p>
@@ -387,20 +387,20 @@
                 <div class="col-lg-5">
                     <div class="section-title mt-50">
                         <h5>About us</h5>
-                        <h2>Welcome to Technews365 </h2>
+                        <h2>Welcome to TECHNEWS365 </h2>
                     </div> <!-- section title -->
                     <div class="about-cont">
-                        <p>Technews365 is a platform that has been providing courses on various emerging technologies
+                        <p>TECHNEWS365 is a platform that has been providing courses on various emerging technologies
                             since its journey began in June 2013. The platform was founded with the vision of making the
-                            latest technology trends accessible to everyone. Over the years, Technews365 has continued
+                            latest technology trends accessible to everyone. Over the years, TECHNEWS365 has continued
                             to expand its offerings and now provides courses on networking, cloud computing, data
                             science, AI, cybersecurity, and other related topics.
 
-                            The courses on Technews365 are designed by industry experts with years of experience in the
+                            The courses on TECHNEWS365 are designed by industry experts with years of experience in the
                             field. They use a variety of teaching methods to ensure that learners have a comprehensive
                             understanding of the subject matter, including lectures, videos, interactive simulations,
                             and hands-on exercises. With its flexible learning options and high-quality resources,
-                            Technews365 has become a trusted source for anyone interested in enhancing their skills and
+                            TECHNEWS365 has become a trusted source for anyone interested in enhancing their skills and
                             staying up-to-date with the latest technology trends.</p>
                         {{-- <a href="#" class="main-btn mt-55">Learn More</a> --}}
                     </div>
