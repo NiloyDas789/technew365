@@ -10,7 +10,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="titlemb-30">
-                        <h2>Course</h2>
+                        <h2>Create Course</h2>
                     </div>
                 </div>
                 <!-- end col -->
@@ -19,10 +19,13 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="#0">Dashboard</a>
+                                    <a href="{{ route('dashboard') }}">Dashboard</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="{{ route('course.index') }}">Course</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    Course
+                                    Create Course
                                 </li>
                             </ol>
                         </nav>
@@ -37,12 +40,12 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="card-style settings-card-1 mb-30">
-                    <div class="title mb-30 d-flex justify-content-between align-items-center">
+                    {{-- <div class="title mb-30 d-flex justify-content-end align-items-center">
                         <h6>Create Course</h6>
                         <button class="border-0 bg-transparent">
                             <i class="lni lni-pencil-alt"></i>
                         </button>
-                    </div>
+                    </div> --}}
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -100,16 +103,6 @@
             };
         }
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.summernote').summernote({
-                placeholder: 'Course Description',
-                height: 200
-            });
-        });
-    </script>
 @endpush
 
 @push('style')
@@ -125,5 +118,4 @@
             width: 1px;
         }
     </style>
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 @endpush

@@ -7,38 +7,52 @@
     <div class="container-fluid">
 
         <!-- start page title -->
-        <div class="row">
-            <div class="col-12">
-                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Edit Course</h4>
-
-                    <div class="page-title-right">
-                        <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="{{ route('courses.index') }}">Course</a></li>
-                            <li class="breadcrumb-item active">Edit Course</li>
-                        </ol>
+        <div class="title-wrapper pt-30">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="titlemb-30">
+                        <h2>Edit Course</h2>
                     </div>
-
                 </div>
+                <!-- end col -->
+                <div class="col-md-6">
+                    <div class="breadcrumb-wrapper mb-30">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="{{ route('dashboard') }}">Dashboard</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="{{ route('course.index') }}">Course</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Edit Course
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <!-- end col -->
             </div>
+            <!-- end row -->
         </div>
         <!-- end page title -->
 
-        <div class="row d-flex justify-content-center">
-            <div class="col-9">
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-                <div class="card">
-
-                    <form action="{{ route('course.update') }}" method="post" enctype="multipart/form-data">
+        <div class="row ">
+            <div class="col-12">
+                <div class="card-style settings-card-1 mb-30">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form action="{{ route('course.update', $course->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
+                        @method('PUT')
                         <div class="profile-info">
                             <div class="row">
                                 @include('backend.course.form')
@@ -54,9 +68,6 @@
             </div> <!-- end col -->
         </div>
         <!-- end row -->
-
-
-
     </div>
 @endsection
 
@@ -86,16 +97,6 @@
             };
         }
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.summernote').summernote({
-                placeholder: 'Course Description',
-                height: 200
-            });
-        });
-    </script>
 @endpush
 
 @push('style')
@@ -111,5 +112,4 @@
             width: 1px;
         }
     </style>
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 @endpush

@@ -19,10 +19,13 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="#0">Dashboard</a>
+                                    <a href="{{ route('dashboard') }}">Dashboard</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="{{ route('role.index') }}">Role</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    Role
+                                    Create Role
                                 </li>
                             </ol>
                         </nav>

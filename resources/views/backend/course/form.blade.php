@@ -7,15 +7,15 @@
             <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->
             <div x-data="imageData()" class="file-input flex items-center">
                 <!-- Preview Image -->
-                <div class="p-3 rounded-full overflow-hidden bg-gray-100">
+                <div class="py-3 rounded-full overflow-hidden bg-gray-100">
                     <!-- Placeholder image -->
-                    {{-- <div x-show="!previewPhoto" class="profile-image mb-1">
-                        <img src="{{ setImage($course->image) }}" class="object-fit-cover"
-                            style="height: 75px; width:75px" alt="" srcset="">
-                    </div> --}}
+                    <div x-show="!previewPhoto" class="profile-image mb-1">
+                        <img src="{{ isset($course->image) ? setImage($course->image) : asset('backend\assets\images\default\default_image.jpg') }}"
+                            class="object-fit-cover" style="height: 90px; width:100px" alt="" srcset="">
+                    </div>
                     <!-- Show a preview of the photo -->
                     <div x-show="previewPhoto" class="profile-image mb-1">
-                        <img :src="previewPhoto" class="object-fit-cover" style="height: 75px; width:75px"
+                        <img :src="previewPhoto" class="object-fit-cover" style="height: 90px; width:100px"
                             alt="">
                     </div>
                 </div>
@@ -55,7 +55,7 @@
 <div class="col-lg-12">
     <div class="input-style-1">
         <label for="title">Course Name</label>
-        <input type="text" name="title" value="{{ old('title') }}" id="title"
+        <input type="text" name="title" value="{{ $course->title ?? old('title') }}" id="title"
             class="@error('title') is-invalid @enderror" placeholder="Course Title">
         @error('title')
             <div class="alert alert-danger mt-1">{{ $message }}</div>
@@ -63,10 +63,10 @@
     </div>
 </div>
 <div class="col-lg-12">
-    <div class="input-style-1">
+    <div class="input-style-3">
         <label for="description">Course Description</label>
-        <textarea type="text" name="description" rows="5" value="{{ old('description') }}" id="description"
-            class="summernote @error('description') is-invalid @enderror">
+        <textarea name="description" rows="5" id="description" class="@error('description') is-invalid @enderror">
+            {{ $course->description ?? old('description') }}
         </textarea>
         @error('description')
             <div class="alert alert-danger mt-1">{{ $message }}</div>
@@ -75,8 +75,9 @@
 </div>
 <div class="col-lg-12">
     <div class="form-check form-switch toggle-switch mb-30">
-        <input class="form-check-input @error('status') is-invalid @enderror" name="status" value="{{ old('status') }}"
-            type="checkbox" id="status" @if (old('status') == 1) checked @endif>
+        <input class="form-check-input @error('status') is-invalid @enderror" name="status"
+            value="{{ $course->status ?? 1 }}" type="checkbox" id="status"
+            @if (isset($course->status) && $course->status == 1) checked @endif>
         <label class="form-check-label" for="status">Status</label>
         @error('status')
             <div class="alert alert-danger mt-1">{{ $message }}</div>

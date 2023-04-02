@@ -29,7 +29,8 @@
                             <li>
                                 <a href="#0">
                                     <div class="image">
-                                        <img src="backend/assets/images/lead/lead-6.png" alt="" />
+                                        <img src="{{ asset('backend/assets/images/lead/lead-6.png') }}"
+                                            alt="" />
                                     </div>
                                     <div class="content">
                                         <h6>
@@ -147,11 +148,11 @@
                             <i class="lni lni-chevron-down"></i>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
-                            <li>
+                            {{-- <li>
                                 <a href="{{ route('profile.edit') }}">
                                     <i class="lni lni-user"></i> View Profile
                                 </a>
-                            </li>
+                            </li> --}}
                             <li>
                                 <a href="#0">
                                     <i class="lni lni-alarm"></i> Notifications

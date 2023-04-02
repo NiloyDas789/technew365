@@ -19,7 +19,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="#0">Dashboard</a>
+                                    <a href="{{ route('dashboard') }}">Dashboard</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
                                     Course
@@ -79,9 +79,16 @@
 
                                             <td>
                                                 <div class="action">
-                                                    <button class="text-danger">
-                                                        <i class="lni lni-trash-can"></i>
-                                                    </button>
+                                                    <a href="{{ route('course.edit', $course->id) }}">
+                                                        <i class="lni lni-pencil-alt"></i>
+                                                    </a>
+                                                    <form method="POST"
+                                                        action="{{ route('course.destroy', $course->id) }}">
+                                                        @csrf
+                                                        <input name="_method" type="hidden" value="DELETE">
+                                                        <button type="submit" class="text-danger ml-5"><i
+                                                                class="lni lni-trash-can"></i></button>
+                                                    </form>
                                                 </div>
                                             </td>
                                         </tr>

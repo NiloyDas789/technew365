@@ -19,9 +19,8 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="#0">Dashboard</a>
+                                    <a href="{{ route('dashboard') }}">Dashboard</a>
                                 </li>
-                                <li class="breadcrumb-item"><a href="#0">Pages</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">
                                     Settings
                                 </li>
@@ -68,9 +67,10 @@
                                                 <!-- Preview Image -->
                                                 <div class="p-3 rounded-full overflow-hidden bg-gray-100">
                                                     <!-- Placeholder image -->
-                                                    <div x-show="!previewPhoto"  class="profile-image mb-1">
-                                                        <img src="{{ setImage($company_setting->logo) }}" class="object-fit-cover" style="height: 75px; width:75px" alt=""
-                                                            srcset="">
+                                                    <div x-show="!previewPhoto" class="profile-image mb-1">
+                                                        <img src="{{ setImage($company_setting->logo) }}"
+                                                            class="object-fit-cover" style="height: 75px; width:75px"
+                                                            alt="" srcset="">
                                                     </div>
                                                     <!-- Show a preview of the photo -->
                                                     <div x-show="previewPhoto" class="profile-image mb-1">
@@ -124,12 +124,15 @@
                                                 <!-- Preview Image -->
                                                 <div class="p-3 overflow-hidden bg-gray-100">
                                                     <!-- Placeholder image -->
-                                                    <div x-show="!previewPhoto"  class="profile-image mb-1">
-                                                        <img src="{{ setImage($company_setting->footer_logo) }}" class="object-fit-cover" style="height: 75px; width:75px" alt="" srcset="">
+                                                    <div x-show="!previewPhoto" class="profile-image mb-1">
+                                                        <img src="{{ setImage($company_setting->footer_logo) }}"
+                                                            class="object-fit-cover" style="height: 75px; width:75px"
+                                                            alt="" srcset="">
                                                     </div>
                                                     <!-- Show a preview of the photo -->
                                                     <div x-show="previewPhoto" class="profile-image mb-1">
-                                                        <img :src="previewPhoto" class="object-fit-cover" style="height: 75px; width:75px"  alt="">
+                                                        <img :src="previewPhoto" class="object-fit-cover"
+                                                            style="height: 75px; width:75px" alt="">
                                                     </div>
                                                 </div>
 

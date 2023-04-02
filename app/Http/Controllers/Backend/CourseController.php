@@ -15,11 +15,6 @@ class CourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index(Request $request)
     {
         $this->checkPermission('course.access');
@@ -38,7 +33,6 @@ class CourseController extends Controller
         $this->checkPermission('course.create');
         return view('backend.course.create');
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -54,11 +48,13 @@ class CourseController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg|max:1024',
         ]);
         $validated['status'] = !($request->has('status')) ? 0 : 1;
+
         if ($request->hasFile('image')) {
             $fileName = Rand() . '.' . $request->file('image')->getClientOriginalExtension();
             $image = $request->file('image')->storeAs('images/course/image', $fileName, 'public');
+            $validated['image'] = $image;
         }
-        $course = Course::create($validated);
+        Course::create($validated);
 
         return redirect()->route('course.index')
                         ->with('success', 'Course created successfully');
@@ -84,7 +80,6 @@ class CourseController extends Controller
     public function edit(Course $course)
     {
         $this->checkPermission('course.edit');
-
         return view('backend.course.edit', compact('course'));
     }
 
@@ -101,7 +96,7 @@ class CourseController extends Controller
         $validated = $this->validate($request, [
             'title' => 'required|string',
             'description' => 'required|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:1024',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:1024',
         ]);
         $validated['status'] = !($request->has('status')) ? 0 : 1;
         if ($request->hasFile('image')) {
@@ -110,6 +105,7 @@ class CourseController extends Controller
             }
             $fileName = Rand() . '.' . $request->file('image')->getClientOriginalExtension();
             $image = $request->file('image')->storeAs('images/course/image', $fileName, 'public');
+            $validated['image'] = $image;
         }
         $course->update($validated);
 
@@ -128,22 +124,5 @@ class CourseController extends Controller
         $course->delete();
         return redirect()->route('course.index')
                         ->with('success', 'Course deleted successfully');
-    }
-
-    public function assign()
-    {
-        $this->checkPermission('course_permission.assign');
-        $users = User::all();
-        $courses = Course::all();
-        return view('backend.course.assign', compact('users', 'courses'));
-    }
-
-    public function storeAssign(Request $request)
-    {
-        $this->checkPermission('course_permission.assign');
-        User::findOrFail($request->input('user_id'))
-            ->syncCourses($request->input('course_id'));
-
-        return redirect()->route('course.assign')->with('success', 'Course assigned to user successfully.');
     }
 }
