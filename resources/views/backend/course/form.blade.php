@@ -65,8 +65,9 @@
 <div class="col-lg-12">
     <div class="input-style-1">
         <label for="description">Course Description</label>
-        <input type="text" name="description" value="{{ old('description') }}" id="description"
-            class="@error('description') is-invalid @enderror" placeholder="Course Description">
+        <textarea type="text" name="description" rows="5" value="{{ old('description') }}" id="description"
+            class="summernote @error('description') is-invalid @enderror">
+        </textarea>
         @error('description')
             <div class="alert alert-danger mt-1">{{ $message }}</div>
         @enderror

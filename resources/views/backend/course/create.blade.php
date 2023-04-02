@@ -100,6 +100,16 @@
             };
         }
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.summernote').summernote({
+                placeholder: 'Course Description',
+                height: 200
+            });
+        });
+    </script>
 @endpush
 
 @push('style')
@@ -115,4 +125,5 @@
             width: 1px;
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 @endpush
