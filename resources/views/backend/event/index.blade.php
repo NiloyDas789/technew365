@@ -1,6 +1,6 @@
 @extends('layouts.backend')
 
-@section('title', 'Course')
+@section('title', 'Event')
 
 
 @section('content')
@@ -10,7 +10,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="title mb-30">
-                        <h2>Course List</h2>
+                        <h2>Event List</h2>
                     </div>
                 </div>
                 <!-- end col -->
@@ -22,7 +22,7 @@
                                     <a href="{{ route('dashboard') }}">Dashboard</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    Course
+                                    Event
                                 </li>
                             </ol>
                         </nav>
@@ -38,16 +38,16 @@
                 <div class="col-lg-12">
                     <div class="card-style mb-30">
                         <div class="mb-50">
-                            {{-- <button class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#createCourse">Create</button> --}}
+                            {{-- <button class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#createEvent">Create</button> --}}
 
                             <!-- Button trigger modal -->
-                            <a class="btn btn-primary float-end" href="{{ route('course.create') }}">Create</a>
+                            <a class="btn btn-primary float-end" href="{{ route('event.create') }}">Create</a>
                             {{-- <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal"
-                                data-bs-target="#createCourse">
+                                data-bs-target="#createEvent">
                                 Create
                             </button> --}}
                         </div>
-                        @include('backend.course.table')
+                        @include('backend.event.table')
                     </div>
                     <!-- end card -->
                 </div>
@@ -62,7 +62,7 @@
 @push('script')
     <script>
         $('.select2').select2({
-            dropdownParent: $('#createCourse'),
+            dropdownParent: $('#createEvent'),
             placeholder: 'Select an option',
         });
     </script>

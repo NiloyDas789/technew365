@@ -12,11 +12,15 @@ return new class () extends Migration {
      */
     public function up()
     {
-        Schema::create('courses', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->longText('description');
             $table->string('image');
+            $table->date('date');
+            $table->time('start_time')->format('H:i');
+            $table->time('end_time')->format('H:i')->nullable();
+            $table->string('location');
             $table->boolean('status')->default(false);
             $table->timestamps();
             $table->softDeletes();
@@ -30,6 +34,6 @@ return new class () extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('courses');
+        Schema::dropIfExists('events');
     }
 };

@@ -69,6 +69,12 @@ class UserSeeder extends Seeder
             ['name' => 'course.show'],
             ['name' => 'course.delete'],
 
+            ['name' => 'event.access'],
+            ['name' => 'event.create'],
+            ['name' => 'event.edit'],
+            ['name' => 'event.show'],
+            ['name' => 'event.delete'],
+
 
         ];
 

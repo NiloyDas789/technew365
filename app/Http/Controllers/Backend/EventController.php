@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreCourseRequest;
-use App\Http\Requests\UpdateCourseRequest;
-use App\Models\Course;
+use App\Http\Requests\StoreEventRequest;
+use App\Http\Requests\UpdateEventRequest;
+use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
-class CourseController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,10 +18,10 @@ class CourseController extends Controller
      */
     public function index(Request $request)
     {
-        $this->checkPermission('course.access');
-        $courses = Course::orderBy('id', 'DESC')->paginate($this->itemPerPage);
-        $this->putSL($courses);
-        return view('backend.course.index', compact('courses'));
+        $this->checkPermission('event.access');
+        $events = Event::orderBy('id', 'DESC')->paginate($this->itemPerPage);
+        $this->putSL($events);
+        return view('backend.event.index', compact('events'));
     }
 
     /**
@@ -31,8 +31,8 @@ class CourseController extends Controller
      */
     public function create()
     {
-        $this->checkPermission('course.create');
-        return view('backend.course.create');
+        $this->checkPermission('event.create');
+        return view('backend.event.create');
     }
     /**
      * Store a newly created resource in storage.
@@ -40,21 +40,21 @@ class CourseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCourseRequest $request)
+    public function store(StoreEventRequest $request)
     {
-        $this->checkPermission('course.store');
+        $this->checkPermission('event.store');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
 
         if ($request->hasFile('image')) {
             $fileName = Rand() . '.' . $request->file('image')->getClientOriginalExtension();
-            $image = $request->file('image')->storeAs('images/course/image', $fileName, 'public');
+            $image = $request->file('image')->storeAs('images/event/image', $fileName, 'public');
             $validated['image'] = $image;
         }
-        Course::create($validated);
+        Event::create($validated);
 
-        return redirect()->route('course.index')
-                        ->with('success', 'Course created successfully');
+        return redirect()->route('event.index')
+                        ->with('success', 'Event created successfully');
     }
     /**
      * Display the specified resource.
@@ -62,10 +62,10 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Course $course)
+    public function show(Event $event)
     {
-        $this->checkPermission('course.show');
-        return view('backend.course.show', compact('course'));
+        $this->checkPermission('event.show');
+        return view('backend.event.show', compact('event'));
     }
 
     /**
@@ -74,10 +74,10 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Course $course)
+    public function edit(Event $event)
     {
-        $this->checkPermission('course.edit');
-        return view('backend.course.edit', compact('course'));
+        $this->checkPermission('event.edit');
+        return view('backend.event.edit', compact('event'));
     }
 
     /**
@@ -87,23 +87,23 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCourseRequest $request, Course $course)
+    public function update(UpdateEventRequest $request, Event $event)
     {
-        $this->checkPermission('course.update');
+        $this->checkPermission('event.update');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
         if ($request->hasFile('image')) {
-            if (File::exists('storage/' . $course->image)) {
-                File::delete('storage/' . $course->image);
+            if (File::exists('storage/' . $event->image)) {
+                File::delete('storage/' . $event->image);
             }
             $fileName = Rand() . '.' . $request->file('image')->getClientOriginalExtension();
-            $image = $request->file('image')->storeAs('images/course/image', $fileName, 'public');
+            $image = $request->file('image')->storeAs('images/event/image', $fileName, 'public');
             $validated['image'] = $image;
         }
-        $course->update($validated);
+        $event->update($validated);
 
-        return redirect()->route('course.index')
-                        ->with('success', 'Course updated successfully');
+        return redirect()->route('event.index')
+                        ->with('success', 'Event updated successfully');
     }
     /**
      * Remove the specified resource from storage.
@@ -111,11 +111,11 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Course $course)
+    public function destroy(Event $event)
     {
-        $this->checkPermission('course.destroy');
-        $course->delete();
-        return redirect()->route('course.index')
-                        ->with('success', 'Course deleted successfully');
+        $this->checkPermission('event.destroy');
+        $event->delete();
+        return redirect()->route('event.index')
+                        ->with('success', 'Event deleted successfully');
     }
 }
