@@ -1075,13 +1075,13 @@
 
     <!--====== NEWS PART START ======-->
 
-    {{-- <section id="news-part" class="pt-115 pb-110">
+    <section id="news-part" class="pt-115 pb-110">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-title pb-50">
-                        <h5>Latest News</h5>
-                        <h2>From the news</h2>
+                        <h5>Latest Jobs</h5>
+                        <h2>From TECHNEWS365</h2>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -1094,14 +1094,14 @@
                         <div class="news-cont">
                             <ul>
                                 <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                <li><a href="#"> <span>By</span> Adam linn</a></li>
+                                {{-- <li><a href="#"> <span>By</span> Adam linn</a></li> --}}
                             </ul>
                             <a href="blog-singel.html">
                                 <h3>Tips to grade high cgpa in university life</h3>
                             </a>
-                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit
+                            {{-- <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit
                                 cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit
-                                amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt .</p>
+                                amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt .</p> --}}
                         </div>
                     </div> <!-- singel news -->
                 </div>
@@ -1117,13 +1117,13 @@
                                 <div class="news-cont mt-30">
                                     <ul>
                                         <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                        <li><a href="#"> <span>By</span> Adam linn</a></li>
+                                        {{-- <li><a href="#"> <span>By</span> Adam linn</a></li> --}}
                                     </ul>
                                     <a href="blog-singel.html">
                                         <h3>Intellectual communication</h3>
                                     </a>
-                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons
-                                        vel.</p>
+                                    {{-- <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons
+                                        vel.</p> --}}
                                 </div>
                             </div>
                         </div> <!-- row -->
@@ -1139,13 +1139,13 @@
                                 <div class="news-cont mt-30">
                                     <ul>
                                         <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                        <li><a href="#"> <span>By</span> Adam linn</a></li>
+                                        {{-- <li><a href="#"> <span>By</span> Adam linn</a></li> --}}
                                     </ul>
                                     <a href="blog-singel.html">
                                         <h3>Study makes you perfect</h3>
                                     </a>
-                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons
-                                        vel.</p>
+                                    {{-- <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons
+                                        vel.</p> --}}
                                 </div>
                             </div>
                         </div> <!-- row -->
@@ -1161,13 +1161,13 @@
                                 <div class="news-cont mt-30">
                                     <ul>
                                         <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                        <li><a href="#"> <span>By</span> Adam linn</a></li>
+                                        {{-- <li><a href="#"> <span>By</span> Adam linn</a></li> --}}
                                     </ul>
                                     <a href="blog-singel.html">
                                         <h3>Technology edcution is now....</h3>
                                     </a>
-                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons
-                                        vel.</p>
+                                    {{-- <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons
+                                        vel.</p> --}}
                                 </div>
                             </div>
                         </div> <!-- row -->
@@ -1175,7 +1175,7 @@
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </section> --}}
+    </section>
 
     <!--====== NEWS PART ENDS ======-->
 

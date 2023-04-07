@@ -75,6 +75,11 @@ class UserSeeder extends Seeder
             ['name' => 'event.show'],
             ['name' => 'event.delete'],
 
+            ['name' => 'job.access'],
+            ['name' => 'job.create'],
+            ['name' => 'job.edit'],
+            ['name' => 'job.show'],
+            ['name' => 'job.delete'],
 
         ];
 
