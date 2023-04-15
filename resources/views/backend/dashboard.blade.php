@@ -4,7 +4,7 @@
 
 
 @section('content')
-    <div class="container-fluid">
+    {{-- <div class="container-fluid">
         <!-- ========== title-wrapper start ========== -->
         <div class="title-wrapper pt-30">
             <div class="row align-items-center">
@@ -789,7 +789,7 @@
             <!-- End Col -->
         </div>
         <!-- End Row -->
-    </div>
+    </div> --}}
 @endsection
 
 @push('script')
