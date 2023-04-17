@@ -28,7 +28,7 @@
                                 <li><i class="fa fa-star"></i></li>
                                 <li><i class="fa fa-star"></i></li>
                             </ul>
-                            <span>(20 Reviws)</span>
+                            <span>({{ $course->total_class }} class)</span>
                             <a href="courses-singel.html">
                                 <h4>{{ $course->title }}</h4>
                             </a>

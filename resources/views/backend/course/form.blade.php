@@ -63,6 +63,16 @@
     </div>
 </div>
 <div class="col-lg-12">
+    <div class="input-style-1">
+        <label for="total_class">Total Class</label>
+        <input type="number" name="total_class" value="{{ $course->total_class ?? old('total_class') }}"
+            id="total_class" class="@error('total_class') is-invalid @enderror" placeholder="Total Class">
+        @error('total_class')
+            <div class="alert alert-danger mt-1">{{ $message }}</div>
+        @enderror
+    </div>
+</div>
+<div class="col-lg-12">
     <div class="input-style-3">
         <label for="description">Course Description</label>
         <textarea name="description" rows="5" id="description" class="@error('description') is-invalid @enderror">

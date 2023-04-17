@@ -16,10 +16,9 @@ return new class () extends Migration {
             $table->id();
             $table->string('title');
             $table->longText('description');
-            $table->string('image');
             $table->date('date');
             $table->time('start_time')->format('H:i');
-            $table->time('end_time')->format('H:i')->nullable();
+            $table->time('end_time')->format('H:i')->nullable()->default(null);
             $table->string('location');
             $table->boolean('status')->default(false);
             $table->timestamps();

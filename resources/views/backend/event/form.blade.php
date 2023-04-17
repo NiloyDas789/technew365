@@ -1,4 +1,4 @@
-<div class="col-lg-6">
+{{-- <div class="col-lg-6">
     <section class="max-w-xl mx-auto flex flex-col py-8 mb-4">
         <div class="py-8">
             <div class="input-style-1">
@@ -51,7 +51,7 @@
             </div>
         </div>
     </section>
-</div>
+</div> --}}
 <div class="col-lg-12">
     <div class="input-style-1">
         <label for="title">Event Title</label>

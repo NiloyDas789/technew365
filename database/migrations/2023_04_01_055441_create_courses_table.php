@@ -16,6 +16,7 @@ return new class () extends Migration {
             $table->id();
             $table->string('title');
             $table->longText('description');
+            $table->integer('total_class');
             $table->string('image');
             $table->boolean('status')->default(false);
             $table->timestamps();

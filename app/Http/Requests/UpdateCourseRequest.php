@@ -26,6 +26,7 @@ class UpdateCourseRequest extends FormRequest
         return [
             'title' => 'required|string',
             'description' => 'required|string',
+            'total_class' => 'required|integer',
             'image' => 'nullable|image|mimes:jpeg,png,jpg|max:1024',
         ];
     }

@@ -46,11 +46,11 @@ class EventController extends Controller
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
 
-        if ($request->hasFile('image')) {
-            $fileName = Rand() . '.' . $request->file('image')->getClientOriginalExtension();
-            $image = $request->file('image')->storeAs('images/event/image', $fileName, 'public');
-            $validated['image'] = $image;
-        }
+        // if ($request->hasFile('image')) {
+        //     $fileName = Rand() . '.' . $request->file('image')->getClientOriginalExtension();
+        //     $image = $request->file('image')->storeAs('images/event/image', $fileName, 'public');
+        //     $validated['image'] = $image;
+        // }
         Event::create($validated);
 
         return redirect()->route('event.index')
@@ -92,14 +92,14 @@ class EventController extends Controller
         $this->checkPermission('event.update');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
-        if ($request->hasFile('image')) {
-            if (File::exists('storage/' . $event->image)) {
-                File::delete('storage/' . $event->image);
-            }
-            $fileName = Rand() . '.' . $request->file('image')->getClientOriginalExtension();
-            $image = $request->file('image')->storeAs('images/event/image', $fileName, 'public');
-            $validated['image'] = $image;
-        }
+        // if ($request->hasFile('image')) {
+        //     if (File::exists('storage/' . $event->image)) {
+        //         File::delete('storage/' . $event->image);
+        //     }
+        //     $fileName = Rand() . '.' . $request->file('image')->getClientOriginalExtension();
+        //     $image = $request->file('image')->storeAs('images/event/image', $fileName, 'public');
+        //     $validated['image'] = $image;
+        // }
         $event->update($validated);
 
         return redirect()->route('event.index')

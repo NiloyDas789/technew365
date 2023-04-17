@@ -26,6 +26,7 @@ class StoreCourseRequest extends FormRequest
         return [
             'title' => 'required|string',
             'description' => 'required|string',
+            'total_class' => 'required|integer',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:1024',
         ];
     }
