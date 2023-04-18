@@ -14,7 +14,7 @@
                     <div class="singel-course">
                         <div class="thum">
                             <div class="image">
-                                <img src="{{ asset('frontend/assets') }}/images/course/cu-1.jpg" alt="Course">
+                                <img src="{{ setImage($course->image) }}" alt="Course">
                             </div>
                             <div class="price">
                                 <span>Free</span>
