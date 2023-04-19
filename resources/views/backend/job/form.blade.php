@@ -2,7 +2,7 @@
     <section class="max-w-xl mx-auto flex flex-col py-8 mb-4">
         <div class="py-8">
             <div class="input-style-1">
-                <label>Job Image</label>
+                <label>Image</label>
             </div>
             <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->
             <div x-data="imageData()" class="file-input flex items-center">
@@ -64,20 +64,20 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="link">Job Link</label>
-        <input type="text" name="link" value="{{ $job->link ?? old('link') }}" id="link"
-            class="@error('link') is-invalid @enderror" placeholder="Job Title">
-        @error('link')
+        <label for="company_name">Company Name</label>
+        <input type="text" name="company_name" value="{{ $job->company_name ?? old('company_name') }}"
+            id="company_name" class="@error('company_name') is-invalid @enderror" placeholder="Company Name">
+        @error('company_name')
             <div class="alert alert-danger mt-1">{{ $message }}</div>
         @enderror
     </div>
 </div>
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="expiry_date">Job Expiry Date</label>
-        <input type="date" name="expiry_date" value="{{ $job->expiry_date ?? old('expiry_date') }}" id="expiry_date"
-            class="@error('expiry_date') is-invalid @enderror" placeholder="Job Title">
-        @error('expiry_date')
+        <label for="designation">Designation</label>
+        <input type="text" name="designation" value="{{ $job->designation ?? old('designation') }}" id="designation"
+            class="@error('designation') is-invalid @enderror" placeholder="Designation">
+        @error('designation')
             <div class="alert alert-danger mt-1">{{ $message }}</div>
         @enderror
     </div>

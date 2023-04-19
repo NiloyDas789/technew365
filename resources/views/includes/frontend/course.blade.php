@@ -16,9 +16,9 @@
                             <div class="image">
                                 <img src="{{ setImage($course->image) }}" alt="Course">
                             </div>
-                            <div class="price">
+                            {{-- <div class="price">
                                 <span>Free</span>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="cont">
                             <ul>

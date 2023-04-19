@@ -1,31 +1,72 @@
 @extends('layouts.frontend')
-@section('title', 'Hill View Hotel - Home')
+@section('name', 'Home')
 @section('content')
-		<!-- SLIDESHOW -->
-        @include('includes.frontend.slideshow')
-		<!-- SLIDESHOW END -->
 
-		<!-- SERVICES LIST & BOOKING FORM -->
-		@include('includes.frontend.servicelist')
-		<!-- SERVICES LIST & BOOKING FORM END -->
+    <!--====== SLIDER PART START ======-->
 
-		<!-- ROOMS LIST -->
-		@include('includes.frontend.roomlist')
-		<!-- ROOMS LIST END -->
+    @include('includes.frontend.slider')
 
-		<!-- WHY CHOOSE US? -->
-		@include('includes.frontend.whychooseus')
-		<!-- WHY CHOOSE US? END -->
+    <!--====== SLIDER PART ENDS ======-->
 
-		<!-- PRICING PLANS -->
-		@include('includes.frontend.pricingplans')
-		<!-- PRICING PLANS END -->
+    <!--====== CATEGORY PART START ======-->
 
-		<!-- TESTIMONIALS CAROUSEL -->
-		@include('includes.frontend.testimonialcarousel')
-		<!-- TESTIMONIALS CAROUSEL END -->
+    @include('includes.frontend.category')
 
-		<!-- CONTACT SECTION -->
-		@include('includes.frontend.contactsection')
-		<!-- CONTACT SECTION END -->
+    <!--====== CATEGORY PART ENDS ======-->
+
+    <!--====== ABOUT PART START ======-->
+
+    @include('includes.frontend.about')
+
+    <!--====== ABOUT PART ENDS ======-->
+
+    <!--====== APPLY PART START ======-->
+
+    {{-- @include('includes.frontend.apply') --}}
+
+    <!--====== APPLY PART ENDS ======-->
+
+    <!--====== COURSE PART START ======-->
+
+    @include('includes.frontend.course')
+
+    <!--====== COURSE PART ENDS ======-->
+
+    <!--====== VIDEO FEATURE PART START ======-->
+
+    @include('includes.frontend.videoFeature')
+
+    <!--====== VIDEO FEATURE PART ENDS ======-->
+
+    <!--====== TEACHERS PART START ======-->
+
+    {{-- @include('includes.frontend.teachers') --}}
+
+    <!--====== TEACHERS PART ENDS ======-->
+
+    <!--====== PUBLICATION PART START ======-->
+
+    {{-- @include('includes.frontend.publication') --}}
+
+    <!--====== PUBLICATION PART ENDS ======-->
+
+    <!--====== TEASTIMONIAL PART START ======-->
+
+    {{-- @include('includes.frontend.teastimonial') --}}
+
+    <!--====== TEASTIMONIAL PART ENDS ======-->
+
+    <!--====== NEWS PART START ======-->
+
+    @include('includes.frontend.news')
+
+    <!--====== NEWS PART ENDS ======-->
+
+    <!--====== PATNAR LOGO PART START ======-->
+
+    {{-- @include('includes.frontend.patnarLogo') --}}
+
+    <!--====== PATNAR LOGO PART ENDS ======-->
+
+
 @endsection

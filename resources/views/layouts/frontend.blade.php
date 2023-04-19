@@ -142,10 +142,10 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index-2.html">Home</a>
+                                        <a class="active" href="{{ route('home') }}">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="courses.html">Courses</a>
+                                        <a href="{{ route('courses') }}">Courses</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="courses.html">Services</a>

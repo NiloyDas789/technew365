@@ -25,8 +25,8 @@ class UpdateJobRequest extends FormRequest
     {
         return [
             'title' => 'required|string',
-            'link' => 'required|string',
-            'expiry_date' => 'required|date',
+            'company_name' => 'required|string',
+            'designation' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg|max:1024',
         ];
     }

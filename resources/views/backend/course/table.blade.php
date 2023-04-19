@@ -6,6 +6,9 @@
                     <h6>Course Title</h6>
                 </th>
                 <th>
+                    <h6>Total Class</h6>
+                </th>
+                <th>
                     <h6>Status</h6>
                 </th>
                 <th>
@@ -19,6 +22,9 @@
                 <tr>
                     <td class="min-width">
                         <p>{{ $course->title }}</p>
+                    </td>
+                    <td class="min-width">
+                        <p>{{ $course->total_class }}</p>
                     </td>
                     <td class="min-width">
                         @if ($course->status == 0)

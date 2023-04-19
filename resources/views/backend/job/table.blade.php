@@ -3,10 +3,13 @@
         <thead>
             <tr>
                 <th>
-                    <h6>Job Title</h6>
+                    <h6>Title</h6>
                 </th>
                 <th>
-                    <h6>Job Expiry Date</h6>
+                    <h6>Company Name</h6>
+                </th>
+                <th>
+                    <h6>Designation</h6>
                 </th>
                 <th>
                     <h6>Status</h6>
@@ -24,7 +27,10 @@
                         <p>{{ $job->title }}</p>
                     </td>
                     <td class="min-width">
-                        <p>{{ $job->expiry_date }}</p>
+                        <p>{{ $job->company_name }}</p>
+                    </td>
+                    <td class="min-width">
+                        <p>{{ $job->designation }}</p>
                     </td>
                     <td class="min-width">
                         @if ($job->status == 0)

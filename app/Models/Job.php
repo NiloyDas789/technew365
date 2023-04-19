@@ -15,9 +15,9 @@ class Job extends Model
 
     protected $fillable = [
         'title',
-        'link',
         'image',
-        'expiry_date',
+        'company_name',
+        'designation',
         'status',
     ];
 }

@@ -21,6 +21,16 @@ class HomeController extends Controller
             ->orderBy('created_at', 'desc')
             ->take(3)->get();
 
-        return view('index', compact('courses', 'events'));
+        return view('frontend.index', compact('courses', 'events'));
+    }
+
+    public function courses()
+    {
+        $courses = Course::query()
+            ->where('status', 1)
+            ->orderBy('created_at', 'desc')
+            ->paginate(6);
+
+        return view('frontend.courses', compact('courses'));
     }
 }

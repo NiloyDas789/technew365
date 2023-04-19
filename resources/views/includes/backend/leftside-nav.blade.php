@@ -17,7 +17,7 @@
                     <span class="text">Dashboard</span>
                 </a>
             </li>
-            <li class="nav-item nav-item-has-children">
+            {{-- <li class="nav-item nav-item-has-children">
                 <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_2"
                     aria-controls="ddmenu_2" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon">
@@ -37,7 +37,7 @@
                         <a href="blank-page.html"> Blank Page </a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
             @can('course.access')
                 <li class="nav-item {{ request()->is('course') || request()->is('course/*') ? 'active' : null }}">
                     <a href="{{ route('course.index') }}">
@@ -80,7 +80,7 @@
                     </a>
                 </li>
             @endcan
-            <li class="nav-item nav-item-has-children">
+            {{-- <li class="nav-item nav-item-has-children">
                 <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_3"
                     aria-controls="ddmenu_3" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon">
@@ -100,11 +100,11 @@
                         <a href="signup.html"> Sign Up </a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
             <span class="divider">
                 <hr />
             </span>
-            <li class="nav-item nav-item-has-children">
+            {{-- <li class="nav-item nav-item-has-children">
                 <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_4"
                     aria-controls="ddmenu_4" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon">
@@ -132,11 +132,11 @@
                                 class="{{ request()->is('role/assign') ? 'active' : null }}"> Role Assign </a>
                         </li>
                     @endcan
-                    {{-- @can('permission.access')
+                    @can('permission.access')
                         <li>
                             <a href="buttons.html"> Permissions </a>
                         </li>
-                    @endcan --}}
+                    @endcan
                     @can('settings.access')
                         <li>
                             <a href="{{ route('company-setting.edit') }}"
@@ -145,7 +145,7 @@
                         </li>
                     @endcan
                 </ul>
-            </li>
+            </li> --}}
             {{-- <span class="divider">
                 <hr />
             </span>
