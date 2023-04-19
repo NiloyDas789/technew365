@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/courses', [HomeController::class, 'courses'])->name('courses');
+Route::get('/courses/{slug}', [HomeController::class, 'viewCourse'])->name('view-course');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

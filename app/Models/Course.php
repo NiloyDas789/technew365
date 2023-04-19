@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Str;
 
 class Course extends Model
 {
@@ -15,9 +16,22 @@ class Course extends Model
 
     protected $fillable = [
         'title',
+        'slug',
         'description',
         'total_class',
         'image',
         'status',
     ];
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($course) {
+            $course->slug = Str::slug($course->title);
+        });
+
+        static::updating(function ($course) {
+            $course->slug = Str::slug($course->title);
+        });
+    }
 }

@@ -28,6 +28,7 @@ class DefaultDataSeeder extends Seeder
                 'description' => 'CCNA (Cisco Certified Network Associate) is a popular certification for computer network engineers provided by the company named Cisco Systems. It is valid for all types of engineers including entry-level network engineers, network administrators, network support engineers and network specialists. It helps to become familiar with broad range of networking concepts like OSI models, IP addressing, Network security, etc. Provide thorough knowledge and hands-on training for cisco Router basic and advances routing capabilities for small and medium size networks Upon completion of the course you will be able to plan, implement, adjust and debug routed cisco RouterOS network configurations.',
                 'total_class' => 20,
                 'image' => '',
+                'slug' => '',
                 'status' => 1,
             ],
             [
@@ -35,6 +36,7 @@ class DefaultDataSeeder extends Seeder
                 'description' => 'The MTCNA (Mikrotik Certified Network Associate) training course will provide you with the skills to configure a MikroTik Router OS Router Board as a dedicated router, a bandwidth manager, a secure firewall appliance, a simple wireless access point, a VPN Server or Client or an Internet Hotspot concentrator etc. This course will cover the entire MTCNA requirements as set by Mikrotik. This is the first level of certification that needs to be obtained if you are looking to get the more advanced certifications. This will help you prepare for the Mikrotik mtcna exam. You will also be familiar with all the features of Mikrotik and how to configure them for most networks. We will be setting up and configuring the firewall filter rules, Nat rules. We will also be looking at the more basic setting up and configuration of the Mikrotik routers.',
                 'total_class' => 10,
                 'image' => '',
+                'slug' => '',
                 'status' => 1,
             ],
             [
@@ -42,6 +44,7 @@ class DefaultDataSeeder extends Seeder
                 'description' => 'A focused study of the routing protocols that MikroTik RouterOS has to offer. The vast majority of theory is backed up by labs and practical implementation giving a robust experience of using VLAN, VPN and OSPF in a MikroTik environment.',
                 'total_class' => 10,
                 'image' => '',
+                'slug' => '',
                 'status' => 1,
             ],
             [
@@ -49,6 +52,7 @@ class DefaultDataSeeder extends Seeder
                 'description' => 'Configuration is the manner in which components are arranged to make up the computer system. Configuration consists of both hardware and software components. Sometimes, people specifically point to hardware arrangement as hardware configuration and to software components as software configuration. Understanding of computer configuration is important as for certain hardware or software applications, a minimum configuration are required.',
                 'total_class' => 12,
                 'image' => '',
+                'slug' => '',
                 'status' => 1,
             ],
             [
@@ -56,6 +60,7 @@ class DefaultDataSeeder extends Seeder
                 'description' => 'A server configuration defines a specific database as the repository for its data. To prevent corruption, that database can be associated with only one server configuration. However, that database can be used by other applications.',
                 'total_class' => 15,
                 'image' => '',
+                'slug' => '',
                 'status' => 1,
             ],
             [
@@ -63,6 +68,7 @@ class DefaultDataSeeder extends Seeder
                 'description' => 'Windows Server Administration is an advanced computer networking topic that includes server installation and configuration, server roles, storage, Active Directory and Group Policy, file, print, and web services, remote access, virtualization, application servers, troubleshooting, performance, and reliability.',
                 'total_class' => 15,
                 'image' => '',
+                'slug' => '',
                 'status' => 1,
             ],
             [
@@ -70,6 +76,7 @@ class DefaultDataSeeder extends Seeder
                 'description' => 'Advanced server is aimed at being a network operating system server and/or an application server, including those involving large databases. This server facilitates clustering and load-balancing. NT 4.0 servers with up to eight-way SMP can upgrade to this product.',
                 'total_class' => 15,
                 'image' => '',
+                'slug' => '',
                 'status' => 1,
             ],
             [
@@ -77,6 +84,7 @@ class DefaultDataSeeder extends Seeder
                 'description' => 'Red Hat Systems Administrators, who work on Linux operating systems, configure, implement, and deploy systems and take care of security issues, besides managing system backups and adding and removing users. They will be part of a team that handles daily tickets and devises and implements technology solutions.',
                 'total_class' => 10,
                 'image' => '',
+                'slug' => '',
                 'status' => 1,
             ],
             [
@@ -84,6 +92,7 @@ class DefaultDataSeeder extends Seeder
                 'description' => 'Red Hat Server Administration is designed for IT professionals without previous Linux system administration experience. The course provides students with Linux administration competence by focusing on core administration tasks. This course also provides a foundation for students who plan to become full-time Linux system administrators by introducing key command-line concepts and enterprise-level tools.',
                 'total_class' => 10,
                 'image' => '',
+                'slug' => '',
                 'status' => 1,
             ],
         ];

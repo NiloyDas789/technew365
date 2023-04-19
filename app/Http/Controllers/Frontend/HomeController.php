@@ -33,4 +33,11 @@ class HomeController extends Controller
 
         return view('frontend.courses', compact('courses'));
     }
+    public function viewCourse($slug)
+    {
+        $course = Course::query()
+            ->where('slug', $slug)
+            ->firstOrFail();
+        return view ('frontend.view_course', compact('course'));
+    }
 }
