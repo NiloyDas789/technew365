@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Course;
 use App\Models\Event;
+use App\Models\Job;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -18,6 +19,7 @@ class DefaultDataSeeder extends Seeder
     {
         $this->createCourses();
         $this->createEvents();
+        $this->createJobs();
     }
 
     private function createCourses()
@@ -139,6 +141,37 @@ class DefaultDataSeeder extends Seeder
 
         foreach ($events as $event) {
             Event::create($event);
+        }
+    }
+
+    private function createJobs()
+    {
+        $jobs = [
+            [
+                'title' => 'Campus clean workshop',
+                'image' => '',
+                'company_name' => 'Google',
+                'designation' => 'Senior Software Engineer',
+                'status' => 1,
+            ],
+            [
+                'title' => 'Tech Summit',
+                'image' => '',
+                'company_name' => 'Google',
+                'designation' => 'Senior Software Engineer',
+                'status' => 1,
+            ],
+            [
+                'title' => 'Enviroement conference',
+                'image' => '',
+                'company_name' => 'Google',
+                'designation' => 'Senior Software Engineer',
+                'status' => 1,
+            ],
+        ];
+
+        foreach ($jobs as $job) {
+            Job::create($job);
         }
     }
 }
