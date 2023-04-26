@@ -40,7 +40,7 @@
 
     <!--====== TEACHERS PART START ======-->
 
-    {{-- @include('includes.frontend.teachers') --}}
+    @include('includes.frontend.teachers')
 
     <!--====== TEACHERS PART ENDS ======-->
 
@@ -58,7 +58,7 @@
 
     <!--====== NEWS PART START ======-->
 
-    @include('includes.frontend.news')
+    {{-- @include('includes.frontend.news') --}}
 
     <!--====== NEWS PART ENDS ======-->
 

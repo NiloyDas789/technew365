@@ -148,21 +148,28 @@ class DefaultDataSeeder extends Seeder
     {
         $jobs = [
             [
-                'title' => 'Campus clean workshop',
+                'title' => 'Tanvir',
                 'image' => '',
                 'company_name' => 'Google',
                 'designation' => 'Senior Software Engineer',
                 'status' => 1,
             ],
             [
-                'title' => 'Tech Summit',
+                'title' => 'Rubel',
                 'image' => '',
                 'company_name' => 'Google',
                 'designation' => 'Senior Software Engineer',
                 'status' => 1,
             ],
             [
-                'title' => 'Enviroement conference',
+                'title' => 'Shuvo',
+                'image' => '',
+                'company_name' => 'Google',
+                'designation' => 'Senior Software Engineer',
+                'status' => 1,
+            ],
+            [
+                'title' => 'Abbas',
                 'image' => '',
                 'company_name' => 'Google',
                 'designation' => 'Senior Software Engineer',
