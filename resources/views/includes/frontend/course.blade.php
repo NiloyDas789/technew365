@@ -28,8 +28,8 @@
                                 <li><i class="fa fa-star"></i></li>
                                 <li><i class="fa fa-star"></i></li>
                             </ul>
-                            <span>({{ $course->total_class }} class)</span>
-                            <a href="courses-singel.html">
+                            <span>({{ $course->total_class }} Classes)</span>
+                            <a href="{{ route('view-course', $course->slug) }}">
                                 <h4>{{ $course->title }}</h4>
                             </a>
                             {{-- <div class="course-teacher">

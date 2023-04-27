@@ -100,7 +100,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4">
                         <div class="logo">
-                            <a href="index-2.html">
+                            <a href="{{ route('home') }}">
                                 <img src="{{ asset('frontend/assets') }}/images/logo.png" alt="Logo">
                             </a>
                         </div>
@@ -161,13 +161,14 @@
                                 <a href="#"><img src="{{ asset('frontend/assets') }}/images/logo-2.png"
                                         alt="Logo"></a>
                             </div>
-                            <p>Gravida nibh vel velit auctor aliquetn quibibendum auci elit cons equat ipsutis sem nibh
-                                id elit. Duis sed odio sit amet nibh vulputate.</p>
+                            <p>Best Platform to Learn Information Technology & Solutions</p>
                             <ul class="mt-20">
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/TECHNEWS365"><i class="fa fa-facebook-f"></i></a>
+                                </li>
+                                <li><a href="https://www.youtube.com/@TECHNEWS365" target="blank"><i
+                                            class="fa fa-youtube"></i></a></li>
+                                <li><a href="#" target="blank"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" target="blank"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div> <!-- footer about -->
                     </div>

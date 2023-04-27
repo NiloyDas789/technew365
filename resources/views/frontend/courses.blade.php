@@ -1,5 +1,5 @@
 @extends('layouts.frontend')
-@section('name', 'Home')
+@section('name', 'Courses')
 @section('content')
 
     <!--====== PAGE BANNER PART START ======-->
@@ -57,7 +57,6 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="courses-grid" role="tabpanel" aria-labelledby="courses-grid-tab">
                     <div class="row">
-
                         @foreach ($courses as $course)
                             <div class="col-lg-4 col-md-6">
                                 <div class="singel-course mt-30">
@@ -78,7 +77,7 @@
                                             <li><i class="fa fa-star"></i></li>
                                         </ul>
                                         <span>({{ $course->total_class }} Classes)</span>
-                                        <a href="courses-singel.html">
+                                        <a href="{{ route('view-course', $course->slug) }}">
                                             <h4>{{ $course->title }}</h4>
                                         </a>
                                         {{-- <div class="course-teacher">
@@ -106,7 +105,7 @@
                         @endforeach
                     </div> <!-- row -->
                 </div>
-                <div class="tab-pane fade" id="courses-list" role="tabpanel" aria-labelledby="courses-list-tab">
+                {{-- <div class="tab-pane fade" id="courses-list" role="tabpanel" aria-labelledby="courses-list-tab">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="singel-course mt-30">
@@ -317,7 +316,7 @@
                             </div> <!-- singel course -->
                         </div>
                     </div> <!-- row -->
-                </div>
+                </div> --}}
             </div> <!-- tab content -->
             <div class="row">
                 <div class="col-lg-12">

@@ -14,28 +14,31 @@
                     <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="active" href="{{ route('home') }}">Home</a>
+                                <a class="{{ request()->is('/') ? 'active' : null }}"
+                                    href="{{ route('home') }}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('courses') }}">Courses</a>
+                                <a class="{{ request()->is('about-us') ? 'active' : null }}"
+                                    href="{{ route('about-us') }}">About us</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('jobs') }}">Students</a>
+                                <a class="{{ request()->is('courses') ? 'active' : null }}"
+                                    href="{{ route('courses') }}">Courses</a>
                             </li>
                             <li class="nav-item">
-                                <a href="courses.html">Services</a>
+                                <a class="{{ request()->is('students') ? 'active' : null }}"
+                                    href="{{ route('students') }}">Students</a>
                             </li>
                             <li class="nav-item">
-                                <a href="courses.html">Verify Certificate</a>
+                                <a class="{{ request()->is('/') ? 'active' : null }}"
+                                    href="courses.html">Certificate</a>
                             </li>
                             <li class="nav-item">
-                                <a href="courses.html">Gallery</a>
+                                <a class="{{ request()->is('/') ? 'active' : null }}" href="courses.html">Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a href="courses.html">Upcoming Batches</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="courses.html">Contact Us</a>
+                                <a class="{{ request()->is('contact') ? 'active' : null }}"
+                                    href="{{ route('contact') }}">Contact</a>
                             </li>
                         </ul>
                     </div>

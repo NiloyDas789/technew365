@@ -1,5 +1,5 @@
 @extends('layouts.frontend')
-@section('name', 'Home')
+@section('name', 'Students')
 @section('content')
     <!--====== PAGE BANNER PART START ======-->
 

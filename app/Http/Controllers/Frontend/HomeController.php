@@ -44,9 +44,22 @@ class HomeController extends Controller
         $course = Course::query()
             ->where('slug', $slug)
             ->firstOrFail();
-        return view('frontend.view_course', compact('course'));
+
+        $extraCourses = Course::query()
+            ->where('status', 1)
+            ->whereNot('id', $course->id)
+            ->orderBy('created_at', 'asc')
+            ->take(3)->get();
+
+        $relatedCourses = Course::query()
+            ->where('status', 1)
+            ->whereNot('id', $course->id)
+            ->orderBy('created_at', 'asc')
+            ->take(2)->get();
+
+        return view('frontend.viewCourse', compact('course', 'relatedCourses', 'extraCourses'));
     }
-    public function jobs()
+    public function students()
     {
         $jobs = Job::query()
             ->where('status', 1)
@@ -54,5 +67,13 @@ class HomeController extends Controller
             ->paginate(8);
 
         return view('frontend.jobs', compact('jobs'));
+    }
+    public function aboutUs()
+    {
+        return view('frontend.aboutus');
+    }
+    public function contact()
+    {
+        return view('frontend.contact');
     }
 }
