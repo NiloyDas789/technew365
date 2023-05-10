@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Course;
 use App\Models\Event;
 use App\Models\Job;
+use App\Models\LatestTech;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,6 +21,7 @@ class DefaultDataSeeder extends Seeder
         $this->createCourses();
         $this->createEvents();
         $this->createJobs();
+        $this->createLatestTechs();
     }
 
     private function createCourses()
@@ -179,6 +181,40 @@ class DefaultDataSeeder extends Seeder
 
         foreach ($jobs as $job) {
             Job::create($job);
+        }
+    }
+
+    private function createLatestTechs()
+    {
+        $latestTechs = [
+            [
+                'title' => 'Tips to grade high cgpa in university life',
+                'image' => '',
+                'description' => 'Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt .',
+                'status' => 1,
+            ],
+            [
+                'title' => 'Intellectual communication',
+                'image' => '',
+                'description' => 'Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt .',
+                'status' => 1,
+            ],
+            [
+                'title' => 'Study makes you perfect',
+                'image' => '',
+                'description' => 'Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt .',
+                'status' => 1,
+            ],
+            [
+                'title' => 'Technology edcution is now....',
+                'image' => '',
+                'description' => 'Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt .',
+                'status' => 1,
+            ],
+        ];
+
+        foreach ($latestTechs as $latestTech) {
+            LatestTech::create($latestTech);
         }
     }
 }

@@ -81,6 +81,12 @@ class UserSeeder extends Seeder
             ['name' => 'job.show'],
             ['name' => 'job.delete'],
 
+            ['name' => 'latest-tech.access'],
+            ['name' => 'latest-tech.create'],
+            ['name' => 'latest-tech.edit'],
+            ['name' => 'latest-tech.show'],
+            ['name' => 'latest-tech.delete'],
+
         ];
 
         foreach ($permissions as $permission) {
