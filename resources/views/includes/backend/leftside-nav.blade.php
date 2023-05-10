@@ -1,6 +1,6 @@
 <aside class="sidebar-nav-wrapper">
     <div class="navbar-logo">
-        <a href="index.html">
+        <a href="{{ route('home') }}">
             <img src="{{ asset('/') }}backend/assets/images/logo/logo.svg" alt="logo" />
         </a>
     </div>
@@ -81,7 +81,8 @@
                 </li>
             @endcan
             @can('latest-tech.access')
-                <li class="nav-item {{ request()->is('latest-tech') || request()->is('latest-tech/*') ? 'active' : null }}">
+                <li
+                    class="nav-item {{ request()->is('latest-tech') || request()->is('latest-tech/*') ? 'active' : null }}">
                     <a href="{{ route('latest-tech.index') }}">
                         <span class="icon">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"

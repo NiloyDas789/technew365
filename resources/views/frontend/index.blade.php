@@ -58,15 +58,15 @@
 
     <!--====== NEWS PART START ======-->
 
-    {{-- @include('includes.frontend.news') --}}
+    @include('includes.frontend.news')
 
     <!--====== NEWS PART ENDS ======-->
 
-    <!--====== PATNAR LOGO PART START ======-->
+    <!--====== Youtube Video PART START ======-->
 
-    {{-- @include('includes.frontend.patnarLogo') --}}
+    @include('includes.frontend.youtubeVideo')
 
-    <!--====== PATNAR LOGO PART ENDS ======-->
+    <!--====== Youtube Video PART ENDS ======-->
 
 
 @endsection

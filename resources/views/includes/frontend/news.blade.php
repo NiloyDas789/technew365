@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="section-title pb-50">
-                    <h5>Latest Jobs</h5>
+                    <h5>Latest Technews</h5>
                     <h2>From TECHNEWS365</h2>
                 </div> <!-- section title -->
             </div>
@@ -16,85 +16,42 @@
                     </div>
                     <div class="news-cont">
                         <ul>
-                            <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
+                            <li><a href="#"><i class="fa fa-calendar"></i>
+                                    {{ date('F j, Y', strtotime($biggerItem[0]->created_at)) }} </a></li>
                             {{-- <li><a href="#"> <span>By</span> Adam linn</a></li> --}}
                         </ul>
                         <a href="blog-singel.html">
-                            <h3>Tips to grade high cgpa in university life</h3>
+                            <h3>{{ $biggerItem[0]->title }}</h3>
                         </a>
-                        {{-- <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit
-                            cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit
-                            amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt .</p> --}}
+                        <p>{{ Str::limit($biggerItem[0]->description, 500) }}</p>
                     </div>
                 </div> <!-- singel news -->
             </div>
             <div class="col-lg-6">
-                <div class="singel-news news-list">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="news-thum mt-30">
-                                <img src="{{ asset('frontend/assets') }}/images/news/ns-1.jpg" alt="News">
+                @foreach ($smallerItems as $smallerItem)
+                    <div class="singel-news news-list">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="news-thum mt-30">
+                                    <img src="{{ asset('frontend/assets') }}/images/news/ns-1.jpg" alt="News">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="news-cont mt-30">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                    {{-- <li><a href="#"> <span>By</span> Adam linn</a></li> --}}
-                                </ul>
-                                <a href="blog-singel.html">
-                                    <h3>Intellectual communication</h3>
-                                </a>
-                                {{-- <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons
-                                    vel.</p> --}}
+                            <div class="col-sm-8">
+                                <div class="news-cont mt-30">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-calendar"></i>
+                                                {{ date('F j, Y', strtotime($smallerItem->created_at)) }}</a></li>
+                                        {{-- <li><a href="#"> <span>By</span> Adam linn</a></li> --}}
+                                    </ul>
+                                    <a href="blog-singel.html">
+                                        <h3></h3>
+                                    </a>
+                                    <p>{{ Str::limit($smallerItem->description, 100) }}</p>
+                                </div>
                             </div>
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- singel news -->
-                <div class="singel-news news-list">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="news-thum mt-30">
-                                <img src="{{ asset('frontend/assets') }}/images/news/ns-2.jpg" alt="News">
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="news-cont mt-30">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                    {{-- <li><a href="#"> <span>By</span> Adam linn</a></li> --}}
-                                </ul>
-                                <a href="blog-singel.html">
-                                    <h3>Study makes you perfect</h3>
-                                </a>
-                                {{-- <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons
-                                    vel.</p> --}}
-                            </div>
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- singel news -->
-                <div class="singel-news news-list">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="news-thum mt-30">
-                                <img src="{{ asset('frontend/assets') }}/images/news/ns-3.jpg" alt="News">
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="news-cont mt-30">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                    {{-- <li><a href="#"> <span>By</span> Adam linn</a></li> --}}
-                                </ul>
-                                <a href="blog-singel.html">
-                                    <h3>Technology edcution is now....</h3>
-                                </a>
-                                {{-- <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons
-                                    vel.</p> --}}
-                            </div>
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- singel news -->
+                        </div> <!-- row -->
+                    </div> <!-- singel news -->
+                @endforeach
             </div>
         </div> <!-- row -->
     </div> <!-- container -->

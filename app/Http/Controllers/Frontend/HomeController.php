@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\Event;
 use App\Models\Job;
+use App\Models\LatestTech;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,7 +28,14 @@ class HomeController extends Controller
             ->orderBy('created_at', 'desc')
             ->take(4)->get();
 
-        return view('frontend.index', compact('courses', 'events', 'jobs'));
+        $latestTechs = LatestTech::query()
+            ->where('status', 1)
+            ->orderBy('created_at', 'desc')
+            ->take(5)->get();
+        $biggerItem = $latestTechs->splice(0, 1);
+        $smallerItems = $latestTechs->all();
+
+        return view('frontend.index', compact('courses', 'events', 'jobs', 'biggerItem', 'smallerItems'));
     }
 
     public function courses()
