@@ -19,7 +19,7 @@
             <div class="col-lg-7 col-md-7 col-6">
                 <div class="header-right">
                     <!-- notification start -->
-                    <div class="notification-box ml-15 d-none d-md-flex">
+                    {{-- <div class="notification-box ml-15 d-none d-md-flex">
                         <button class="dropdown-toggle" type="button" id="notification" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="lni lni-alarm"></i>
@@ -68,7 +68,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                     <!-- notification end -->
                     <!-- message start -->
                     {{--                    <div class="header-message-box ml-15 d-none d-md-flex"> --}}
@@ -153,7 +153,7 @@
                                     <i class="lni lni-user"></i> View Profile
                                 </a>
                             </li> --}}
-                            <li>
+                            {{-- <li>
                                 <a href="#0">
                                     <i class="lni lni-alarm"></i> Notifications
                                 </a>
@@ -163,7 +163,7 @@
                             </li>
                             <li>
                                 <a href="#0"> <i class="lni lni-cog"></i> Settings </a>
-                            </li>
+                            </li> --}}
                             <li>
                                 <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault();

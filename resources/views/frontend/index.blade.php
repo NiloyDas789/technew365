@@ -64,7 +64,7 @@
 
     <!--====== Youtube Video PART START ======-->
 
-    @include('includes.frontend.youtubeVideo')
+    {{-- @include('includes.frontend.youtubeVideo') --}}
 
     <!--====== Youtube Video PART ENDS ======-->
 

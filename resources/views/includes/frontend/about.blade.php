@@ -32,9 +32,9 @@
                             <li>
                                 <div class="singel-event">
                                     <span><i class="fa fa-calendar"></i> {{ $event->date }}</span>
-                                    <a href="events-singel.html">
-                                        <h4>{{ $event->title }}</h4>
-                                    </a>
+
+                                    <h4>{{ $event->title }}</h4>
+
                                     <span><i class="fa fa-clock-o"></i>
                                         {{ date('h:i A', strtotime($event->start_time)) }}
                                         {{-- {{ $event->end_time !== '00:00:00' ? '-' : null }} --}}

@@ -32,9 +32,7 @@
                                             alt="Teachers">
                                     </div>
                                     <div class="cont">
-                                        <a href="teachers-singel.html">
-                                            <h6>{{ $job->title }}</h6>
-                                        </a>
+                                        <h6>{{ $job->title }}</h6>
                                         <span>{{ $job->designation }} at</span>
                                         <span>{{ $job->company_name }}</span>
                                     </div>

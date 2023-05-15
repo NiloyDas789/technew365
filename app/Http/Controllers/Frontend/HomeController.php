@@ -67,6 +67,14 @@ class HomeController extends Controller
 
         return view('frontend.viewCourse', compact('course', 'relatedCourses', 'extraCourses'));
     }
+    public function latestNews($slug)
+    {
+        $latestNews = LatestTech::query()
+            ->where('slug', $slug)
+            ->firstOrFail();
+
+        return view('frontend.viewNews', compact('latestNews'));
+    }
     public function students()
     {
         $jobs = Job::query()

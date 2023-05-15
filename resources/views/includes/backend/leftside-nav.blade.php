@@ -1,7 +1,7 @@
 <aside class="sidebar-nav-wrapper">
     <div class="navbar-logo">
         <a href="{{ route('home') }}">
-            <img src="{{ asset('/') }}backend/assets/images/logo/logo.svg" alt="logo" />
+            <img src="{{ asset('/backend/assets/images/logo/logo.svg') }}" alt="logo" />
         </a>
     </div>
     <nav class="sidebar-nav">

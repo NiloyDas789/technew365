@@ -20,7 +20,7 @@
                                     {{ date('F j, Y', strtotime($biggerItem[0]->created_at)) }} </a></li>
                             {{-- <li><a href="#"> <span>By</span> Adam linn</a></li> --}}
                         </ul>
-                        <a href="blog-singel.html">
+                        <a href="{{ route('latest-news', $biggerItem[0]->slug) }}">
                             <h3>{{ $biggerItem[0]->title }}</h3>
                         </a>
                         <p>{{ Str::limit($biggerItem[0]->description, 500) }}</p>
@@ -43,8 +43,8 @@
                                                 {{ date('F j, Y', strtotime($smallerItem->created_at)) }}</a></li>
                                         {{-- <li><a href="#"> <span>By</span> Adam linn</a></li> --}}
                                     </ul>
-                                    <a href="blog-singel.html">
-                                        <h3></h3>
+                                    <a href="{{ route('latest-news', $smallerItem->slug) }}">
+                                        <h3>{{ $smallerItem->title }}</h3>
                                     </a>
                                     <p>{{ Str::limit($smallerItem->description, 100) }}</p>
                                 </div>

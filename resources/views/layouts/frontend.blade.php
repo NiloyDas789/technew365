@@ -78,8 +78,7 @@
                         <div class="header-contact text-lg-left text-center">
                             <ul>
                                 <li><img src="{{ asset('frontend/assets') }}/images/all-icon/map.png"
-                                        alt="icon"><span>127/5 Mark street, New
-                                        york</span></li>
+                                        alt="icon"><span>Joynab Colony, Chottogram</span></li>
                                 <li><img src="{{ asset('frontend/assets') }}/images/all-icon/email.png"
                                         alt="icon"><span>technews365.net@gmail.com</span>
                                 </li>
@@ -101,7 +100,7 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="logo">
                             <a href="{{ route('home') }}">
-                                <img src="{{ asset('frontend/assets') }}/images/logo.png" alt="Logo">
+                                <img src="{{ asset('default/logo.png') }}" alt="Logo">
                             </a>
                         </div>
                     </div>
@@ -158,7 +157,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="#"><img src="{{ asset('frontend/assets') }}/images/logo-2.png"
+                                <a href="{{ route('home') }}"><img src="{{ asset('default/logo.png') }}"
                                         alt="Logo"></a>
                             </div>
                             <p>Best Platform to Learn Information Technology & Solutions</p>
