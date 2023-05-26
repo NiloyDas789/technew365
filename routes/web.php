@@ -30,6 +30,7 @@ Route::get('/latest-news/{slug}', [HomeController::class, 'latestNews'])->name('
 Route::get('/students', [HomeController::class, 'students'])->name('students');
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

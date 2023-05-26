@@ -44,7 +44,7 @@
                                                 <i class="fa fa-home"></i>
                                             </div>
                                             <div class="cont">
-                                                <p>143 castle road 517 district, kiyev port south Canada</p>
+                                                <p>Joynab Colony , Chittagong</p>
                                             </div>
                                         </div> <!-- singel address -->
                                     </li>
@@ -65,8 +65,8 @@
                                                 <i class="fa fa-envelope-o"></i>
                                             </div>
                                             <div class="cont">
-                                                <p>info@yourmail.com</p>
-                                                <p>info@yourmail.com</p>
+                                                <p>technews365.net@gmail.com</p>
+                                                {{-- <p>info@yourmail.com</p> --}}
                                             </div>
                                         </div> <!-- singel address -->
                                     </li>

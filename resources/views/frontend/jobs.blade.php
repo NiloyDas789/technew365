@@ -33,7 +33,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="singel-teachers mt-30 text-center">
                             <div class="image">
-                                <img src="{{ asset('frontend/assets') }}/images/teachers/t-1.jpg" alt="Teachers">
+                                <img src="{{ setImage($job->image) }}" alt="Teachers">
                             </div>
                             <div class="cont">
                                 <a href="#">

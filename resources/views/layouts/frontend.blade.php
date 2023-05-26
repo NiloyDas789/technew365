@@ -162,12 +162,13 @@
                             </div>
                             <p>Best Platform to Learn Information Technology & Solutions</p>
                             <ul class="mt-20">
-                                <li><a href="https://www.facebook.com/TECHNEWS365"><i class="fa fa-facebook-f"></i></a>
+                                <li><a href="https://www.facebook.com/TECHNEWS365" target="blank"><i
+                                            class="fa fa-facebook-f"></i></a>
                                 </li>
                                 <li><a href="https://www.youtube.com/@TECHNEWS365" target="blank"><i
                                             class="fa fa-youtube"></i></a></li>
-                                <li><a href="#" target="blank"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" target="blank"><i class="fa fa-instagram"></i></a></li>
+                                {{-- <li><a href="#" target="blank"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" target="blank"><i class="fa fa-instagram"></i></a></li> --}}
                             </ul>
                         </div> <!-- footer about -->
                     </div>

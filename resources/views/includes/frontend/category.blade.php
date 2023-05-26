@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="category-text pt-40">
-                        <h2>Best platform to learn everything</h2>
+                        <h2>Best platform to get everything</h2>
                     </div>
                 </div>
                 <div class="col-lg-6 offset-lg-1 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-8 offset-2">
@@ -17,7 +17,7 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>Language</span>
+                                        <span>Web Development</span>
                                     </span>
                                 </span> <!-- singel category -->
                             </a>
@@ -30,7 +30,7 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>Business</span>
+                                        <span>Networking</span>
                                     </span>
                                 </span> <!-- singel category -->
                             </a>
@@ -43,7 +43,7 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>Literature</span>
+                                        <span>Courses</span>
                                     </span>
                                 </span> <!-- singel category -->
                             </a>
@@ -56,7 +56,7 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>Language</span>
+                                        <span>Web Development</span>
                                     </span>
                                 </span> <!-- singel category -->
                             </a>
@@ -69,7 +69,7 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>Business</span>
+                                        <span>Networking</span>
                                     </span>
                                 </span> <!-- singel category -->
                             </a>
@@ -82,7 +82,7 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>Literature</span>
+                                        <span>Courses</span>
                                     </span>
                                 </span> <!-- singel category -->
                             </a>

@@ -13,7 +13,7 @@
                         <h2>About Us</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">About Us</li>
                             </ol>
                         </nav>
@@ -48,9 +48,9 @@
                             enhancing their skills and staying up-to-date with the latest technology trends.</p>
                     </div>
                 </div> <!-- about cont -->
-                <div class="col-lg-7">
-                    <div class="about-image mt-50">
-                        <img src="{{ asset('frontend/assets') }}/images/about/about-2.jpg" alt="About">
+                <div class="col-lg-7 mt-auto mb-4">
+                    <div class="about-image">
+                        <img src="{{ asset('frontend/assets') }}/images/banner/banner-4.png" alt="About">
                     </div> <!-- about imag -->
                 </div>
             </div> <!-- row -->
@@ -250,7 +250,7 @@
 
     <!--====== TEASTIMONIAL PART START ======-->
 
-    <section id="testimonial" class="bg_cover pt-115 pb-120" data-overlay="8"
+    {{-- <section id="testimonial" class="bg_cover pt-115 pb-120" data-overlay="8"
         style="background-image: url({{ asset('frontend/assets') }}/images/bg-2.jpg)">
         <div class="container">
             <div class="row">
@@ -312,13 +312,13 @@
                 </div>
             </div> <!-- testimonial slied -->
         </div> <!-- container -->
-    </section>
+    </section> --}}
 
     <!--====== TEASTIMONIAL PART ENDS ======-->
 
     <!--====== PATNAR LOGO PART START ======-->
 
-    <div id="patnar-logo" class="pt-40 pb-80 gray-bg">
+    {{-- <div id="patnar-logo" class="pt-40 pb-80 gray-bg">
         <div class="container">
             <div class="row patnar-slied">
                 <div class="col-lg-12">
@@ -353,7 +353,7 @@
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </div>
+    </div> --}}
 
     <!--====== PATNAR LOGO PART ENDS ======-->
 

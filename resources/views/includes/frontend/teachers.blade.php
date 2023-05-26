@@ -18,7 +18,7 @@
                         Join Technews365 today and take the first step towards a successful career in the exciting world
                         of technology.
                     </p>
-                    <a href="#" class="main-btn mt-55">Career with us</a>
+                    <a href="{{ route('contact') }}" class="main-btn mt-55">Career with us</a>
                 </div> <!-- teachers cont -->
             </div>
             <div class="col-lg-6 offset-lg-1">
@@ -28,8 +28,7 @@
                             <div class="col-sm-6">
                                 <div class="singel-teachers mt-30 text-center">
                                     <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/teachers/t-1.jpg"
-                                            alt="Teachers">
+                                        <img src="{{ setImage($job->image) }}" alt="Teachers">
                                     </div>
                                     <div class="cont">
                                         <h6>{{ $job->title }}</h6>

@@ -18,10 +18,6 @@
                                     href="{{ route('home') }}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="{{ request()->is('about-us') ? 'active' : null }}"
-                                    href="{{ route('about-us') }}">About us</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="{{ request()->is('courses') ? 'active' : null }}"
                                     href="{{ route('courses') }}">Courses</a>
                             </li>
@@ -29,12 +25,17 @@
                                 <a class="{{ request()->is('students') ? 'active' : null }}"
                                     href="{{ route('students') }}">Students</a>
                             </li>
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a class="{{ request()->is('/') ? 'active' : null }}"
                                     href="courses.html">Certificate</a>
+                            </li> --}}
+                            <li class="nav-item">
+                                <a class="{{ request()->is('gallery') ? 'active' : null }}"
+                                    href="{{ route('gallery') }}">Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="{{ request()->is('/') ? 'active' : null }}" href="courses.html">Gallery</a>
+                                <a class="{{ request()->is('about-us') ? 'active' : null }}"
+                                    href="{{ route('about-us') }}">About us</a>
                             </li>
                             <li class="nav-item">
                                 <a class="{{ request()->is('contact') ? 'active' : null }}"
