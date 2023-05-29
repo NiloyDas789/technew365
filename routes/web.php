@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Backend\BookController;
 use App\Http\Controllers\Backend\CompanySettingController;
 use App\Http\Controllers\Backend\CourseController;
 use App\Http\Controllers\Backend\EventController;
+use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\JobController;
 use App\Http\Controllers\Backend\LatestTechController;
 use App\Http\Controllers\Backend\ProfileController;
@@ -54,6 +56,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('event', EventController::class);
     Route::resource('job', JobController::class);
     Route::resource('latest-tech', LatestTechController::class);
+    Route::resource('book', BookController::class);
+    Route::resource('gallery', GalleryController::class);
 
     Route::get('settings/company-setting', [CompanySettingController::class, 'editCompanySetting'])->name('company-setting.edit');
     Route::post('settings/company-setting', [CompanySettingController::class, 'updateCompanySetting'])->name('company-setting.update');
