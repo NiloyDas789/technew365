@@ -73,7 +73,7 @@
                         </div> <!-- course terms --> --}}
 
                         <div class="corses-singel-image pt-50">
-                            <img src="{{ asset('frontend/assets') }}/images/course/cu-1.jpg" alt="Courses">
+                            <img src="{{ setImage($course->image) }}" alt="Courses">
                         </div> <!-- corses singel image -->
 
                         <div class="corses-tab mt-30">

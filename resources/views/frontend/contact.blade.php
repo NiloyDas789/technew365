@@ -54,8 +54,8 @@
                                                 <i class="fa fa-phone"></i>
                                             </div>
                                             <div class="cont">
-                                                <p>+3 123 456 789</p>
-                                                <p>+1 222 345 342</p>
+                                                <p>+8801750-030604</p>
+                                                {{-- <p>+1 222 345 342</p> --}}
                                             </div>
                                         </div> <!-- singel address -->
                                     </li>

@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="section-title pb-45">
-                    <h2>Featured Youtube Videos </h2>
+                    <h2>TECHNEWS365 Youtube Videos </h2>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->

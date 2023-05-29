@@ -48,7 +48,7 @@
             </div>
         </div> <!-- row -->
     </div> <!-- container -->
-    <div class="about-bg">
-        <img src="{{ asset('frontend/assets') }}/images/about/bg-1.png" alt="About">
-    </div>
+    {{-- <div class="about-bg">
+        <img src="{{ asset('frontend/assets') }}/images/about/datacenter.jpg" alt="About">
+    </div> --}}
 </section>

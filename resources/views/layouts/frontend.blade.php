@@ -13,7 +13,7 @@
     <title>TECHNEWS365</title>
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{ asset('frontend/assets') }}/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('default/favicon.ico') }}" type="image/png">
 
     <!--====== Slick css ======-->
     <link rel="stylesheet" href="{{ asset('frontend/assets') }}/css/slick.css">
@@ -78,7 +78,7 @@
                         <div class="header-contact text-lg-left text-center">
                             <ul>
                                 <li><img src="{{ asset('frontend/assets') }}/images/all-icon/map.png"
-                                        alt="icon"><span>Joynab Colony, Chottogram</span></li>
+                                        alt="icon"><span>Dewan bazar, Chottagram</span></li>
                                 <li><img src="{{ asset('frontend/assets') }}/images/all-icon/email.png"
                                         alt="icon"><span>technews365.net@gmail.com</span>
                                 </li>
@@ -100,7 +100,7 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="logo">
                             <a href="{{ route('home') }}">
-                                <img src="{{ asset('default/logo.png') }}" alt="Logo">
+                                <img src="{{ asset('default/logo_1.png') }}" alt="Logo">
                             </a>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                                 </div>
                                 <div class="cont">
                                     <p>Need Help? call us free</p>
-                                    <span>321 325 5678</span>
+                                    <span>+8801750-030604</span>
                                 </div>
                             </div>
                             {{-- <div class="button float-left">
@@ -226,7 +226,7 @@
                                         <i class="fa fa-phone"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>+3 123 456 789</p>
+                                        <p>+8801750-030604</p>
                                     </div>
                                 </li>
                                 <li>

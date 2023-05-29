@@ -11,39 +11,13 @@
                     <div class="row category-slied mt-40">
                         <div class="col-lg-4">
                             <a href="#">
-                                <span class="singel-category text-center color-1">
-                                    <span class="icon">
-                                        <img src="{{ asset('frontend/assets') }}/images/all-icon/ctg-1.png"
-                                            alt="Icon">
-                                    </span>
-                                    <span class="cont">
-                                        <span>Web Development</span>
-                                    </span>
-                                </span> <!-- singel category -->
-                            </a>
-                        </div>
-                        <div class="col-lg-4">
-                            <a href="#">
                                 <span class="singel-category text-center color-2">
                                     <span class="icon">
                                         <img src="{{ asset('frontend/assets') }}/images/all-icon/ctg-2.png"
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>Networking</span>
-                                    </span>
-                                </span> <!-- singel category -->
-                            </a>
-                        </div>
-                        <div class="col-lg-4">
-                            <a href="#">
-                                <span class="singel-category text-center color-3">
-                                    <span class="icon">
-                                        <img src="{{ asset('frontend/assets') }}/images/all-icon/ctg-3.png"
-                                            alt="Icon">
-                                    </span>
-                                    <span class="cont">
-                                        <span>Courses</span>
+                                        <span>Network Administration</span>
                                     </span>
                                 </span> <!-- singel category -->
                             </a>
@@ -56,20 +30,7 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>Web Development</span>
-                                    </span>
-                                </span> <!-- singel category -->
-                            </a>
-                        </div>
-                        <div class="col-lg-4">
-                            <a href="#">
-                                <span class="singel-category text-center color-2">
-                                    <span class="icon">
-                                        <img src="{{ asset('frontend/assets') }}/images/all-icon/ctg-2.png"
-                                            alt="Icon">
-                                    </span>
-                                    <span class="cont">
-                                        <span>Networking</span>
+                                        <span>Cloud Computing</span>
                                     </span>
                                 </span> <!-- singel category -->
                             </a>
@@ -82,7 +43,49 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>Courses</span>
+                                        <span>HSC BATCH
+                                            (ICT Training)</span>
+                                    </span>
+                                </span> <!-- singel category -->
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <a href="#">
+                                <span class="singel-category text-center color-2">
+                                    <span class="icon">
+                                        <img src="{{ asset('frontend/assets') }}/images/all-icon/ctg-2.png"
+                                            alt="Icon">
+                                    </span>
+                                    <span class="cont">
+                                        <span>Network Administration</span>
+                                    </span>
+                                </span> <!-- singel category -->
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a href="#">
+                                <span class="singel-category text-center color-1">
+                                    <span class="icon">
+                                        <img src="{{ asset('frontend/assets') }}/images/all-icon/ctg-1.png"
+                                            alt="Icon">
+                                    </span>
+                                    <span class="cont">
+                                        <span>Cloud Computing</span>
+                                    </span>
+                                </span> <!-- singel category -->
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a href="#">
+                                <span class="singel-category text-center color-3">
+                                    <span class="icon">
+                                        <img src="{{ asset('frontend/assets') }}/images/all-icon/ctg-3.png"
+                                            alt="Icon">
+                                    </span>
+                                    <span class="cont">
+                                        <span>HSC BATCH
+                                            (ICT Training)</span>
                                     </span>
                                 </span> <!-- singel category -->
                             </a>

@@ -23,7 +23,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="{{ request()->is('students') ? 'active' : null }}"
-                                    href="{{ route('students') }}">Students</a>
+                                    href="{{ route('students') }}">Placement</a>
                             </li>
                             {{-- <li class="nav-item">
                                 <a class="{{ request()->is('/') ? 'active' : null }}"
