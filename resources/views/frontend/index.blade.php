@@ -46,7 +46,7 @@
 
     <!--====== PUBLICATION PART START ======-->
 
-    {{-- @include('includes.frontend.publication') --}}
+    @include('includes.frontend.publication')
 
     <!--====== PUBLICATION PART ENDS ======-->
 

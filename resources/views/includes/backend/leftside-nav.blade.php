@@ -6,7 +6,7 @@
     </div>
     <nav class="sidebar-nav">
         <ul>
-            <li class="nav-item {{ request()->is('dashboard') ? 'active' : null }}">
+            <li class="nav-item {{ request()->is('admin/dashboard') ? 'active' : null }}">
                 <a href="{{ route('dashboard') }}">
                     <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22">
@@ -39,7 +39,8 @@
                 </ul>
             </li> --}}
             @can('course.access')
-                <li class="nav-item {{ request()->is('course') || request()->is('course/*') ? 'active' : null }}">
+                <li
+                    class="nav-item {{ request()->is('admin/course') || request()->is('admin/course/*') ? 'active' : null }}">
                     <a href="{{ route('course.index') }}">
                         <span class="icon">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -53,7 +54,7 @@
                 </li>
             @endcan
             @can('event.access')
-                <li class="nav-item {{ request()->is('event') || request()->is('event/*') ? 'active' : null }}">
+                <li class="nav-item {{ request()->is('admin/event') || request()->is('admin/event/*') ? 'active' : null }}">
                     <a href="{{ route('event.index') }}">
                         <span class="icon">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -67,7 +68,7 @@
                 </li>
             @endcan
             @can('job.access')
-                <li class="nav-item {{ request()->is('job') || request()->is('job/*') ? 'active' : null }}">
+                <li class="nav-item {{ request()->is('admin/job') || request()->is('admin/job/*') ? 'active' : null }}">
                     <a href="{{ route('job.index') }}">
                         <span class="icon">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -82,7 +83,7 @@
             @endcan
             @can('latest-tech.access')
                 <li
-                    class="nav-item {{ request()->is('latest-tech') || request()->is('latest-tech/*') ? 'active' : null }}">
+                    class="nav-item {{ request()->is('admin/latest-tech') || request()->is('admin/latest-tech/*') ? 'active' : null }}">
                     <a href="{{ route('latest-tech.index') }}">
                         <span class="icon">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -96,7 +97,7 @@
                 </li>
             @endcan
             @can('book.access')
-                <li class="nav-item {{ request()->is('book') || request()->is('book/*') ? 'active' : null }}">
+                <li class="nav-item {{ request()->is('admin/book') || request()->is('admin/book/*') ? 'active' : null }}">
                     <a href="{{ route('book.index') }}">
                         <span class="icon">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -110,7 +111,8 @@
                 </li>
             @endcan
             @can('gallery.access')
-                <li class="nav-item {{ request()->is('gallery') || request()->is('gallery/*') ? 'active' : null }}">
+                <li
+                    class="nav-item {{ request()->is('admin/gallery') || request()->is('admin/gallery/*') ? 'active' : null }}">
                     <a href="{{ route('gallery.index') }}">
                         <span class="icon">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -160,11 +162,11 @@
                     <span class="text">Setting </span>
                 </a>
                 <ul id="ddmenu_4"
-                    class="collapse dropdown-nav {{ request()->is('settings/company-setting') || request()->is('role') || request()->is('role/*') ? 'show' : null }}">
+                    class="collapse dropdown-nav {{ request()->is('admin/settings/company-setting') || request()->is('admin/role') || request()->is('admin/role/*') ? 'show' : null }}">
                     @can('role.access')
                         <li>
                             <a href="{{ route('role.index') }}"
-                                class="{{ request()->is('role/create') || request()->is('role') ? 'active' : null }}">
+                                class="{{ request()->is('admin/role/create') || request()->is('admin/role') ? 'active' : null }}">
                                 Role
                             </a>
                         </li>
@@ -172,7 +174,7 @@
                     @can('role_permission.assign')
                         <li>
                             <a href="{{ route('role.assign') }}"
-                                class="{{ request()->is('role/assign') ? 'active' : null }}"> Role Assign </a>
+                                class="{{ request()->is('admin/role/assign') ? 'active' : null }}"> Role Assign </a>
                         </li>
                     @endcan
                     @can('permission.access')
@@ -183,7 +185,7 @@
                     @can('settings.access')
                         <li>
                             <a href="{{ route('company-setting.edit') }}"
-                                class="{{ request()->is('settings/company-setting') ? 'active' : null }}"> Company Setting
+                                class="{{ request()->is('admin/settings/company-setting') ? 'active' : null }}"> Company Setting
                             </a>
                         </li>
                     @endcan
