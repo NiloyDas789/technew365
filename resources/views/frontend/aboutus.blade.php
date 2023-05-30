@@ -50,7 +50,7 @@
                 </div> <!-- about cont -->
                 <div class="col-lg-7 mt-auto mb-4">
                     <div class="about-image">
-                        <img src="{{ asset('frontend/assets') }}/images/banner/banner-4.png" alt="About">
+                        <img src="{{ asset('frontend/assets') }}/images/banner/banner-5.png" alt="About">
                     </div> <!-- about imag -->
                 </div>
             </div> <!-- row -->

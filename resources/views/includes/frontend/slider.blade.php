@@ -25,7 +25,7 @@
     </div> <!-- single slider -->
 
     <div class="single-slider bg_cover pt-150"
-        style="background-image: url({{ asset('frontend/assets') }}/images/banner/banner-2.png" data-overlay="4">
+        style="background-image: url({{ asset('frontend/assets') }}/images/banner/banner-3.png" data-overlay="4">
         <div class="container">
             <div class="row">
                 <div class="col-xl-7 col-lg-9">
@@ -49,7 +49,7 @@
     </div> <!-- single slider -->
 
     <div class="single-slider bg_cover pt-150"
-        style="background-image: url({{ asset('frontend/assets') }}/images/banner/banner-3.png" data-overlay="4">
+        style="background-image: url({{ asset('frontend/assets') }}/images/banner/banner-4.png" data-overlay="4">
         <div class="container">
             <div class="row">
                 <div class="col-xl-7 col-lg-9">
