@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Book;
 use App\Models\Course;
 use App\Models\Event;
+use App\Models\Gallery;
 use App\Models\Job;
 use App\Models\LatestTech;
 use Illuminate\Http\Request;
@@ -28,6 +30,11 @@ class HomeController extends Controller
             ->orderBy('created_at', 'desc')
             ->take(4)->get();
 
+        $books = Book::query()
+            ->where('status', 1)
+            ->orderBy('created_at', 'desc')
+            ->take(3)->get();
+
         $latestTechs = LatestTech::query()
             ->where('status', 1)
             ->orderBy('created_at', 'desc')
@@ -35,7 +42,7 @@ class HomeController extends Controller
         $biggerItem = $latestTechs->splice(0, 1);
         $smallerItems = $latestTechs->all();
 
-        return view('frontend.index', compact('courses', 'events', 'jobs', 'biggerItem', 'smallerItems'));
+        return view('frontend.index', compact('courses', 'events', 'jobs', 'biggerItem', 'smallerItems', 'books'));
     }
 
     public function courses()
@@ -94,6 +101,11 @@ class HomeController extends Controller
     }
     public function gallery()
     {
-        return view('frontend.gallery');
+        $galleries = Gallery::query()
+            ->where('status', 1)
+            ->orderBy('created_at', 'desc')
+            ->paginate(9);
+
+        return view('frontend.gallery', compact('galleries'));
     }
 }

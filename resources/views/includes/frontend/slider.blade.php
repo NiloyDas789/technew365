@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-xl-7 col-lg-9">
                     <div class="slider-cont">
-                        <h1 data-animation="bounceInLeft" data-delay="1s">Rise of The Idea... - Learn with
+                        <h1 data-animation="bounceInLeft" data-delay="1s">Rise of The Idea... <br> - Learn with
                             TECHNEWS365
                         </h1>
                         <p data-animation="fadeInUp" data-delay="1.3s">TECHNEWS365 provides learners with flexible
@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="col-xl-7 col-lg-9">
                     <div class="slider-cont">
-                        <h1 data-animation="bounceInLeft" data-delay="1s">Rise of The Idea... - Learn with
+                        <h1 data-animation="bounceInLeft" data-delay="1s">Rise of The Idea... <br> - Learn with
                             TECHNEWS365
                         </h1>
                         <p data-animation="fadeInUp" data-delay="1.3s">The platform has been providing courses on
@@ -54,7 +54,7 @@
             <div class="row">
                 <div class="col-xl-7 col-lg-9">
                     <div class="slider-cont">
-                        <h1 data-animation="bounceInLeft" data-delay="1s">Rise of The Idea... - Learn with
+                        <h1 data-animation="bounceInLeft" data-delay="1s">Rise of The Idea... <br> - Learn with
                             TECHNEWS365
                         </h1>
                         <p data-animation="fadeInUp" data-delay="1.3s">The courses on TECHNEWS365 are designed by

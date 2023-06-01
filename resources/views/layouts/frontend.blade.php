@@ -218,7 +218,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>Joynab Colony</p>
+                                        <p>Joynab Coloney, Dewan Bazar, Chattogram</p>
                                     </div>
                                 </li>
                                 <li>

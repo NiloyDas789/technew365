@@ -18,7 +18,7 @@
             @foreach ($galleries as $gallery)
                 <tr>
                     <td class="min-width">
-                        <p>{{ setImage($gallery->image) }}</p>
+                        <img height="50" width="50" class="rounded" src="{{ setImage($gallery->image) }}" />
                     </td>
                     <td class="min-width">
                         @if ($gallery->status == 0)

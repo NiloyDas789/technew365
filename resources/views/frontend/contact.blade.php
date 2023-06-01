@@ -44,7 +44,7 @@
                                                 <i class="fa fa-home"></i>
                                             </div>
                                             <div class="cont">
-                                                <p>Joynab Colony , Chittagong</p>
+                                                <p>Joynab Coloney, Dewan Bazar, Chattogram</p>
                                             </div>
                                         </div> <!-- singel address -->
                                     </li>

@@ -32,190 +32,26 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="courses-grid" role="tabpanel" aria-labelledby="courses-grid-tab">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_1.png"
-                                            alt="Course">
+                        @foreach ($galleries as $gallery)
+                            <div class="col-lg-4 col-md-6">
+                                <div class="singel-course mt-30">
+                                    <div class="thum">
+                                        <div class="image">
+                                            <img src="{{ setImage($gallery->image) }}" alt="Technews365">
+                                        </div>
                                     </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_2.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_3.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_4.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_5.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_6.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_7.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_8.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_9.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_10.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_11.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_12.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_13.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_14.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_15.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_16.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_17.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singel-course mt-30">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend/assets') }}/images/gallery/TECHNEWS365_18.png"
-                                            alt="Course">
-                                    </div>
-                                </div>
-                            </div> <!-- singel course -->
-                        </div>
+                                </div> <!-- singel course -->
+                            </div>
+                        @endforeach
                     </div> <!-- row -->
                 </div>
 
             </div> <!-- tab content -->
+            <div class="row">
+                <div class="col-lg-12">
+                    {{ $galleries->links() }}
+                </div>
+            </div> <!-- row -->
         </div> <!-- container -->
     </section>
 

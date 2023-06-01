@@ -18,7 +18,7 @@
             @foreach ($books as $book)
                 <tr>
                     <td class="min-width">
-                        <p>{{ setImage($book->image) }}</p>
+                        <img height="50" width="50" class="rounded" src="{{ setImage($book->image) }}" />
                     </td>
                     <td class="min-width">
                         @if ($book->status == 0)
