@@ -99,6 +99,12 @@ class UserSeeder extends Seeder
             ['name' => 'gallery.show'],
             ['name' => 'gallery.delete'],
 
+            ['name' => 'certification.access'],
+            ['name' => 'certification.create'],
+            ['name' => 'certification.edit'],
+            ['name' => 'certification.show'],
+            ['name' => 'certification.delete'],
+
         ];
 
         foreach ($permissions as $permission) {

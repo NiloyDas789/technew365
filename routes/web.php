@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\BookController;
+use App\Http\Controllers\Backend\CertificationController;
 use App\Http\Controllers\Backend\CompanySettingController;
 use App\Http\Controllers\Backend\CourseController;
 use App\Http\Controllers\Backend\EventController;
@@ -52,12 +53,13 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::resource('user', UserController::class);
 
 
-    Route::resource('course', CourseController::class);
-    Route::resource('event', EventController::class);
-    Route::resource('job', JobController::class);
-    Route::resource('latest-tech', LatestTechController::class);
-    Route::resource('book', BookController::class);
-    Route::resource('gallery', GalleryController::class);
+    Route::resource('course', CourseController::class)->except(['show']);
+    Route::resource('event', EventController::class)->except(['show']);
+    Route::resource('job', JobController::class)->except(['show']);
+    Route::resource('latest-tech', LatestTechController::class)->except(['show']);
+    Route::resource('book', BookController::class)->except(['show']);
+    Route::resource('gallery', GalleryController::class)->except(['show']);
+    Route::resource('certification', CertificationController::class)->except(['show']);
 
     Route::get('settings/company-setting', [CompanySettingController::class, 'editCompanySetting'])->name('company-setting.edit');
     Route::post('settings/company-setting', [CompanySettingController::class, 'updateCompanySetting'])->name('company-setting.update');

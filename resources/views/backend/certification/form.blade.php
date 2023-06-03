@@ -2,7 +2,7 @@
     <section class="max-w-xl mx-auto flex flex-col py-8 mb-4">
         <div class="py-8">
             <div class="input-style-1">
-                <label>Event Image</label>
+                <label>Certification Image</label>
             </div>
             <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->
             <div x-data="imageData()" class="file-input flex items-center">
@@ -10,7 +10,7 @@
                 <div class="py-3 rounded-full overflow-hidden bg-gray-100">
                     <!-- Placeholder image -->
                     <div x-show="!previewPhoto" class="profile-image mb-1">
-                        <img src="{{ isset($event->image) ? setImage($event->image) : asset('backend\assets\images\default\default_image.jpg') }}"
+                        <img src="{{ isset($certification->image) ? setImage($certification->image) : asset('backend\assets\images\default\default_image.jpg') }}"
                             class="object-fit-cover" style="height: 90px; width:100px" alt="" srcset="">
                     </div>
                     <!-- Show a preview of the photo -->
@@ -54,63 +54,41 @@
 </div> --}}
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="title">Event Title</label>
-        <input type="text" name="title" value="{{ $event->title ?? old('title') }}" id="title"
-            class="@error('title') is-invalid @enderror" placeholder="Event Title">
-        @error('title')
+        <label for="name">Student Name</label>
+        <input type="text" name="name" value="{{ $certification->name ?? old('name') }}" id="name"
+            class="@error('name') is-invalid @enderror" placeholder="Student Name">
+        @error('name')
             <div class="alert alert-danger mt-1">{{ $message }}</div>
         @enderror
     </div>
 </div>
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="location">Event Location</label>
-        <input type="text" name="location" value="{{ $event->location ?? old('location') }}" id="location"
-            class="@error('location') is-invalid @enderror" placeholder="Event Location">
-        @error('location')
+        <label for="student_id">Student ID</label>
+        <input type="text" name="student_id" value="{{ $certification->student_id ?? old('student_id') }}"
+            id="student_id" class="@error('student_id') is-invalid @enderror" placeholder="Student ID">
+        @error('student_id')
             <div class="alert alert-danger mt-1">{{ $message }}</div>
         @enderror
     </div>
 </div>
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="date">Event Date</label>
-        <input type="date" name="date" value="{{ $event->date ?? old('date') }}" id="date"
-            class="@error('date') is-invalid @enderror" placeholder="Event Date">
-        @error('date')
+        <label for="course_title">Course Title</label>
+        <input type="text" name="course_title" value="{{ $certification->course_title ?? old('course_title') }}"
+            id="course_title" class="@error('course_title') is-invalid @enderror" placeholder="Course Title">
+        @error('course_title')
             <div class="alert alert-danger mt-1">{{ $message }}</div>
         @enderror
     </div>
 </div>
 <div class="col-lg-12">
-    <div class="input-style-2">
-        <label for="start_time">Event Start Time</label>
-        <input type="time" name="start_time"
-            value="{{ isset($event->start_time) ? date('H:i', strtotime($event->start_time)) : old('start_time') }}"
-            id="start_time" class="@error('start_time') is-invalid @enderror" placeholder="Event Start Time">
-        @error('start_time')
-            <div class="alert alert-danger mt-1">{{ $message }}</div>
-        @enderror
-    </div>
-</div>
-<div class="col-lg-12">
-    <div class="input-style-2">
-        <label for="end_time">Event End Time</label>
-        <input type="time" name="end_time"
-            value="{{ isset($event->end_time) ? date('H:i', strtotime($event->end_time)) : old('end_time') }}"
-            id="end_time" class="@error('end_time') is-invalid @enderror" placeholder="Event End Time">
-        @error('end_time')
-            <div class="alert alert-danger mt-1">{{ $message }}</div>
-        @enderror
-    </div>
-</div>
-<div class="col-lg-12">
-    <div class="input-style-3">
-        <label for="description">Event Description</label>
-        <textarea name="description" rows="5" id="description" class="@error('description') is-invalid @enderror">
-            {{ $event->description ?? old('description') }}
-        </textarea>
-        @error('description')
+    <div class="input-style-1">
+        <label for="completion_date">Course Completetion Date</label>
+        <input type="date" name="completion_date"
+            value="{{ $certification->completion_date ?? old('completion_date') }}" id="completion_date"
+            class="@error('completion_date') is-invalid @enderror" placeholder="Course Completetion Date">
+        @error('completion_date')
             <div class="alert alert-danger mt-1">{{ $message }}</div>
         @enderror
     </div>
@@ -118,8 +96,8 @@
 <div class="col-lg-12">
     <div class="form-check form-switch toggle-switch mb-30">
         <input class="form-check-input @error('status') is-invalid @enderror" name="status"
-            value="{{ $event->status ?? 1 }}" type="checkbox" id="status"
-            @if (isset($event->status) && $event->status == 1) checked @endif>
+            value="{{ $certification->status ?? 1 }}" type="checkbox" id="status"
+            @if (isset($certification->status) && $certification->status == 1) checked @endif>
         <label class="form-check-label" for="status">Status</label>
         @error('status')
             <div class="alert alert-danger mt-1">{{ $message }}</div>
