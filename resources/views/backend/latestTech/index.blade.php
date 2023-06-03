@@ -55,6 +55,7 @@
             </div>
             <!-- end row -->
         </div>
+        {{ $latestTechs->links('vendor.pagination.bootstrap-5') }}
         <!-- end row -->
     </div>
 @endsection

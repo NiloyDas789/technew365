@@ -3,6 +3,9 @@
         <thead>
             <tr>
                 <th>
+                    <h6>Course Image</h6>
+                </th>
+                <th>
                     <h6>Course Title</h6>
                 </th>
                 <th>
@@ -20,6 +23,9 @@
         <tbody>
             @foreach ($courses as $course)
                 <tr>
+                    <td class="min-width">
+                        <img height="50" width="50" class="rounded" src="{{ setImage($course->image) }}" />
+                    </td>
                     <td class="min-width">
                         <p>{{ $course->title }}</p>
                     </td>

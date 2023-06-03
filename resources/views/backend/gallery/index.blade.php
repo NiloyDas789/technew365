@@ -55,6 +55,7 @@
             </div>
             <!-- end row -->
         </div>
+        {{ $galleries->links('vendor.pagination.bootstrap-5') }}
         <!-- end row -->
     </div>
 @endsection

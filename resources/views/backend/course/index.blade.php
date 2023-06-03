@@ -55,6 +55,7 @@
             </div>
             <!-- end row -->
         </div>
+        {{ $courses->links('vendor.pagination.bootstrap-5') }}
         <!-- end row -->
     </div>
 @endsection
