@@ -22,7 +22,7 @@
                                     <a href="{{ route('dashboard') }}">Dashboard</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="{{ route('latestTech.index') }}">Latest Technews</a>
+                                    <a href="{{ route('latest-tech.index') }}">Latest Technews</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
                                     Create Latest Technews

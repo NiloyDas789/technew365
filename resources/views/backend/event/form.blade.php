@@ -54,7 +54,7 @@
 </div> --}}
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="title">Event Title</label>
+        <label for="title">Event Title <span class="text-sm text-danger">*</span></label>
         <input type="text" name="title" value="{{ $event->title ?? old('title') }}" id="title"
             class="@error('title') is-invalid @enderror" placeholder="Event Title">
         @error('title')
@@ -64,7 +64,7 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="location">Event Location</label>
+        <label for="location">Event Location <span class="text-sm text-danger">*</span></label>
         <input type="text" name="location" value="{{ $event->location ?? old('location') }}" id="location"
             class="@error('location') is-invalid @enderror" placeholder="Event Location">
         @error('location')
@@ -74,7 +74,7 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="date">Event Date</label>
+        <label for="date">Event Date <span class="text-sm text-danger">*</span></label>
         <input type="date" name="date" value="{{ $event->date ?? old('date') }}" id="date"
             class="@error('date') is-invalid @enderror" placeholder="Event Date">
         @error('date')
@@ -84,7 +84,7 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-2">
-        <label for="start_time">Event Start Time</label>
+        <label for="start_time">Event Start Time <span class="text-sm text-danger">*</span></label>
         <input type="time" name="start_time"
             value="{{ isset($event->start_time) ? date('H:i', strtotime($event->start_time)) : old('start_time') }}"
             id="start_time" class="@error('start_time') is-invalid @enderror" placeholder="Event Start Time">
@@ -106,7 +106,7 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-3">
-        <label for="description">Event Description</label>
+        <label for="description">Event Description <span class="text-sm text-danger">*</span></label>
         <textarea name="description" rows="5" id="description" class="@error('description') is-invalid @enderror">
             {{ $event->description ?? old('description') }}
         </textarea>

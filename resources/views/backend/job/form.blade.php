@@ -2,7 +2,10 @@
     <section class="max-w-xl mx-auto flex flex-col py-8 mb-4">
         <div class="py-8">
             <div class="input-style-1">
-                <label>Image</label>
+                <label>Image @if (request()->routeIs('job.create'))
+                        <span class="text-sm text-danger">*</span>
+                    @endif
+                </label>
             </div>
             <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->
             <div x-data="imageData()" class="file-input flex items-center">
@@ -54,7 +57,7 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="title">Job Title</label>
+        <label for="title">Job Title <span class="text-sm text-danger">*</span></label>
         <input type="text" name="title" value="{{ $job->title ?? old('title') }}" id="title"
             class="@error('title') is-invalid @enderror" placeholder="Job Title">
         @error('title')
@@ -64,7 +67,7 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="company_name">Company Name</label>
+        <label for="company_name">Company Name <span class="text-sm text-danger">*</span></label>
         <input type="text" name="company_name" value="{{ $job->company_name ?? old('company_name') }}"
             id="company_name" class="@error('company_name') is-invalid @enderror" placeholder="Company Name">
         @error('company_name')
@@ -74,7 +77,7 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="designation">Designation</label>
+        <label for="designation">Designation <span class="text-sm text-danger">*</span></label>
         <input type="text" name="designation" value="{{ $job->designation ?? old('designation') }}" id="designation"
             class="@error('designation') is-invalid @enderror" placeholder="Designation">
         @error('designation')

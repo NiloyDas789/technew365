@@ -2,7 +2,11 @@
     <section class="max-w-xl mx-auto flex flex-col py-8 mb-4">
         <div class="py-8">
             <div class="input-style-1">
-                <label>Course Image</label>
+                <label>Course Image
+                    @if (request()->routeIs('course.create'))
+                        <span class="text-sm text-danger">*</span>
+                    @endif
+                </label>
             </div>
             <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->
             <div x-data="imageData()" class="file-input flex items-center">
@@ -54,7 +58,7 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="title">Course Title</label>
+        <label for="title">Course Title <span class="text-sm text-danger">*</span></label>
         <input type="text" name="title" value="{{ $course->title ?? old('title') }}" id="title"
             class="@error('title') is-invalid @enderror" placeholder="Course Title">
         @error('title')
@@ -64,7 +68,7 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="total_class">Total Class</label>
+        <label for="total_class">Total Class <span class="text-sm text-danger">*</span></label>
         <input type="number" name="total_class" value="{{ $course->total_class ?? old('total_class') }}"
             id="total_class" class="@error('total_class') is-invalid @enderror" placeholder="Total Class">
         @error('total_class')
@@ -74,7 +78,7 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-3">
-        <label for="description">Course Description</label>
+        <label for="description">Course Description <span class="text-sm text-danger">*</span></label>
         <textarea name="description" rows="5" id="description" class="@error('description') is-invalid @enderror">
             {{ $course->description ?? old('description') }}
         </textarea>

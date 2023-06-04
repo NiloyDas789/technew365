@@ -2,7 +2,10 @@
     <section class="max-w-xl mx-auto flex flex-col py-8 mb-4">
         <div class="py-8">
             <div class="input-style-1">
-                <label>Latest Technews Image</label>
+                <label>Latest Technews Image @if (request()->routeIs('latest-tech.create'))
+                        <span class="text-sm text-danger">*</span>
+                    @endif
+                </label>
             </div>
             <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->
             <div x-data="imageData()" class="file-input flex items-center">
@@ -54,7 +57,7 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="title">Latest Technews Title</label>
+        <label for="title">Latest Technews Title <span class="text-sm text-danger">*</span></label>
         <input type="text" name="title" value="{{ $latestTech->title ?? old('title') }}" id="title"
             class="@error('title') is-invalid @enderror" placeholder="LatestTech Title">
         @error('title')
@@ -64,7 +67,7 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-3">
-        <label for="description">Description</label>
+        <label for="description">Description <span class="text-sm text-danger">*</span></label>
         <textarea name="description" rows="5" id="description" class="@error('description') is-invalid @enderror">
             {{ $latestTech->description ?? old('description') }}
         </textarea>
