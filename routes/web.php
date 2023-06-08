@@ -34,6 +34,8 @@ Route::get('/students', [HomeController::class, 'students'])->name('students');
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
+Route::get('/certificate-verification', [HomeController::class, 'certificate'])->name('certificate');
+// Route::post('/certificate-verification', [HomeController::class, 'getCertificate'])->name('get.certificate');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

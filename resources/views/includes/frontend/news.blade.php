@@ -12,7 +12,7 @@
             <div class="col-lg-6">
                 <div class="singel-news mt-30">
                     <div class="news-thum pb-25">
-                        <img src="{{ asset('frontend/assets') }}/images/news/n-1.jpg" alt="News">
+                        <img src="{{ setImage($biggerItem[0]->image) }}" alt="News">
                     </div>
                     <div class="news-cont">
                         <ul>
@@ -33,7 +33,7 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="news-thum mt-30">
-                                    <img src="{{ asset('frontend/assets') }}/images/news/ns-1.jpg" alt="News">
+                                    <img src="{{ setImage($smallerItem->image) }}" alt="News">
                                 </div>
                             </div>
                             <div class="col-sm-8">

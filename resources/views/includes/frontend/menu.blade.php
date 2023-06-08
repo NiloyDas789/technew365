@@ -25,10 +25,10 @@
                                 <a class="{{ request()->is('students') ? 'active' : null }}"
                                     href="{{ route('students') }}">Placement</a>
                             </li>
-                            {{-- <li class="nav-item">
-                                <a class="{{ request()->is('/') ? 'active' : null }}"
-                                    href="courses.html">Certificate</a>
-                            </li> --}}
+                            <li class="nav-item">
+                                <a class="{{ request()->is('certificate-verification') ? 'active' : null }}"
+                                    href="{{ route('certificate') }}">Verify Certificate</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="{{ request()->is('gallery') ? 'active' : null }}"
                                     href="{{ route('gallery') }}">Gallery</a>

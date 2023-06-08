@@ -44,7 +44,7 @@
                                                 <i class="fa fa-home"></i>
                                             </div>
                                             <div class="cont">
-                                                <p>Joynab Coloney, Dewan Bazar, Chattogram</p>
+                                                <p>Dewan Bazar, Joynab Colony, Office Building (4th Floor), Chittagong.</p>
                                             </div>
                                         </div> <!-- singel address -->
                                     </li>

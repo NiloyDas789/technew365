@@ -33,8 +33,7 @@
                 <div class="col-lg-12">
                     <div class="blog-details mt-30">
                         <div class="thum">
-                            <img style="width: 100%;" src="{{ asset('frontend/assets') }}/images/blog/b-1.jpg"
-                                alt="Blog Details">
+                            <img style="width: 100%;" src="{{ setImage($latestNews->image) }}" alt="Latest_News">
                         </div>
                         <div class="cont">
                             <h3>{{ $latestNews->title }}</h3>
