@@ -36,7 +36,7 @@
                             <h2>Enter Your ID</h2>
                         </div> <!-- section title -->
                         <div class="main-form pt-45">
-                            <form action="{{ route('get.certificate') }}" method="GET">
+                            <form action="{{ route('certificate') }}" method="GET">
                                 @csrf
                                 <div class="col-md-12">
                                     <div class="singel-form form-group has-error has-danger">

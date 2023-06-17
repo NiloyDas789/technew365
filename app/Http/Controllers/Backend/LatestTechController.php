@@ -53,7 +53,7 @@ class LatestTechController extends Controller
         }
         LatestTech::create($validated);
 
-        return redirect()->route('latestTech.index')
+        return redirect()->route('')
                         ->with('success', 'LatestTech created successfully');
     }
     /**
@@ -102,7 +102,7 @@ class LatestTechController extends Controller
         }
         $latestTech->update($validated);
 
-        return redirect()->route('latestTech.index')
+        return redirect()->route('latest-tech.index')
                         ->with('success', 'LatestTech updated successfully');
     }
     /**
@@ -115,7 +115,7 @@ class LatestTechController extends Controller
     {
         $this->checkPermission('latestTech.destroy');
         $latestTech->delete();
-        return redirect()->route('latestTech.index')
+        return redirect()->route('latest-tech.index')
                         ->with('success', 'LatestTech deleted successfully');
     }
 }
