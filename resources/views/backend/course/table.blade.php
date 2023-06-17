@@ -3,7 +3,7 @@
         <thead>
             <tr>
                 <th>
-                    <h6>Course Image</h6>
+                    <h6>Image</h6>
                 </th>
                 <th>
                     <h6>Course Title</h6>

@@ -3,6 +3,9 @@
         <thead>
             <tr>
                 <th>
+                    <h6>Image</h6>
+                </th>
+                <th>
                     <h6>Title</h6>
                 </th>
                 <th>
@@ -23,6 +26,9 @@
         <tbody>
             @foreach ($jobs as $job)
                 <tr>
+                    <td class="min-width">
+                        <img height="50" width="50" class="rounded" src="{{ setImage($job->image) }}" />
+                    </td>
                     <td class="min-width">
                         <p>{{ $job->title }}</p>
                     </td>

@@ -162,13 +162,18 @@
                             </div>
                             <p>Best Platform to Learn Information Technology & Solutions</p>
                             <ul class="mt-20">
+                                <li><a href="https://www.facebook.com/groups/technews365info" target="blank"><i
+                                            class="fa fa-users"></i></a>
+                                </li>
                                 <li><a href="https://www.facebook.com/TECHNEWS365" target="blank"><i
                                             class="fa fa-facebook-f"></i></a>
                                 </li>
                                 <li><a href="https://www.youtube.com/@TECHNEWS365" target="blank"><i
                                             class="fa fa-youtube"></i></a></li>
-                                {{-- <li><a href="#" target="blank"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" target="blank"><i class="fa fa-instagram"></i></a></li> --}}
+                                <li><a href="https://www.instagram.com/technews365" target="blank"><i
+                                            class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://twitter.com/technews365info" target="blank"><i
+                                            class="fa fa-twitter"></i></a></li>
                             </ul>
                         </div> <!-- footer about -->
                     </div>
@@ -218,7 +223,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>Joynab Coloney, Dewan Bazar, Chattogram</p>
+                                        <p>Dewan Bazar, Joynab Colony, Office Building (4th Floor), Chittagong</p>
                                     </div>
                                 </li>
                                 <li>

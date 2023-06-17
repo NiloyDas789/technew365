@@ -3,6 +3,9 @@
         <thead>
             <tr>
                 <th>
+                    <h6>Image</h6>
+                </th>
+                <th>
                     <h6>Latest Technews Title</h6>
                 </th>
                 <th>
@@ -17,6 +20,9 @@
         <tbody>
             @foreach ($latestTechs as $latestTech)
                 <tr>
+                    <td class="min-width">
+                        <img height="50" width="50" class="rounded" src="{{ setImage($latestTech->image) }}" />
+                    </td>
                     <td class="min-width">
                         <p>{{ $latestTech->title }}</p>
                     </td>

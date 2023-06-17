@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Book;
+use App\Models\Certification;
 use App\Models\Course;
 use App\Models\Event;
 use App\Models\Gallery;
@@ -98,6 +99,29 @@ class HomeController extends Controller
     public function contact()
     {
         return view('frontend.contact');
+    }
+    public function certificate(Request $request)
+    {
+        // session()->flush();
+        if ($request->has('id')) {
+            $certification = Certification::where('student_id', $request->id)->first();
+            if($certification == null) {
+                return view('frontend.certificate')->with('error', 'Certificate not found!');
+            }
+            return view('frontend.certificate', compact('certification'));
+        }
+        return view('frontend.certificate');
+    }
+    public function getCertificate(Request $request)
+    {
+        // dd($request->all());
+
+        // session()->put('certification', $certification);
+        // if ($certification) {
+        //     return view('frontend.certificate');
+        // } else {
+        //     return redirect()->back()->with('error', 'Certificate not found!');
+        // }
     }
     public function gallery()
     {
