@@ -30,7 +30,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/courses', [HomeController::class, 'courses'])->name('courses');
 Route::get('/courses/{slug}', [HomeController::class, 'viewCourse'])->name('view-course');
 Route::get('/latest-news/{slug}', [HomeController::class, 'latestNews'])->name('latest-news');
-Route::get('/students', [HomeController::class, 'students'])->name('students');
+Route::get('/placements', [HomeController::class, 'students'])->name('students');
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
@@ -45,9 +45,9 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
         return view('backend.dashboard');
     })->name('dashboard');
-    // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('role/assign', [RoleController::class, 'assign'])->name('role.assign');
     Route::post('role/assign', [RoleController::class, 'storeAssign'])->name('assign.store');

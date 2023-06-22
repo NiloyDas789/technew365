@@ -50,7 +50,7 @@
                 </div> <!-- about cont -->
                 <div class="col-lg-7 mt-auto mb-4">
                     <div class="about-image">
-                        <img src="{{ asset('frontend/assets') }}/images/banner/banner-5.png" alt="About">
+                        <img src="{{ asset('frontend/assets') }}/images/top_bannner_1.png" alt="About">
                     </div> <!-- about imag -->
                 </div>
             </div> <!-- row -->
@@ -60,7 +60,7 @@
                         <div class="about-singel-items mt-30">
                             <span>01</span>
                             <h4>Why Choose us</h4>
-                            <p>At Technews365, we are committed to providing the highest quality technology courses and
+                            <p>At TECHNEWS365, we are committed to providing the highest quality technology courses and
                                 resources for our students. Our team of experienced instructors and industry professionals
                                 are dedicated to helping you succeed in your career.</p>
                         </div> <!-- about singel -->
@@ -69,7 +69,7 @@
                         <div class="about-singel-items mt-30">
                             <span>02</span>
                             <h4>Our Mission</h4>
-                            <p>At Technews365, our mission is to empower individuals with quality technology education,
+                            <p>At TECHNEWS365, our mission is to empower individuals with quality technology education,
                                 personalized learning experiences, and a supportive community.</p>
                         </div> <!-- about singel -->
                     </div>
@@ -77,7 +77,7 @@
                         <div class="about-singel-items mt-30">
                             <span>03</span>
                             <h4>Our vission</h4>
-                            <p>At Technews365, our vision is to be a leading provider of quality technology education that
+                            <p>At TECHNEWS365, our vision is to be a leading provider of quality technology education that
                                 empowers individuals to achieve their full potential and become change-makers in the tech
                                 industry.</p>
                         </div> <!-- about singel -->

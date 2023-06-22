@@ -30,7 +30,7 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>Cloud Computing</span>
+                                        <span>Cloud <br /> Computing</span>
                                     </span>
                                 </span> <!-- singel category -->
                             </a>
@@ -71,7 +71,7 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>Cloud Computing</span>
+                                        <span>Cloud <br /> Computing</span>
                                     </span>
                                 </span> <!-- singel category -->
                             </a>

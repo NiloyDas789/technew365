@@ -1,5 +1,5 @@
 <section id="video-feature" class="bg_cover pt-60 pb-110"
-    style="background-image: url({{ asset('frontend/assets') }}/images/youtube_banner.jpg)">
+    style="background-image: url({{ asset('frontend/assets') }}/images/youtube_banner.png)">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 order-last order-lg-first">

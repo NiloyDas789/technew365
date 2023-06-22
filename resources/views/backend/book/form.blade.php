@@ -2,7 +2,7 @@
     <section class="max-w-xl mx-auto flex flex-col py-8 mb-4">
         <div class="py-8">
             <div class="input-style-1">
-                <label>Book Image <span class="text-sm text-danger">*</span></label>
+                <label>Book Image <span class="text-sm text-danger">*</span> <sup>( 215 * 285 px )</sup></label>
             </div>
             <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->
             <div x-data="imageData()" class="file-input flex items-center">

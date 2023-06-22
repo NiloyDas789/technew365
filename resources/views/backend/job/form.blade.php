@@ -5,6 +5,7 @@
                 <label>Image @if (request()->routeIs('job.create'))
                         <span class="text-sm text-danger">*</span>
                     @endif
+                    <sup>( Passport Size )</sup>
                 </label>
             </div>
             <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->

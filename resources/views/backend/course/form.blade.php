@@ -6,6 +6,7 @@
                     @if (request()->routeIs('course.create'))
                         <span class="text-sm text-danger">*</span>
                     @endif
+                    <sup>( 369 * 251 px )</sup>
                 </label>
             </div>
             <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->

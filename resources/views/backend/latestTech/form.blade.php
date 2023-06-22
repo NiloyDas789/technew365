@@ -5,6 +5,7 @@
                 <label>Latest Technews Image @if (request()->routeIs('latest-tech.create'))
                         <span class="text-sm text-danger">*</span>
                     @endif
+                    <sup>( 536 * 336 pixels )</sup>
                 </label>
             </div>
             <!-- If you wish to reference an existing file (i.e. from your database), pass the url into imageData() -->

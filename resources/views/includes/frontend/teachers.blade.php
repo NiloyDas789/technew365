@@ -7,15 +7,15 @@
                     <h2>Meet our students</h2>
                 </div> <!-- section title -->
                 <div class="teachers-cont">
-                    <p>Technews365 has helped numerous students achieve successful careers in high-demand sectors. With
+                    <p>TECHNEWS365 has helped numerous students achieve successful careers in high-demand sectors. With
                         courses designed by industry experts, learners gain the skills and knowledge needed to succeed
-                        in today's technology-driven world. Students who have completed courses on Technews365 have gone
+                        in today's technology-driven world. Students who have completed courses on TECHNEWS365 have gone
                         on to work in diverse industries, including networking, cloud computing, data science, AI, and
-                        cybersecurity. With flexible learning options and high-quality resources, Technews365 empowers
+                        cybersecurity. With flexible learning options and high-quality resources, TECHNEWS365 empowers
                         learners to reach their career aspirations and stay up-to-date with the latest technology
                         trends.
                         <br>
-                        Join Technews365 today and take the first step towards a successful career in the exciting world
+                        Join TECHNEWS365 today and take the first step towards a successful career in the exciting world
                         of technology.
                     </p>
                     <a href="{{ route('contact') }}" class="main-btn mt-55">Career with us</a>

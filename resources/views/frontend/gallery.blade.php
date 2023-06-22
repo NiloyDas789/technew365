@@ -37,7 +37,7 @@
                                 <div class="singel-course mt-30">
                                     <div class="thum">
                                         <div class="image">
-                                            <img src="{{ setImage($gallery->image) }}" alt="Technews365">
+                                            <img src="{{ setImage($gallery->image) }}" alt="TECHNEWS365">
                                         </div>
                                     </div>
                                 </div> <!-- singel course -->
