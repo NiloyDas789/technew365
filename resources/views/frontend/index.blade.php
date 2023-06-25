@@ -70,3 +70,44 @@
 
 
 @endsection
+@push('style')
+    <style>
+        /* Styles for mobile */
+        @media (max-width: 767px) {
+            #slider_banner_1 {
+                background-image: url("{{ asset('frontend/assets') }}/images/mobile/banner-1.jpg");
+            }
+
+            #slider_banner_3 {
+                background-image: url("{{ asset('frontend/assets') }}/images/mobile/banner-3.jpg");
+            }
+
+            #slider_banner_4 {
+                background-image: url("{{ asset('frontend/assets') }}/images/mobile/banner-4.jpg");
+            }
+
+            #video-feature {
+                background-image: url("{{ asset('frontend/assets') }}/images/mobile/youtube_banner.jpg");
+            }
+        }
+
+        /* Styles for web */
+        @media (min-width: 768px) {
+            #slider_banner_1 {
+                background-image: url("{{ asset('frontend/assets') }}/images/banner/banner-1.png");
+            }
+
+            #slider_banner_3 {
+                background-image: url("{{ asset('frontend/assets') }}/images/banner/banner-3.png");
+            }
+
+            #slider_banner_4 {
+                background-image: url("{{ asset('frontend/assets') }}/images/banner/banner-4.png");
+            }
+
+            #video-feature {
+                background-image: url("{{ asset('frontend/assets') }}/images/youtube_banner.jpg");
+            }
+        }
+    </style>
+@endpush
