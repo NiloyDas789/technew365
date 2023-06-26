@@ -44,6 +44,13 @@
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="{{ asset('frontend/assets') }}/css/responsive.css">
+
+    <!-- Alpine Plugins -->
+    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     @stack('style')
 
 </head>

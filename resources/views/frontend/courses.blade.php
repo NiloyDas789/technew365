@@ -60,8 +60,8 @@
                         @foreach ($courses as $course)
                             <div class="col-lg-4 col-md-6">
                                 <div class="singel-course mt-30">
-                                    <div class="thum">
-                                        <div class="image">
+                                    <div class="thum" x-data="{ shown: false }" x-intersect="shown = true">
+                                        <div class="image" x-show="shown">
                                             <img src="{{ setImage($course->image) }}" alt="Course">
                                         </div>
                                         {{-- <div class="price">

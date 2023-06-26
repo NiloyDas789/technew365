@@ -29,7 +29,7 @@
     <section id="contact-page" class="pt-90 pb-120 gray-bg">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-7">
                     <div class="contact-from mt-30">
                         <div class="section-title">
                             <h5>Contact Us</h5>
@@ -73,6 +73,13 @@
                                 </ul>
                             </div>
                         </div> <!-- main form -->
+                    </div> <!--  contact from -->
+                </div>
+                <div class="col-lg-5">
+                    <div class="contact-from mt-30">
+                        <a href="https://www.google.com/maps/@22.3450161,91.8378478,19.5z?entry=ttu" target="_blank"><img
+                                src="{{ asset('frontend/assets') }}/images/location.jpg" alt=""></a>
+
                     </div> <!--  contact from -->
                 </div>
                 {{-- <div class="col-lg-5">

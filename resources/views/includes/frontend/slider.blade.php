@@ -1,5 +1,5 @@
-<section id="slider-part" class="slider-active">
-    <div class="single-slider bg_cover pt-150" id="slider_banner_1" data-overlay="4">
+<section id="slider-part" class="slider-active" x-data="{ shown: false }" x-intersect="shown = true">
+    <div class="single-slider bg_cover pt-150" id="slider_banner_1" data-overlay="4" x-show="shown">
         <div class="container">
             <div class="row">
                 <div class="col-xl-7 col-lg-9">
@@ -23,7 +23,7 @@
         </div> <!-- container -->
     </div> <!-- single slider -->
 
-    <div class="single-slider bg_cover pt-150" id="slider_banner_3" data-overlay="4">
+    <div class="single-slider bg_cover pt-150" id="slider_banner_3" data-overlay="4" x-show="shown">
         <div class="container">
             <div class="row">
                 <div class="col-xl-7 col-lg-9">
@@ -46,7 +46,7 @@
         </div> <!-- container -->
     </div> <!-- single slider -->
 
-    <div class="single-slider bg_cover pt-150" id="slider_banner_4" data-overlay="4">
+    <div class="single-slider bg_cover pt-150" id="slider_banner_4" data-overlay="4" x-show="shown">
         <div class="container">
             <div class="row">
                 <div class="col-xl-7 col-lg-9">

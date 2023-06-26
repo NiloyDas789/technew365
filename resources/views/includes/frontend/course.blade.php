@@ -12,8 +12,8 @@
             @foreach ($courses as $course)
                 <div class="col-lg-4">
                     <div class="singel-course">
-                        <div class="thum">
-                            <div class="image">
+                        <div class="thum" x-data="{ shown: false }" x-intersect="shown = true">
+                            <div class="image" x-show="shown">
                                 <img src="{{ setImage($course->image) }}" alt="Course">
                             </div>
                             {{-- <div class="price">

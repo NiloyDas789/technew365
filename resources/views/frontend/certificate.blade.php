@@ -33,14 +33,14 @@
                     <div class="contact-from mt-30">
                         <div class="section-title">
                             <h5>Verify Certificate</h5>
-                            <h2>Enter Your ID</h2>
+                            <h2>Enter Your Tracking ID</h2>
                         </div> <!-- section title -->
                         <div class="main-form pt-45">
                             <form action="{{ route('certificate') }}" method="GET">
                                 @csrf
                                 <div class="col-md-12">
                                     <div class="singel-form form-group has-error has-danger">
-                                        <input name="id" type="text" placeholder="Your ID"
+                                        <input name="id" type="text" placeholder="Your Tracking ID"
                                             data-error="ID is required." required="required">
                                         <div class="help-block with-errors">
                                         </div>
@@ -63,50 +63,59 @@
                         </div>
                         {{-- {{ dd(session()->pull('certification')) }} --}}
                         @isset($certification)
-                            <ul>
-                                <li>
-                                    <div class="singel-address">
-                                        <div class="icon">
-                                            <b>Student Name:</b>
-                                        </div>
-                                        <div class="cont">
-                                            <p>{{ $certification->name }}</p>
-                                        </div>
-                                    </div> <!-- singel address -->
-                                </li>
-                                <li>
-                                    <div class="singel-address">
-                                        <div class="icon">
-                                            <b>Student ID:</b>
-                                        </div>
-                                        <div class="cont">
-                                            <p>{{ $certification->student_id }}</p>
-                                        </div>
-                                    </div> <!-- singel address -->
-                                </li>
-                                <li>
-                                    <div class="singel-address">
-                                        <div class="icon">
-                                            <b>Course Title:</b>
-                                        </div>
-                                        <div class="cont">
-                                            <p>{{ $certification->course_title }}</p>
-                                        </div>
-                                    </div> <!-- singel address -->
-                                </li>
-                                <li>
-                                    <div class="singel-address">
-                                        <div class="icon">
-                                            <b>Completetion Date:</b>
-                                        </div>
-                                        <div class="cont">
-                                            <p>{{ $certification->completion_date }}</p>
-                                        </div>
-                                    </div> <!-- singel address -->
-                                </li>
-                            </ul>
-                            <a href="{{ route('certificate') }}" type="button" class="btn btn-secondary mt-2">
-                                <i class="fas fa-redo-alt"></i>Reset</a>
+                            <div
+                                style="background-image: url('{{ asset('frontend/assets') }}/images/certificate_bg.png') ;
+                        background-size: 150px;
+                        /* width: 180px; */
+                        /* height: 300px; */
+                            background-repeat: no-repeat;
+
+                        background-size: fit;">
+                                <ul>
+                                    <li>
+                                        <div class="singel-address">
+                                            <div class="icon">
+                                                <b>Student Name:</b>
+                                            </div>
+                                            <div class="cont">
+                                                <p>{{ $certification->name }}</p>
+                                            </div>
+                                        </div> <!-- singel address -->
+                                    </li>
+                                    <li>
+                                        <div class="singel-address">
+                                            <div class="icon">
+                                                <b>Student ID:</b>
+                                            </div>
+                                            <div class="cont">
+                                                <p>{{ $certification->student_id }}</p>
+                                            </div>
+                                        </div> <!-- singel address -->
+                                    </li>
+                                    <li>
+                                        <div class="singel-address">
+                                            <div class="icon">
+                                                <b>Course Title:</b>
+                                            </div>
+                                            <div class="cont">
+                                                <p>{{ $certification->course_title }}</p>
+                                            </div>
+                                        </div> <!-- singel address -->
+                                    </li>
+                                    <li>
+                                        <div class="singel-address">
+                                            <div class="icon">
+                                                <b>Completetion Date:</b>
+                                            </div>
+                                            <div class="cont">
+                                                <p>{{ $certification->completion_date }}</p>
+                                            </div>
+                                        </div> <!-- singel address -->
+                                    </li>
+                                </ul>
+                                <a href="{{ route('certificate') }}" type="button" class="btn btn-secondary mt-2">
+                                    <i class="fas fa-redo-alt"></i>Reset</a>
+                            </div>
                         @endisset
                         @if (Session::has('error'))
                             <div class="alert alert-danger" role="alert">
