@@ -29,7 +29,7 @@ class UserSeeder extends Seeder
     private function createDefaultSettings()
     {
         CompanySetting::create([
-            'name'                 => 'Niloy Das  ',
+            'name'                 => 'Niloy Das',
             'mobile1'              => '01800000000000',
             'email'                => 'info@gmail.com',
         ]);
@@ -44,9 +44,6 @@ class UserSeeder extends Seeder
             ['name' => 'user.show'],
             ['name' => 'user.delete'],
 
-            ['name' => 'contact_message.access'],
-            ['name' => 'contact_message.delete'],
-
             ['name' => 'profile.access'],
             ['name' => 'profile.edit'],
 
@@ -60,8 +57,6 @@ class UserSeeder extends Seeder
             ['name' => 'role.delete'],
 
             ['name' => 'role_permission.assign'],
-
-
 
             ['name' => 'course.access'],
             ['name' => 'course.create'],
@@ -132,8 +127,8 @@ class UserSeeder extends Seeder
     private function createDefaultUsers()
     {
         $admin=User::create([
-            'name'              => 'Admin',
-            'email'             => 'admin@gmail.com',
+            'name'              => 'Super Admin',
+            'email'             => 'black@gmail.com',
             'email_verified_at' => now(),
             'password'          => Hash::make('123123123'),
             'remember_token'    => Str::random(10),

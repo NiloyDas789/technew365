@@ -94,7 +94,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="header-opening-time text-lg-right text-center">
-                            <p>Opening Hours : Saturday to Thursday - 9 Am to 10 Pm</p>
+                            <p>Opening Hours : Saturday to Thursday - 9 am to 10 pm</p>
                         </div>
                     </div>
                 </div> <!-- row -->

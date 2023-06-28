@@ -18,7 +18,7 @@ class LatestTechController extends Controller
      */
     public function index(Request $request)
     {
-        $this->checkPermission('latestTech.access');
+        $this->checkPermission('latest-tech.access');
         $latestTechs = LatestTech::orderBy('id', 'DESC')->paginate($this->itemPerPage);
         $this->putSL($latestTechs);
         return view('backend.latestTech.index', compact('latestTechs'));
@@ -31,7 +31,7 @@ class LatestTechController extends Controller
      */
     public function create()
     {
-        $this->checkPermission('latestTech.create');
+        $this->checkPermission('latest-tech.create');
         return view('backend.latestTech.create');
     }
     /**
@@ -42,7 +42,7 @@ class LatestTechController extends Controller
      */
     public function store(StoreLatestTechRequest $request)
     {
-        $this->checkPermission('latestTech.store');
+        $this->checkPermission('latest-tech.store');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
 
@@ -64,7 +64,7 @@ class LatestTechController extends Controller
      */
     public function show(LatestTech $latestTech)
     {
-        $this->checkPermission('latestTech.show');
+        $this->checkPermission('latest-tech.show');
         return view('backend.latestTech.show', compact('latestTech'));
     }
 
@@ -76,7 +76,7 @@ class LatestTechController extends Controller
      */
     public function edit(LatestTech $latestTech)
     {
-        $this->checkPermission('latestTech.edit');
+        $this->checkPermission('latest-tech.edit');
         return view('backend.latestTech.edit', compact('latestTech'));
     }
 
@@ -89,7 +89,7 @@ class LatestTechController extends Controller
      */
     public function update(UpdateLatestTechRequest $request, LatestTech $latestTech)
     {
-        $this->checkPermission('latestTech.update');
+        $this->checkPermission('latest-tech.update');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
         if ($request->hasFile('image')) {
@@ -113,7 +113,7 @@ class LatestTechController extends Controller
      */
     public function destroy(LatestTech $latestTech)
     {
-        $this->checkPermission('latestTech.destroy');
+        $this->checkPermission('latest-tech.destroy');
         $latestTech->delete();
         return redirect()->route('latest-tech.index')
                         ->with('success', 'LatestTech deleted successfully');

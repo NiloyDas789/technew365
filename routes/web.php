@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\BookController;
 use App\Http\Controllers\Backend\CertificationController;
 use App\Http\Controllers\Backend\CompanySettingController;
 use App\Http\Controllers\Backend\CourseController;
+use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\EventController;
 use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\JobController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Frontend\HomeController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,16 +37,10 @@ Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/certificate-verification', [HomeController::class, 'certificate'])->name('certificate');
-// Route::post('/certificate-verification', [HomeController::class, 'getCertificate'])->name('get.certificate');
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->prefix('admin')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('backend.dashboard');
-    })->name('dashboard');
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -66,5 +62,33 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('settings/company-setting', [CompanySettingController::class, 'editCompanySetting'])->name('company-setting.edit');
     Route::post('settings/company-setting', [CompanySettingController::class, 'updateCompanySetting'])->name('company-setting.update');
 });
+
+
+Route::get('black/optimize', function () {
+    Artisan::call('optimize');
+    Artisan::call('optimize:clear');
+    dd('done');
+});
+
+Route::get('black/storage-link', function () {
+    Artisan::call('storage:link');
+    dd('done');
+});
+
+// Route::get('black/migrate',function(){
+//    Artisan::call('migrate');
+//    dd('done');
+// });
+
+// Route::get('black/migrate-fresh',function(){
+//     Artisan::call('migrate:fresh --seed');
+//     dd(' done fresh');
+// });
+
+// Route::get('black/rollback',function(){
+//    Artisan::call('migrate:rollback');
+//    dd('done');
+// });
+
 
 require __DIR__.'/auth.php';

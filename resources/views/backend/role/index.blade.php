@@ -77,9 +77,15 @@
                                             </td>
                                             <td>
                                                 <div class="action">
-                                                    <button class="text-danger">
-                                                        <i class="lni lni-trash-can"></i>
-                                                    </button>
+                                                    <a href="{{ route('role.edit', $role->id) }}">
+                                                        <i class="lni lni-pencil-alt"></i>
+                                                    </a>
+                                                    <form method="POST" action="{{ route('role.destroy', $role->id) }}">
+                                                        @csrf
+                                                        <input name="_method" type="hidden" value="DELETE">
+                                                        <button type="submit" class="text-danger ml-5"><i
+                                                                class="lni lni-trash-can"></i></button>
+                                                    </form>
                                                 </div>
                                             </td>
                                         </tr>

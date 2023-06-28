@@ -83,7 +83,7 @@ class RoleController extends Controller
     public function edit(Role $role)
     {
         $this->checkPermission('role.edit');
-        $permissions = Permission::pluck('name', 'id');
+        $permissions = Permission::select('name', 'id')->get();
 
         return view('backend.role.edit', compact('role', 'permissions'));
     }

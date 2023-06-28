@@ -59,30 +59,7 @@
                         @csrf
                         <div class="profile-info">
                             <div class="row">
-
-                                <div class="col-12">
-                                    <div class="input-style-1">
-                                        <label>Role Name</label>
-                                        <input type="text" name="name" value="{{ old('name') }}"
-                                            class="@error('name') is-invalid @enderror" placeholder="Role Name">
-                                        @error('name')
-                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="select-style-2">
-                                        <label>Permissions</label>
-                                        <div class="select-position">
-                                            <select class="select2" name="permissions[]" multiple>
-                                                @foreach ($permissions as $permission)
-                                                    <option value="{{ $permission->id }}">{{ $permission->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                @include('backend.role.form')
                                 <div class="col-12">
                                     <button type="submit" class="main-btn primary-btn btn-hover">
                                         Submit

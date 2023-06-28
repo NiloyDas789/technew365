@@ -1,15 +1,27 @@
-<div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} mb-3">
-    {{ Form::label('name', 'Name', ['class' => 'col-sm-3 control-label']) }}
-    <div class="col-sm-9">
-        {{ Form::text('name', null, ['class' => 'form-control','placeholder' => 'Enter name',
-        'required' => 'required']) }}
-        <small class="text-danger">{{ $errors->first('name') }}</small>
+<div class="col-12">
+    <div class="input-style-1">
+        <label>Role Name</label>
+        <input type="text" name="name" value="{{ $role->name ?? old('name') }}"
+            class="@error('name') is-invalid @enderror" placeholder="Role Name">
+        @error('name')
+            <div class="alert alert-danger mt-1">{{ $message }}</div>
+        @enderror
     </div>
 </div>
-<div class="form-group{{ $errors->has('permission') ? ' has-error' : '' }} mb-3">
-    {{ Form::label('permission', 'permission', ['class' => 'col-sm-3 control-label']) }}
-    <div class="col-sm-9">
-        {{ Form::select('permission[]', $permissions, null, ['class' => 'select2 form-control ','multiple'=>'multiple', 'required' => 'required']) }}
-        <small class="text-danger">{{ $errors->first('permission') }}</small>
+<div class="col-12">
+    <div class="select-style-2">
+        <label>Permissions</label>
+        <div class="select-position">
+            <select class="select2" name="permissions[]" multiple>
+                @foreach ($permissions as $permission)
+                    <option value="{{ $permission->id }}"
+                        {{ $role->hasPermissionTo($permission->id) ? 'selected' : '' }}>
+                        {{ $permission->name }}</option>
+                @endforeach
+            </select>
+            @error('permissions')
+                <div class="alert alert-danger mt-1">{{ $message }}</div>
+            @enderror
+        </div>
     </div>
 </div>
