@@ -58,9 +58,9 @@
 </div>
 <div class="col-lg-12">
     <div class="input-style-1">
-        <label for="title">Job Title <span class="text-sm text-danger">*</span></label>
+        <label for="title">Placement Title <span class="text-sm text-danger">*</span></label>
         <input type="text" name="title" value="{{ $job->title ?? old('title') }}" id="title"
-            class="@error('title') is-invalid @enderror" placeholder="Job Title">
+            class="@error('title') is-invalid @enderror" placeholder="Placement Title">
         @error('title')
             <div class="alert alert-danger mt-1">{{ $message }}</div>
         @enderror

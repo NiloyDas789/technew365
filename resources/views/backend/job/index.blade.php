@@ -1,6 +1,6 @@
 @extends('layouts.backend')
 
-@section('title', 'Job')
+@section('title', 'Placement')
 
 
 @section('content')
@@ -10,7 +10,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="title mb-30">
-                        <h2>Job List</h2>
+                        <h2>Placement List</h2>
                     </div>
                 </div>
                 <!-- end col -->
@@ -22,7 +22,7 @@
                                     <a href="{{ route('dashboard') }}">Dashboard</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    Job
+                                    Placement
                                 </li>
                             </ol>
                         </nav>

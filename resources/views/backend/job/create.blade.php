@@ -1,6 +1,6 @@
 @extends('layouts.backend')
 
-@section('title', 'Create Job')
+@section('title', 'Create Placement')
 
 
 @section('content')
@@ -10,7 +10,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="titlemb-30">
-                        <h2>Create Job</h2>
+                        <h2>Create Placement</h2>
                     </div>
                 </div>
                 <!-- end col -->
@@ -22,10 +22,10 @@
                                     <a href="{{ route('dashboard') }}">Dashboard</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="{{ route('job.index') }}">Job</a>
+                                    <a href="{{ route('job.index') }}">Placement</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    Create Job
+                                    Create Placement
                                 </li>
                             </ol>
                         </nav>
@@ -41,7 +41,7 @@
             <div class="col-lg-12">
                 <div class="card-style settings-card-1 mb-30">
                     {{-- <div class="title mb-30 d-flex justify-content-end align-items-center">
-                        <h6>Create Job</h6>
+                        <h6>Create Placement</h6>
                         <button class="border-0 bg-transparent">
                             <i class="lni lni-pencil-alt"></i>
                         </button>
