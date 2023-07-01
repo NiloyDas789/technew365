@@ -41,7 +41,7 @@ class CertificationController extends Controller
      */
     public function store(StoreCertificationRequest $request)
     {
-        $this->checkPermission('certification.store');
+        $this->checkPermission('certification.create');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
 

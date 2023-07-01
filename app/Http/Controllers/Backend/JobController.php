@@ -42,7 +42,7 @@ class JobController extends Controller
      */
     public function store(StoreJobRequest $request)
     {
-        $this->checkPermission('job.store');
+        $this->checkPermission('job.create');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
 

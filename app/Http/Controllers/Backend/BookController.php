@@ -42,7 +42,7 @@ class BookController extends Controller
      */
     public function store(StoreBookRequest $request)
     {
-        $this->checkPermission('book.store');
+        $this->checkPermission('book.create');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
 

@@ -46,7 +46,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $this->checkPermission('user.store');
+        $this->checkPermission('user.create');
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email|unique:users,email',

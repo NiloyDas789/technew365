@@ -42,7 +42,7 @@ class GalleryController extends Controller
      */
     public function store(StoreGalleryRequest $request)
     {
-        $this->checkPermission('gallery.store');
+        $this->checkPermission('gallery.create');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
 

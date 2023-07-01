@@ -42,7 +42,7 @@ class EventController extends Controller
      */
     public function store(StoreEventRequest $request)
     {
-        $this->checkPermission('event.store');
+        $this->checkPermission('event.create');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
 

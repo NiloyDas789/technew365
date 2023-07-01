@@ -42,7 +42,7 @@ class CourseController extends Controller
      */
     public function store(StoreCourseRequest $request)
     {
-        $this->checkPermission('course.store');
+        $this->checkPermission('course.create');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
 

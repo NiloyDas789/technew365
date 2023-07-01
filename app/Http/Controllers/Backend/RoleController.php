@@ -50,7 +50,7 @@ class RoleController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
-        $this->checkPermission('role.store');
+        $this->checkPermission('role.create');
         $this->validate($request, [
             'name' => 'required|unique:roles,name',
             'permissions' => 'required',

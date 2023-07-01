@@ -42,7 +42,7 @@ class LatestTechController extends Controller
      */
     public function store(StoreLatestTechRequest $request)
     {
-        $this->checkPermission('latest-tech.store');
+        $this->checkPermission('latest-tech.create');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
 
