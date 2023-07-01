@@ -10,8 +10,8 @@
         </div> <!-- row -->
         <div class="row">
             <div class="col-lg-6">
-                <div class="singel-news mt-30" x-data="{ shown: false }" x-intersect="shown = true">
-                    <div class="news-thum pb-25" x-show="shown">
+                <div class="singel-news mt-30">
+                    <div class="news-thum pb-25">
                         <img src="{{ setImage($biggerItem[0]->image) }}" alt="News">
                     </div>
                     <div class="news-cont">
@@ -31,8 +31,8 @@
                 @foreach ($smallerItems as $smallerItem)
                     <div class="singel-news news-list">
                         <div class="row">
-                            <div class="col-sm-4" x-data="{ shown: false }" x-intersect="shown = true">
-                                <div class="news-thum mt-30" x-show="shown">
+                            <div class="col-sm-4">
+                                <div class="news-thum mt-30">
                                     <img src="{{ setImage($smallerItem->image) }}" alt="News">
                                 </div>
                             </div>

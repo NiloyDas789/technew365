@@ -94,15 +94,15 @@
         /* Styles for web */
         @media (min-width: 768px) {
             #slider_banner_1 {
-                background-image: url("{{ asset('frontend/assets') }}/images/banner/banner-1.png");
+                background-image: url("{{ asset('frontend/assets') }}/images/banner/banner-1.jpg");
             }
 
             #slider_banner_3 {
-                background-image: url("{{ asset('frontend/assets') }}/images/banner/banner-3.png");
+                background-image: url("{{ asset('frontend/assets') }}/images/banner/banner-3.jpg");
             }
 
             #slider_banner_4 {
-                background-image: url("{{ asset('frontend/assets') }}/images/banner/banner-4.png");
+                background-image: url("{{ asset('frontend/assets') }}/images/banner/banner-4.jpg");
             }
 
             #video-feature {

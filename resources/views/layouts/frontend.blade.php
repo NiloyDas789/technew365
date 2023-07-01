@@ -19,16 +19,16 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets') }}/css/slick.css">
 
     <!--====== Animate css ======-->
-    <link rel="stylesheet" href="{{ asset('frontend/assets') }}/css/animate.css">
+    {{-- <link rel="stylesheet" href="{{ asset('frontend/assets') }}/css/animate.css"> --}}
 
     <!--====== Nice Select css ======-->
-    <link rel="stylesheet" href="{{ asset('frontend/assets') }}/css/nice-select.css">
+    {{-- <link rel="stylesheet" href="{{ asset('frontend/assets') }}/css/nice-select.css"> --}}
 
     <!--====== Nice Number css ======-->
-    <link rel="stylesheet" href="{{ asset('frontend/assets') }}/css/jquery.nice-number.min.css">
+    {{-- <link rel="stylesheet" href="{{ asset('frontend/assets') }}/css/jquery.nice-number.min.css"> --}}
 
     <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="{{ asset('frontend/assets') }}/css/magnific-popup.css">
+    {{-- <link rel="stylesheet" href="{{ asset('frontend/assets') }}/css/magnific-popup.css">  --}}
 
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="{{ asset('frontend/assets') }}/css/bootstrap.min.css">
@@ -44,12 +44,6 @@
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="{{ asset('frontend/assets') }}/css/responsive.css">
-
-    <!-- Alpine Plugins -->
-    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-
-    <!-- Alpine Core -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     @stack('style')
 
@@ -230,7 +224,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>Dewan Bazar, Joynab Colony, Office Building (4th Floor), Chittagong</p>
+                                        <p>Dewan Bazar, Joynab Colony, Office Building (4th Floor), Chattogram</p>
                                     </div>
                                 </li>
                                 <li>
@@ -308,11 +302,6 @@
     <!--====== Main js ======-->
     <script src="{{ asset('frontend/assets') }}/js/main.js"></script>
 
-    <!--====== Map js ======-->
-    <script
-        src="{{ asset('frontend/assets') }}/https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ">
-    </script>
-    <script src="{{ asset('frontend/assets') }}/js/map-script.js"></script>
 
 </body>
 

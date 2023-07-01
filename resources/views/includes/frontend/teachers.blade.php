@@ -28,7 +28,7 @@
                             <div class="col-sm-6">
                                 <div class="singel-teachers mt-30 text-center" x-data="{ shown: false }"
                                     x-intersect="shown = true">
-                                    <div class="image" x-show="shown">
+                                    <div class="image">
                                         <img src="{{ setImage($job->image) }}" alt="Teachers">
                                     </div>
                                     <div class="cont">

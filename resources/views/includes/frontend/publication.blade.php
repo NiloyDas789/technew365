@@ -16,8 +16,8 @@
         <div class="row justify-content-center">
             @foreach ($books as $book)
                 <div class="col-lg-3 col-md-6 col-sm-8">
-                    <div class="singel-publication mt-30" x-data="{ shown: false }" x-intersect="shown = true">
-                        <div class="image" x-show="shown">
+                    <div class="singel-publication mt-30">
+                        <div class="image">
                             <img src="{{ setImage($book->image) }}" alt="Publication">
                             <div class="add-cart">
                                 {{-- <ul>

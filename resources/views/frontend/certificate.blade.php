@@ -62,7 +62,7 @@
                             {{-- <h2>Enter Your ID</h2> --}}
                         </div>
                         {{-- {{ dd(session()->pull('certification')) }} --}}
-                        @isset($certification)
+                        @if (isset($certification))
                             <div
                                 style="background-image: url('{{ asset('frontend/assets') }}/images/certificate_bg.png') ;
                         background-size: 150px;
@@ -116,7 +116,11 @@
                                 <a href="{{ route('certificate') }}" type="button" class="btn btn-secondary mt-2">
                                     <i class="fas fa-redo-alt"></i>Reset</a>
                             </div>
-                        @endisset
+                        @else
+                            <div class="alert alert-danger mt-5" role="alert">
+                                <p>No Data Found.</p>
+                            </div>
+                        @endif
                         @if (Session::has('error'))
                             <div class="alert alert-danger" role="alert">
                                 {{ session()->pull('error') }}
