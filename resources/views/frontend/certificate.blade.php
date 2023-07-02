@@ -33,14 +33,14 @@
                     <div class="contact-from mt-30">
                         <div class="section-title">
                             <h5>Verify Certificate</h5>
-                            <h2>Enter Your Tracking ID</h2>
+                            <h2>Enter Verification ID</h2>
                         </div> <!-- section title -->
                         <div class="main-form pt-45">
                             <form action="{{ route('certificate') }}" method="GET">
                                 @csrf
                                 <div class="col-md-12">
                                     <div class="singel-form form-group has-error has-danger">
-                                        <input name="id" type="text" placeholder="Your Tracking ID"
+                                        <input name="id" type="text" placeholder="Your Verification ID"
                                             data-error="ID is required." required="required">
                                         <div class="help-block with-errors">
                                         </div>
@@ -57,20 +57,21 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="contact-from mt-30">
-                        <div class="section-title">
-                            <h5>Certificate Details</h5>
-                            {{-- <h2>Enter Your ID</h2> --}}
-                        </div>
+
                         {{-- {{ dd(session()->pull('certification')) }} --}}
                         @if (isset($certification))
                             <div
                                 style="background-image: url('{{ asset('frontend/assets') }}/images/certificate_bg.png') ;
-                        background-size: 150px;
+                        /* background-size: 150px; */
                         /* width: 180px; */
                         /* height: 300px; */
                             background-repeat: no-repeat;
 
                         background-size: fit;">
+                                <div class="section-title">
+                                    <h5>Certificate Details</h5>
+                                    {{-- <h2>Enter Your ID</h2> --}}
+                                </div>
                                 <ul>
                                     <li>
                                         <div class="singel-address">
@@ -85,7 +86,7 @@
                                     <li>
                                         <div class="singel-address">
                                             <div class="icon">
-                                                <b>Student ID:</b>
+                                                <b>ID:</b>
                                             </div>
                                             <div class="cont">
                                                 <p>{{ $certification->student_id }}</p>
