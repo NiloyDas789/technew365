@@ -89,7 +89,7 @@ class BookController extends Controller
      */
     public function update(UpdateBookRequest $request, Book $book)
     {
-        $this->checkPermission('book.update');
+        $this->checkPermission('book.edit');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
         if ($request->hasFile('image')) {
@@ -113,7 +113,7 @@ class BookController extends Controller
      */
     public function destroy(Book $book)
     {
-        $this->checkPermission('book.destroy');
+        $this->checkPermission('book.delete');
         $book->delete();
         return redirect()->route('book.index')
                         ->with('success', 'Book deleted successfully');

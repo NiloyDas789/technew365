@@ -89,7 +89,7 @@ class JobController extends Controller
      */
     public function update(UpdateJobRequest $request, Job $job)
     {
-        $this->checkPermission('job.update');
+        $this->checkPermission('job.edit');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
         if ($request->hasFile('image')) {
@@ -113,7 +113,7 @@ class JobController extends Controller
      */
     public function destroy(Job $job)
     {
-        $this->checkPermission('job.destroy');
+        $this->checkPermission('job.delete');
         $job->delete();
         return redirect()->route('job.index')
                         ->with('success', 'Job deleted successfully');

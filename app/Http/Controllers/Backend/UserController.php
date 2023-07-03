@@ -102,7 +102,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->checkPermission('user.update');
+        $this->checkPermission('user.edit');
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email|unique:user,email,'.$id,
@@ -135,7 +135,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $this->checkPermission('user.destroy');
+        $this->checkPermission('user.delete');
         User::find($id)->delete();
         return redirect()->route('user.index')
                         ->with('success', 'User deleted successfully');

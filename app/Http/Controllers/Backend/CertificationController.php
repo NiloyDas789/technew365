@@ -88,7 +88,7 @@ class CertificationController extends Controller
      */
     public function update(UpdateCertificationRequest $request, Certification $certification)
     {
-        $this->checkPermission('certification.update');
+        $this->checkPermission('certification.edit');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
         // if ($request->hasFile('image')) {
@@ -112,7 +112,7 @@ class CertificationController extends Controller
      */
     public function destroy(Certification $certification)
     {
-        $this->checkPermission('certification.destroy');
+        $this->checkPermission('certification.delete');
         $certification->delete();
         return redirect()->route('certification.index')
                         ->with('success', 'Certification deleted successfully');

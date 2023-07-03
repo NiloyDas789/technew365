@@ -89,7 +89,7 @@ class GalleryController extends Controller
      */
     public function update(UpdateGalleryRequest $request, Gallery $gallery)
     {
-        $this->checkPermission('gallery.update');
+        $this->checkPermission('gallery.edit');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
         if ($request->hasFile('image')) {
@@ -113,7 +113,7 @@ class GalleryController extends Controller
      */
     public function destroy(Gallery $gallery)
     {
-        $this->checkPermission('gallery.destroy');
+        $this->checkPermission('gallery.delete');
         $gallery->delete();
         return redirect()->route('gallery.index')
                         ->with('success', 'Gallery deleted successfully');

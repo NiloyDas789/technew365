@@ -97,7 +97,7 @@ class RoleController extends Controller
      */
     public function update(Request $request, Role $role)
     {
-        $this->checkPermission('role.update');
+        $this->checkPermission('role.edit');
         $this->validate($request, [
             'name' => 'required',
             'permissions' => 'required',
@@ -119,7 +119,7 @@ class RoleController extends Controller
      */
     public function destroy(Role $role)
     {
-        $this->checkPermission('role.destroy');
+        $this->checkPermission('role.delete');
         $role->delete();
         return redirect()->route('role.index')
                         ->with('success', 'Role deleted successfully');

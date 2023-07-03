@@ -89,7 +89,7 @@ class EventController extends Controller
      */
     public function update(UpdateEventRequest $request, Event $event)
     {
-        $this->checkPermission('event.update');
+        $this->checkPermission('event.edit');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
         // if ($request->hasFile('image')) {
@@ -113,7 +113,7 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        $this->checkPermission('event.destroy');
+        $this->checkPermission('event.delete');
         $event->delete();
         return redirect()->route('event.index')
                         ->with('success', 'Event deleted successfully');

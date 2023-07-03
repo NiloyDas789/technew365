@@ -89,7 +89,7 @@ class LatestTechController extends Controller
      */
     public function update(UpdateLatestTechRequest $request, LatestTech $latestTech)
     {
-        $this->checkPermission('latest-tech.update');
+        $this->checkPermission('latest-tech.edit');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
         if ($request->hasFile('image')) {
@@ -113,7 +113,7 @@ class LatestTechController extends Controller
      */
     public function destroy(LatestTech $latestTech)
     {
-        $this->checkPermission('latest-tech.destroy');
+        $this->checkPermission('latest-tech.delete');
         $latestTech->delete();
         return redirect()->route('latest-tech.index')
                         ->with('success', 'LatestTech deleted successfully');

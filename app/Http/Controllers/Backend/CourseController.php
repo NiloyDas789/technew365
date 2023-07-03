@@ -89,7 +89,7 @@ class CourseController extends Controller
      */
     public function update(UpdateCourseRequest $request, Course $course)
     {
-        $this->checkPermission('course.update');
+        $this->checkPermission('course.edit');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
         if ($request->hasFile('image')) {
@@ -113,7 +113,7 @@ class CourseController extends Controller
      */
     public function destroy(Course $course)
     {
-        $this->checkPermission('course.destroy');
+        $this->checkPermission('course.delete');
         $course->delete();
         return redirect()->route('course.index')
                         ->with('success', 'Course deleted successfully');
