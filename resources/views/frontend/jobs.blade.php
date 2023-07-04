@@ -4,7 +4,7 @@
     <!--====== PAGE BANNER PART START ======-->
 
     <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"
-        style="background-image: url({{ asset('frontend/assets') }}/images/top_banner_1.jpg)">
+        style="background-image: url({{ asset('frontend/assets') }}/images/banner/top_banner.webp)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
