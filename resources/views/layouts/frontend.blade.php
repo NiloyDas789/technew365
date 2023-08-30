@@ -157,7 +157,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-about mt-40">
-                            <div class="logo">
+                            <div class="logo" style=" background-color: #ffffff; border-radius: 10px; padding: 15px;">
                                 <a href="{{ route('home') }}"><img src="{{ asset('default/logo.png') }}"
                                         alt="Logo"></a>
                             </div>
