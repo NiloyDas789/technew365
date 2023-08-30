@@ -79,7 +79,7 @@
                         <div class="header-contact text-lg-left text-center">
                             <ul>
                                 <li><img src="{{ asset('frontend/assets') }}/images/all-icon/map.png"
-                                        alt="icon"><span>Dewan bazar, Chottagram</span></li>
+                                        alt="icon"><span>Sub Area Lane, Chattogram</span></li>
                                 <li><img src="{{ asset('frontend/assets') }}/images/all-icon/email.png"
                                         alt="icon"><span>technews365.net@gmail.com</span>
                                 </li>
@@ -162,17 +162,18 @@
                                         alt="Logo"></a>
                             </div>
                             <p>Best Platform to Learn Information Technology & Solutions</p>
+                            <p>© 2028 | All Rights Reserved </p>
                             <ul class="mt-20">
-                                <li><a href="https://www.facebook.com/groups/technews365info" target="blank"><i
-                                            class="fa fa-users"></i></a>
-                                </li>
                                 <li><a href="https://www.facebook.com/TECHNEWS365" target="blank"><i
                                             class="fa fa-facebook-f"></i></a>
                                 </li>
+                                <li><a href="https://www.facebook.com/groups/technews365info" target="blank"><i
+                                            class="fa fa-users"></i></a>
+                                </li>
                                 <li><a href="https://www.youtube.com/@TECHNEWS365" target="blank"><i
                                             class="fa fa-youtube"></i></a></li>
-                                <li><a href="https://www.instagram.com/technews365" target="blank"><i
-                                            class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://instagram.com/technews365info?igshid=OGQ5ZDc2ODk2ZA=="
+                                        target="blank"><i class="fa fa-instagram"></i></a></li>
                                 <li><a href="https://twitter.com/technews365info" target="blank"><i
                                             class="fa fa-twitter"></i></a></li>
                             </ul>
@@ -224,7 +225,8 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>Dewan Bazar, Joynab Colony, Office Building (4th Floor), Chattogram</p>
+                                        <p>Sub Area Lane, Joynab Colony, Office Building (4th Floor),
+                                            Chattogram</p>
                                     </div>
                                 </li>
                                 <li>

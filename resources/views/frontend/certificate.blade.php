@@ -118,6 +118,10 @@
                                     <i class="fas fa-redo-alt"></i>Reset</a>
                             </div>
                         @else
+                            <div class="section-title">
+                                <h5>Search Again</h5>
+                                {{-- <h2>Enter Your ID</h2> --}}
+                            </div>
                             <div class="alert alert-danger mt-5" role="alert">
                                 <p>No Data Found.</p>
                             </div>

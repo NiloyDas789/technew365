@@ -10,11 +10,16 @@
                     <p>TECHNEWS365 is a platform that has been providing courses on various emerging technologies
                         since its journey began in June 2013. The platform was founded with the vision of making the
                         latest technology trends accessible to everyone. Over the years, TECHNEWS365 has continued
-                        to expand its offerings and now provides courses on networking, cloud computing, data
-                        science, AI, cybersecurity, and other related topics.
+                        to expand its &nbsp;offerings and now &nbsp;provides courses on networking, cloud
+                        computing,data
+                        science, &nbsp;AI, &nbsp;&nbsp;cybersecurity, &nbsp;and &nbsp;other &nbsp;related topics.
 
-                        The courses on TECHNEWS365 are designed by industry experts with years of experience in the
-                        field. They use a variety of teaching methods to ensure that learners have a comprehensive
+                        The &nbsp;courses &nbsp;on TECHNEWS365 courses are designed by industry experts with years of
+                        experience in
+                        the
+                        field. They use a variety of teaching methods &nbsp;to &nbsp;ensure &nbsp;that
+                        &nbsp;learners&nbsp;
+                        &nbsp;&nbsp;have &nbsp;a &nbsp;&nbsp;&nbsp;&nbsp;comprehensive
                         understanding of the subject matter, including lectures, videos, interactive simulations,
                         and hands-on exercises. With its flexible learning options and high-quality resources,
                         TECHNEWS365 has become a trusted source for anyone interested in enhancing their skills and

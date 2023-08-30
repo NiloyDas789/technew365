@@ -23,7 +23,7 @@ class HomeController extends Controller
 
         $events = Event::query()
             ->where('status', 1)
-            ->orderBy('created_at', 'desc')
+            ->orderBy('date', 'asc')
             ->take(3)->get();
 
         $jobs = Job::query()

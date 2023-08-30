@@ -41,6 +41,10 @@
                                 <a class="{{ request()->is('contact') ? 'active' : null }}"
                                     href="{{ route('contact') }}">Contact</a>
                             </li>
+                            <li class="nav-item">
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100093828733109">IT
+                                    Shop</a>
+                            </li>
                         </ul>
                     </div>
                 </nav> <!-- nav -->

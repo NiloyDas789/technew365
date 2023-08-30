@@ -102,7 +102,7 @@
                                     <div class="overview-description">
                                         <div class="singel-description pt-40">
                                             <h6>Course Summary</h6>
-                                            <p>{{ $course->description }}</p>
+                                            <p>{!! $course->description !!}</p>
                                         </div>
                                         {{-- <div class="singel-description pt-40">
                                             <h6>Requrements</h6>
@@ -491,7 +491,7 @@
                                 </ul>
                                 <div class="price-button pt-10">
                                     {{-- <span>Price : <b>$25</b></span> --}}
-                                    <a href="#" class="main-btn">Enroll Now</a>
+                                    <a href="{{ route('contact') }}" class="main-btn">Enroll Now</a>
                                 </div>
                             </div> <!-- course features -->
                         </div>
@@ -501,8 +501,7 @@
                                 @foreach ($extraCourses as $extraCourse)
                                     <div class="singel-makelike mt-20">
                                         <div class="image">
-                                            <img src="{{ asset('frontend/assets') }}/images/your-make/y-1.jpg"
-                                                alt="Image">
+                                            <img src="{{ setImage($extraCourse->image) }}" alt="Image">
                                         </div>
                                         <div class="cont">
                                             <a href="{{ route('view-course', $extraCourse->slug) }}">
@@ -533,8 +532,7 @@
                                     <div class="singel-course mt-30">
                                         <div class="thum">
                                             <div class="image">
-                                                <img src="{{ asset('frontend/assets') }}/images/course/cu-2.jpg"
-                                                    alt="Course">
+                                                <img src="{{ setImage($relatedCourse->image) }}" alt="Course">
                                             </div>
                                             {{-- <div class="price">
                                                 <span>Free</span>

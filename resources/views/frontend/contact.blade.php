@@ -44,7 +44,8 @@
                                                 <i class="fa fa-home"></i>
                                             </div>
                                             <div class="cont">
-                                                <p>Dewan Bazar, Joynab Colony, Office Building (4th Floor), Chattogram.</p>
+                                                <p>Sub Area Lane, Joynab Colony, Office Building (4th Floor),
+                                                    Chattogram.</p>
                                             </div>
                                         </div> <!-- singel address -->
                                     </li>

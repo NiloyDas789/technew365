@@ -17,7 +17,8 @@
                     <div class="news-cont">
                         <ul>
                             <li><a href="#"><i class="fa fa-calendar"></i>
-                                    {{ date('F j, Y', strtotime($biggerItem[0]->created_at)) }} </a></li>
+                                    {{ date('F j, Y', strtotime($biggerItem[0]->updated_at ?? $biggerItem[0]->created_at)) }}
+                                </a></li>
                             {{-- <li><a href="#"> <span>By</span> Adam linn</a></li> --}}
                         </ul>
                         <a href="{{ route('latest-news', $biggerItem[0]->slug) }}">
@@ -40,7 +41,8 @@
                                 <div class="news-cont mt-30">
                                     <ul>
                                         <li><a href="#"><i class="fa fa-calendar"></i>
-                                                {{ date('F j, Y', strtotime($smallerItem->created_at)) }}</a></li>
+                                                {{ date('F j, Y', strtotime($smallerItem->updated_at ?? $smallerItem->created_at)) }}</a>
+                                        </li>
                                         {{-- <li><a href="#"> <span>By</span> Adam linn</a></li> --}}
                                     </ul>
                                     <a href="{{ route('latest-news', $smallerItem->slug) }}">
