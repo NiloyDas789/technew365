@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCourseRequest;
 use App\Http\Requests\UpdateCourseRequest;
 use App\Models\Course;
+use App\Models\CourseCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
@@ -32,7 +33,8 @@ class CourseController extends Controller
     public function create()
     {
         $this->checkPermission('course.create');
-        return view('backend.course.create');
+        $courseCategories = CourseCategory::select('name', 'id')->get();
+        return view('backend.course.create', compact('courseCategories'));
     }
     /**
      * Store a newly created resource in storage.
@@ -77,7 +79,8 @@ class CourseController extends Controller
     public function edit(Course $course)
     {
         $this->checkPermission('course.edit');
-        return view('backend.course.edit', compact('course'));
+        $courseCategories = CourseCategory::select('name', 'id')->get();
+        return view('backend.course.edit', compact('course', 'courseCategories'));
     }
 
     /**

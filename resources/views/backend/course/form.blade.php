@@ -67,6 +67,23 @@
         @enderror
     </div>
 </div>
+<div class="col-12">
+    <div class="select-style-2">
+        <label>Category</label>
+        <div class="select-position">
+            <select class="select2" name="course_category_id" multiple>
+                @foreach ($courseCategories as $courseCategory)
+                    <option value="{{ $courseCategory->id }}"
+                        {{ $role->hasPermissionTo($courseCategory->id) ? 'selected' : '' }}>
+                        {{ $courseCategory->name }}</option>
+                @endforeach
+            </select>
+            @error('courseCategory')
+                <div class="alert alert-danger mt-1">{{ $message }}</div>
+            @enderror
+        </div>
+    </div>
+</div>
 <div class="col-lg-12">
     <div class="input-style-1">
         <label for="total_class">Total Class <span class="text-sm text-danger">*</span></label>

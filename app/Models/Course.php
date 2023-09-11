@@ -34,4 +34,9 @@ class Course extends Model
             $course->slug = Str::slug($course->title);
         });
     }
+
+    public function courseCategory()
+    {
+        $this->belongsTo(CourseCategory::class);
+    }
 }

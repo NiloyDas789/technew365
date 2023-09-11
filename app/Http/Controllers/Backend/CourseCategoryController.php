@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreCourseCategoryRequest;
+use App\Http\Requests\UpdateCourseCategoryRequest;
 use App\Models\CourseCategory;
 use Illuminate\Http\Request;
 

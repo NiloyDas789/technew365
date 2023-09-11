@@ -17,4 +17,9 @@ class CourseCategory extends Model
         'title',
         'status',
     ];
+
+    public function courses()
+    {
+        $this->hasMany(Course::class);
+    }
 }

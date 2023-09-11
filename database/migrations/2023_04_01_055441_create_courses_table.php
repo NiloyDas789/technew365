@@ -15,6 +15,7 @@ return new class () extends Migration {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->foreignId('course_category_id')->constrained()->cascadeOnDelete();
             $table->string('slug')->unique();
             $table->longText('description');
             $table->integer('total_class');
