@@ -23,7 +23,7 @@
                                     <a href="{{ route('dashboard') }}">Dashboard</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="{{ route('courseCategory.index') }}">Course Category</a>
+                                    <a href="{{ route('course-category.index') }}">Course Category</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
                                     Edit Course Category
@@ -50,7 +50,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="{{ route('courseCategory.update', $courseCategory->id) }}" method="post"
+                    <form action="{{ route('course-category.update', $courseCategory->id) }}" method="post"
                         enctype="multipart/form-data">
                         @csrf
                         @method('PUT')

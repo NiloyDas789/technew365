@@ -38,6 +38,20 @@
                     </li>
                 </ul>
             </li> --}}
+            @can('course-category.access')
+                <li
+                    class="nav-item {{ request()->is('admin/course-category') || request()->is('admin/course-category/*') ? 'active' : null }}">
+                    <a href="{{ route('course-category.index') }}">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
+                                <path fill="currentColor"
+                                    d="M24 30H8a2.002 2.002 0 0 1-2-2V4a2.002 2.002 0 0 1 2-2h16a2.002 2.002 0 0 1 2 2v16.618l-5-2.5l-5 2.5V4H8v24h16v-4h2v4a2.003 2.003 0 0 1-2 2Zm-3-14.118l3 1.5V4h-6v13.382Z" />
+                            </svg>
+                        </span>
+                        <span class="text">Course Category</span>
+                    </a>
+                </li>
+            @endcan
             @can('course.access')
                 <li
                     class="nav-item {{ request()->is('admin/course') || request()->is('admin/course/*') ? 'active' : null }}">

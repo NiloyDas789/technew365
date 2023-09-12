@@ -30,10 +30,10 @@
 
                     <td>
                         <div class="action">
-                            <a href="{{ route('courseCategory.edit', $courseCategory->id) }}">
+                            <a href="{{ route('course-category.edit', $courseCategory->id) }}">
                                 <i class="lni lni-pencil-alt"></i>
                             </a>
-                            <form method="POST" action="{{ route('courseCategory.destroy', $courseCategory->id) }}">
+                            <form method="POST" action="{{ route('course-category.destroy', $courseCategory->id) }}">
                                 @csrf
                                 <input name="_method" type="hidden" value="DELETE">
                                 <button type="submit" class="text-danger ml-5"><i

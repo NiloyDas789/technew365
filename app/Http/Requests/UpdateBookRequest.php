@@ -24,7 +24,7 @@ class UpdateBookRequest extends FormRequest
     public function rules()
     {
         return [
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:1024',
+            'image' => 'nullable|image|mimes:webp|max:200',
         ];
     }
 }

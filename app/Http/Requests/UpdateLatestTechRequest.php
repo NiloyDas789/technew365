@@ -26,7 +26,7 @@ class UpdateLatestTechRequest extends FormRequest
         return [
             'title' => 'required|string',
             'description' => 'required|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:1024',
+            'image' => 'nullable|image|mimes:webp|max:200',
         ];
     }
 }

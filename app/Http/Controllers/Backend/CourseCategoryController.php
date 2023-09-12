@@ -7,6 +7,7 @@ use App\Http\Requests\StoreCourseCategoryRequest;
 use App\Http\Requests\UpdateCourseCategoryRequest;
 use App\Models\CourseCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class CourseCategoryController extends Controller
 {
@@ -17,7 +18,7 @@ class CourseCategoryController extends Controller
      */
     public function index(Request $request)
     {
-        $this->checkPermission('courseCategory.access');
+        $this->checkPermission('course-category.access');
         $courseCategories = CourseCategory::orderBy('id', 'DESC')->paginate($this->itemPerPage);
         $this->putSL($courseCategories);
         return view('backend.courseCategory.index', compact('courseCategories'));
@@ -30,7 +31,7 @@ class CourseCategoryController extends Controller
      */
     public function create()
     {
-        $this->checkPermission('courseCategory.create');
+        $this->checkPermission('course-category.create');
         return view('backend.courseCategory.create');
     }
     /**
@@ -41,18 +42,18 @@ class CourseCategoryController extends Controller
      */
     public function store(StoreCourseCategoryRequest $request)
     {
-        $this->checkPermission('courseCategory.create');
+        $this->checkPermission('course-category.create');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
 
-        // if ($request->hasFile('image')) {
-        //     $fileName = Rand() . '.' . $request->file('image')->getClientOriginalExtension();
-        //     $image = $request->file('image')->storeAs('images/courseCategory/image', $fileName, 'public');
-        //     $validated['image'] = $image;
-        // }
+        if ($request->hasFile('image')) {
+            $fileName = Rand() . '.' . $request->file('image')->getClientOriginalExtension();
+            $image = $request->file('image')->storeAs('images/courseCategory/image', $fileName, 'public');
+            $validated['image'] = $image;
+        }
         CourseCategory::create($validated);
 
-        return redirect()->route('courseCategory.index')
+        return redirect()->route('course-category.index')
                         ->with('success', 'CourseCategory created successfully');
     }
     /**
@@ -63,7 +64,7 @@ class CourseCategoryController extends Controller
      */
     public function show(CourseCategory $courseCategory)
     {
-        $this->checkPermission('courseCategory.show');
+        $this->checkPermission('course-category.show');
         return view('backend.courseCategory.show', compact('courseCategory'));
     }
 
@@ -75,7 +76,7 @@ class CourseCategoryController extends Controller
      */
     public function edit(CourseCategory $courseCategory)
     {
-        $this->checkPermission('courseCategory.edit');
+        $this->checkPermission('course-category.edit');
         return view('backend.courseCategory.edit', compact('courseCategory'));
     }
 
@@ -88,13 +89,21 @@ class CourseCategoryController extends Controller
      */
     public function update(UpdateCourseCategoryRequest $request, CourseCategory $courseCategory)
     {
-        $this->checkPermission('courseCategory.edit');
+        $this->checkPermission('course-category.edit');
         $validated = $request->all();
         $validated['status'] = !($request->has('status')) ? 0 : 1;
+        if ($request->hasFile('image')) {
+            if (File::exists('storage/' . $courseCategory->image)) {
+                File::delete('storage/' . $courseCategory->image);
+            }
+            $fileName = Rand() . '.' . $request->file('image')->getClientOriginalExtension();
+            $image = $request->file('image')->storeAs('images/courseCategory/image', $fileName, 'public');
+            $validated['image'] = $image;
+        }
 
         $courseCategory->update($validated);
 
-        return redirect()->route('courseCategory.index')
+        return redirect()->route('course-category.index')
                         ->with('success', 'CourseCategory updated successfully');
     }
     /**
@@ -105,9 +114,9 @@ class CourseCategoryController extends Controller
      */
     public function destroy(CourseCategory $courseCategory)
     {
-        $this->checkPermission('courseCategory.delete');
+        $this->checkPermission('course-category.delete');
         $courseCategory->delete();
-        return redirect()->route('courseCategory.index')
+        return redirect()->route('course-category.index')
                         ->with('success', 'CourseCategory deleted successfully');
     }
 }

@@ -27,7 +27,7 @@ class UpdateJobRequest extends FormRequest
             'title' => 'required|string',
             'company_name' => 'required|string',
             'designation' => 'required|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:1024',
+            'image' => 'nullable|image|mimes:webp|max:200',
         ];
     }
 }

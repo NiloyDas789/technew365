@@ -235,10 +235,12 @@ class DefaultDataSeeder extends Seeder
         $courseCategories = [
             [
                 'title' => 'Networking',
+                'image' => '',
                 'status' => 1,
             ],
             [
                 'title' => 'Graphics',
+                'image' => '',
                 'status' => 1,
             ],
 

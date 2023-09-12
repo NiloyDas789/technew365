@@ -22,7 +22,7 @@
                                     <a href="{{ route('dashboard') }}">Dashboard</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="{{ route('courseCategory.index') }}">Course Category</a>
+                                    <a href="{{ route('course-category.index') }}">Course Category</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
                                     Create Course Category
@@ -55,7 +55,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="{{ route('courseCategory.store') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('course-category.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="profile-info">
                             <div class="row">

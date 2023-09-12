@@ -41,7 +41,7 @@
                             {{-- <button class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#createCourse Category">Create</button> --}}
 
                             <!-- Button trigger modal -->
-                            <a class="btn btn-primary float-end" href="{{ route('courseCategory.create') }}">Create</a>
+                            <a class="btn btn-primary float-end" href="{{ route('course-category.create') }}">Create</a>
                             {{-- <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal"
                                 data-bs-target="#createCourse Category">
                                 Create

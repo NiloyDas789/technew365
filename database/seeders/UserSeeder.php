@@ -58,6 +58,12 @@ class UserSeeder extends Seeder
 
             ['name' => 'role_permission.assign'],
 
+            ['name' => 'course-category.access'],
+            ['name' => 'course-category.create'],
+            ['name' => 'course-category.edit'],
+            ['name' => 'course-category.show'],
+            ['name' => 'course-category.delete'],
+
             ['name' => 'course.access'],
             ['name' => 'course.create'],
             ['name' => 'course.edit'],
@@ -126,7 +132,7 @@ class UserSeeder extends Seeder
 
     private function createDefaultUsers()
     {
-        $admin=User::create([
+        $admin = User::create([
             'name'              => 'Super Admin',
             'email'             => 'black@gmail.com',
             'email_verified_at' => now(),
@@ -138,7 +144,7 @@ class UserSeeder extends Seeder
 
     private function createDemoUsers()
     {
-        $user=User::create([
+        $user = User::create([
             'name'              => 'User',
             'email'             => 'user@gmail.com',
             'email_verified_at' => now(),

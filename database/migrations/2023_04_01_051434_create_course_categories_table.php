@@ -15,6 +15,7 @@ return new class () extends Migration {
         Schema::create('course_categories', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('image');
             $table->boolean('status')->default(false);
             $table->timestamps();
             $table->softDeletes();
