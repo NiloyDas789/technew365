@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Book;
 use App\Models\Certification;
 use App\Models\Course;
+use App\Models\CourseCategory;
 use App\Models\Event;
 use App\Models\Gallery;
 use App\Models\Job;
@@ -16,7 +17,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $courses = Course::query()
+        $courseCategories = CourseCategory::query()
             ->where('status', 1)
             ->orderBy('created_at', 'desc')
             ->take(6)->get();
@@ -43,7 +44,7 @@ class HomeController extends Controller
         $biggerItem = $latestTechs->splice(0, 1);
         $smallerItems = $latestTechs->all();
 
-        return view('frontend.index', compact('courses', 'events', 'jobs', 'biggerItem', 'smallerItems', 'books'));
+        return view('frontend.index', compact('courseCategories', 'events', 'jobs', 'biggerItem', 'smallerItems', 'books'));
     }
 
     public function courses()

@@ -28,7 +28,7 @@
 
     <!--====== COURSE PART START ======-->
 
-    @include('includes.frontend.course')
+    @include('includes.frontend.courseCategory')
 
     <!--====== COURSE PART ENDS ======-->
 
