@@ -81,7 +81,9 @@
                                 <li><img src="{{ asset('frontend/assets') }}/images/all-icon/map.png"
                                         alt="icon"><span>Sub Area Lane, Chattogram</span></li>
                                 <li><img src="{{ asset('frontend/assets') }}/images/all-icon/email.png"
-                                        alt="icon"><span>technews365.net@gmail.com</span>
+                                        alt="icon"><span><a
+                                            href="https://mail.google.com/mail/?view=cm&fs=1&to=technews365.net@gmail.com"
+                                            style="color: white" target="blank">technews365.net@gmail.com</a> </span>
                                 </li>
                             </ul>
                         </div>
@@ -242,7 +244,10 @@
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>technews365.net@gmail.com</p>
+                                        <span><a href="https://mail.google.com/mail/?view=cm&fs=1&to=technews365.net@gmail.com"
+                                                style="color: white" target="blank">technews365.net@gmail.com</a>
+                                        </span>
+                                        {{-- <p>technews365.net@gmail.com</p> --}}
                                     </div>
                                 </li>
                             </ul>
