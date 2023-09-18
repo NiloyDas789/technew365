@@ -243,6 +243,11 @@ class DefaultDataSeeder extends Seeder
                 'image' => '',
                 'status' => 1,
             ],
+            [
+                'title' => 'Web Development',
+                'image' => '',
+                'status' => 1,
+            ],
 
         ];
 

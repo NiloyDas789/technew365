@@ -67,3 +67,14 @@
         @enderror
     </div>
 </div>
+<div class="col-lg-12">
+    <div class="form-check form-switch toggle-switch mb-30">
+        <input class="form-check-input @error('status') is-invalid @enderror" name="status"
+            value="{{ $courseCategory->status ?? 1 }}" type="checkbox" id="status"
+            @if (isset($courseCategory->status) && $courseCategory->status == 1) checked @endif>
+        <label class="form-check-label" for="status">Status</label>
+        @error('status')
+            <div class="alert alert-danger mt-1">{{ $message }}</div>
+        @enderror
+    </div>
+</div>

@@ -31,7 +31,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/courses', [HomeController::class, 'courses'])->name('courses');
-Route::get('/courses/{slug}', [HomeController::class, 'viewCourse'])->name('view-course');
+Route::get('/category-courses/{slug}', [HomeController::class, 'viewCourses'])->name('view-courses');
+Route::get('/courses/{id}', [HomeController::class, 'viewCourse'])->name('view-course');
 Route::get('/latest-news/{slug}', [HomeController::class, 'latestNews'])->name('latest-news');
 Route::get('/placements', [HomeController::class, 'students'])->name('students');
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');

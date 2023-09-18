@@ -56,6 +56,16 @@ class HomeController extends Controller
 
         return view('frontend.courses', compact('courses'));
     }
+    public function viewCourses($id)
+    {
+        $courses = Course::query()
+            ->where('course_category_id', $id)
+            ->where('status', 1)
+            ->orderBy('created_at', 'desc')
+            ->paginate(6);
+
+        return view('frontend.courses', compact('courses'));
+    }
     public function viewCourse($slug)
     {
         $course = Course::query()
