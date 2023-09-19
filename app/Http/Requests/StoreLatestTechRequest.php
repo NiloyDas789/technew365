@@ -26,7 +26,7 @@ class StoreLatestTechRequest extends FormRequest
         return [
             'title' => 'required|string',
             'description' => 'required|string',
-            'image' => 'required|image|mimes:webp|max:200',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:1024',
         ];
     }
 }

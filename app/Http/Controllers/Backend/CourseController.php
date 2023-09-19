@@ -33,7 +33,7 @@ class CourseController extends Controller
     public function create()
     {
         $this->checkPermission('course.create');
-        $courseCategories = CourseCategory::select('name', 'id')->get();
+        $courseCategories = CourseCategory::select('title', 'id')->get();
         return view('backend.course.create', compact('courseCategories'));
     }
     /**
@@ -79,7 +79,7 @@ class CourseController extends Controller
     public function edit(Course $course)
     {
         $this->checkPermission('course.edit');
-        $courseCategories = CourseCategory::select('name', 'id')->get();
+        $courseCategories = CourseCategory::select('title', 'id')->get();
         return view('backend.course.edit', compact('course', 'courseCategories'));
     }
 

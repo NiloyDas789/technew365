@@ -24,7 +24,7 @@ class StoreBookRequest extends FormRequest
     public function rules()
     {
         return [
-            'image' => 'required|image|mimes:webp|max:200',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:1024',
         ];
     }
 }

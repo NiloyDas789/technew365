@@ -71,11 +71,10 @@
     <div class="select-style-2">
         <label>Category</label>
         <div class="select-position">
-            <select class="select2" name="course_category_id" multiple>
+            <select class="select2" name="course_category_id">
                 @foreach ($courseCategories as $courseCategory)
-                    <option value="{{ $courseCategory->id }}"
-                        {{ $role->hasPermissionTo($courseCategory->id) ? 'selected' : '' }}>
-                        {{ $courseCategory->name }}</option>
+                    <option value="{{ $courseCategory->id }}" {{ $courseCategory->id ? 'selected' : '' }}>
+                        {{ $courseCategory->title }}</option>
                 @endforeach
             </select>
             @error('courseCategory')
@@ -97,7 +96,8 @@
 <div class="col-lg-12">
     <div class="input-style-3">
         <label for="description">Course Description <span class="text-sm text-danger">*</span></label>
-        <textarea name="description" rows="5" id="description" class="@error('description') is-invalid @enderror">
+        <textarea name="description" rows="5" id="description"
+            class="ckeditor @error('description') is-invalid @enderror">
             {{ $course->description ?? old('description') }}
         </textarea>
         @error('description')
