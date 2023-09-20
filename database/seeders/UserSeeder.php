@@ -186,9 +186,9 @@ class UserSeeder extends Seeder
     {
         $user = User::create([
             'name'              => 'User',
-            'email'             => 'user@gmail.com',
+            'email'             => 'technews365.net@gmail.com',
             'email_verified_at' => now(),
-            'password'          => Hash::make('123123123'),
+            'password'          => Hash::make('technews365.net@365'),
             'remember_token'    => Str::random(10),
         ]);
         $user->assignRole('User');

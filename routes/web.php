@@ -83,10 +83,10 @@ Route::get('black/storage-link', function () {
 //    dd('done');
 // });
 
-// Route::get('black/migrate-fresh',function(){
-//     Artisan::call('migrate:fresh --seed');
-//     dd(' done fresh');
-// });
+Route::get('black/migrate-fresh', function () {
+    Artisan::call('migrate:fresh --seed');
+    dd(' done fresh');
+});
 
 // Route::get('black/rollback',function(){
 //    Artisan::call('migrate:rollback');
