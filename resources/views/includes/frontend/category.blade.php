@@ -17,7 +17,7 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>Network Administration</span>
+                                        <span>Network </br> Administration</span>
                                     </span>
                                 </span> <!-- singel category -->
                             </a>
@@ -43,7 +43,7 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>HSC BATCH
+                                        <span>HSC BATCH </br>
                                             (ICT Training)</span>
                                     </span>
                                 </span> <!-- singel category -->
@@ -58,7 +58,7 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>Network Administration</span>
+                                        <span>Network </br> Administration</span>
                                     </span>
                                 </span> <!-- singel category -->
                             </a>
@@ -84,7 +84,7 @@
                                             alt="Icon">
                                     </span>
                                     <span class="cont">
-                                        <span>HSC BATCH
+                                        <span>HSC BATCH </br>
                                             (ICT Training)</span>
                                     </span>
                                 </span> <!-- singel category -->

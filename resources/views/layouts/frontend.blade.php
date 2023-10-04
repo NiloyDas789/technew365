@@ -164,7 +164,7 @@
                                         alt="Logo"></a>
                             </div>
                             <p>Best Platform to Learn Information Technology & Solutions</p>
-                            <p>© 2028 | All Rights Reserved </p>
+                            <p>© TECHNEWS365 | All Rights Reserved </p>
                             <ul class="mt-20">
                                 <li><a href="https://www.facebook.com/TECHNEWS365" target="blank"><i
                                             class="fa fa-facebook-f"></i></a>
