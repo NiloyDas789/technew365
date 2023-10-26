@@ -20,7 +20,7 @@ class HomeController extends Controller
         $courseCategories = CourseCategory::query()
             ->where('status', 1)
             ->orderBy('created_at', 'desc')
-            ->take(6)->get();
+            ->get();
 
         $events = Event::query()
             ->where('status', 1)

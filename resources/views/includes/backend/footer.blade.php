@@ -4,8 +4,7 @@
             <div class="col-md-6 order-last order-md-first">
                 <div class="copyright text-center text-md-start">
                     <p class="text-sm">
-                        Designed and Developed by <a target="_blank"
-                            href="https://www.linkedin.com/in/niloy-das-2a532b154/" class="text-sm">Niloy Das</a>
+                        Designed and Developed by TECHNEWS365
                     </p>
                 </div>
             </div>

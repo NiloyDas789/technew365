@@ -73,7 +73,8 @@
         <div class="select-position">
             <select class="select2" name="course_category_id">
                 @foreach ($courseCategories as $courseCategory)
-                    <option value="{{ $courseCategory->id }}" {{ $courseCategory->id ? 'selected' : '' }}>
+                    <option value="{{ $courseCategory->id }}"
+                        {{ $courseCategory->id == $course->course_category_id ? 'selected' : '' }}>
                         {{ $courseCategory->title }}</option>
                 @endforeach
             </select>
