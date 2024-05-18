@@ -78,15 +78,25 @@ Route::get('black/storage-link', function () {
     dd('done');
 });
 
-// Route::get('black/migrate',function(){
-//    Artisan::call('migrate');
-//    dd('done');
-// });
+Route::get('black/server-down', function () {
+    Artisan::call('down');
+    dd('Server down');
+});
+
+Route::get('black/server-restore', function () {
+    Artisan::call('up');
+    dd('Server Restored');
+});
 
 Route::get('black/migrate-fresh', function () {
     Artisan::call('migrate:fresh --seed');
     dd(' done fresh');
 });
+
+// Route::get('black/migrate',function(){
+//    Artisan::call('migrate');
+//    dd('done');
+// });
 
 // Route::get('black/rollback',function(){
 //    Artisan::call('migrate:rollback');
